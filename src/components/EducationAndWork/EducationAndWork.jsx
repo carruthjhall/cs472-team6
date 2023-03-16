@@ -13,11 +13,6 @@ export default function EducationWorkExperience({ options }) {
     let school_iterator = 0;
     let job_iterator = 0;
 
-    console.log("edu/work called");
-    console.log(school1_content);
-    console.log(school2_content);
-    console.log(school3_content);
-
     let isSchool = true;
 
     function dot(str){
@@ -29,7 +24,7 @@ export default function EducationWorkExperience({ options }) {
 
     function returnSchoolOrJob(array){
         let dot;
-        console.log(array);
+
         if(array.length == 3 && array[2].length > 0)
         {
             dot = <span>&#x2022;</span>;
@@ -46,7 +41,7 @@ export default function EducationWorkExperience({ options }) {
     }
 
     function isEmpty(array){
-        console.log(array);
+
         for(let i = 0; i < array.length; i++)
         {
             if(array[i].length > 0 )

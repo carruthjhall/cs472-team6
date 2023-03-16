@@ -8,7 +8,7 @@ export default function StatsWrapperOptions({options, updateComponent}) {
 
     function handleStatChange(index, e){
         let newStats = [...stats];
-        newStats[index][e.target.name] = e.target.value;
+        newStats[index] = {...newStats[index], [e.target.name]: e.target.value};
 
         updateComponent({ stats: newStats });
     }

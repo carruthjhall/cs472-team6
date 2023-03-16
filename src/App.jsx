@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import PreviewPanel from "./components/PreviewPanel/PreviewPanel";
 import SidePanel from "./components/SidePanel/SidePanel";
-import CtaSection from "./components/CtaSection/CtaSection";
 
 export default function App() {
   return (

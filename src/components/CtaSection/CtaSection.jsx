@@ -1,9 +1,8 @@
 import vectorSVG from "./vector.svg";
 export default function CtaSection({options}) {
-  const link = "https://www.google.com/";
-  const word1 = "See the impact of good, conversion-oriented design on your business.";
-  const word2 = "Let's Work Together";
-  let linka = link;
+  const {link, word1, word2} = options;
+  {/*const word1 = "See the impact of good, conversion-oriented design on your business.";
+const word2 = "Let's Work Together";*/}
   let word1s = word1;
   let word2s = word2; 
   return (
@@ -13,7 +12,7 @@ export default function CtaSection({options}) {
         <h2>{word1s}</h2> 
       <div className = {`bg-white dark:bg-black`}>
         <div className = 'flex item-center space-x-2'>
-        <a href={linka}className= "flex items-center font-bold font-main bg-gradient-to-r from-purple-600 via-red-500 to-yellow-500 text-transparent bg-clip-text">{word2s}<img src={vectorSVG}/></a>
+        <a href={link}className= "flex items-center font-bold font-main bg-gradient-to-r from-purple-600 via-red-500 to-yellow-500 text-transparent bg-clip-text">{word2s}<img src={vectorSVG}/></a>
         </div>
       </div>
     </div>

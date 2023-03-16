@@ -1,10 +1,9 @@
 import vectorSVG from "./vector.svg";
 export default function CtaSection({options}) {
   const {link, word1, word2} = options;
-  {/*const word1 = "See the impact of good, conversion-oriented design on your business.";
-const word2 = "Let's Work Together";*/}
   let word1s = word1;
   let word2s = word2; 
+  
   return (
     <div className={`bg-white text-black dark:bg-black dark:text-white`}>
     <div className={'py-20 px-40'}>

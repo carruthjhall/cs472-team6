@@ -1,5 +1,3 @@
-import { Gradients } from "../../utils/utils";
-
 export default function AboutHeadSectionOptions({options, updateComponent}) {
     let {name, description} = options;
 

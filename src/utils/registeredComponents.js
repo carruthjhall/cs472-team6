@@ -9,5 +9,9 @@ import { Gradients } from "./utils";
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
-    ['AboutHeadSection', new Component('AboutHeadSection', AboutHeadSection, AboutHeadSectionOptions, AboutHeadSectionPreview, {name: 'Kartik Bansal', description: 'Over the past 12 years, I\'ve worked with a diverse range of clients, from startups to Fortune 500 companies. I love crafting interfaces that delight users and help businesses grow.'}],
+    ['AboutHeadSection', new Component('AboutHeadSection', AboutHeadSection, AboutHeadSectionOptions, AboutHeadSectionPreview, 
+        {   name: 'Kartik Bansal', 
+            description: `Over the past 12 years, I\'ve worked with a diverse range of clients, from startups to Fortune 500 companies. 
+                            I love crafting interfaces that delight users and help businesses grow.`
+        }],
 ]);

@@ -1,4 +1,4 @@
-export default function AboutPage({options}) {
+export default function AboutHeadSection({options}) {
   const {name, description} = options;
 
   return (

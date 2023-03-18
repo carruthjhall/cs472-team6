@@ -6,9 +6,13 @@ import AboutHeadSection from "../components/AboutHeadSection/AboutHeadSection";
 import AboutHeadSectionOptions from "../components/AboutHeadSection/AboutHeadSectionOptions";
 import AboutHeadSectionPreview from "../components/AboutHeadSection/AboutHeadSectionPreview.png";
 
-import EducationAndWork from "../components/EducationAndWork/EducationAndWork";
-import EducationAndWorkOptions from "../components/EducationAndWork/EducationAndWorkOptions";
-import EducationAndWorkPreview from "../components/EducationAndWork/EducationAndWorkPreview.png";
+import AboutHeadImages from "../components/AboutHeadImages/AboutHeadImages";
+import AboutHeadImagesOptions from "../components/AboutHeadImages/AboutHeadImagesOptions";
+import AboutHeadImagesPreview from "../components/AboutHeadImages/AboutHeadImagesPreview.png";
+import image1 from "../components/AboutHeadImages/aboutImage1.svg";
+import image2 from "../components/AboutHeadImages/aboutImage2.svg";
+import image3 from "../components/AboutHeadImages/aboutImage3.svg";
+import image4 from "../components/AboutHeadImages/aboutImage4.svg";
 
 import Component from "../models/Component";
 import { Gradients } from "./utils";
@@ -17,10 +21,16 @@ export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
     ['AboutHeadSection', new Component('AboutHeadSection', AboutHeadSection, AboutHeadSectionOptions, AboutHeadSectionPreview, 
         {   name: 'Kartik Bansal', 
+            gradient: Gradients.default,
             description: `Over the past 12 years, I\'ve worked with a diverse range of clients, from startups to Fortune 500 companies. 
                             I love crafting interfaces that delight users and help businesses grow.`
         })
     ],
-    ['EducationAndWork', new Component('EducationAndWork', EducationAndWork, EducationAndWorkOptions, EducationAndWorkPreview, 
-        {educationItem1: 'Stanford University', workExperienceItem1: 'Twitter Inc'})],
+    ['AboutHeadImages', new Component('AboutHeadImages', AboutHeadImages, AboutHeadImagesOptions, AboutHeadImagesPreview, 
+        {   image1: {image1}, 
+            image2: {image2},
+            image3: {image3},
+            image4: {image4}
+        })
+    ],
 ]);

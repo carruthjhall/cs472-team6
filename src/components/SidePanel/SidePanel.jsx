@@ -1,4 +1,4 @@
-import { SidePanelState, SidePanelVisibility } from "../../state"
+import { SidePanelState, SidePanelVisibility, devViewState } from "../../state"
 import { Tabs } from "../../utils/utils"
 import ComponentOptionsTab from "../ComponentOptionsTab/ComponentOptionsTab"
 import ComponentsListTab from "../ComponentsListTab/ComponentsListTab"
@@ -45,17 +45,18 @@ export default function SidePanel() {
     let ActivePanel = tabs.filter((tab) => tab.name === activeTab)[0].panel;
     let isVisible = SidePanelVisibility((state) => state.isVisible);
     let setVisibility = SidePanelVisibility((state) => state.setVisibility);
+    let isDevView = devViewState((state) => state.isDevView);
 
     return (
-        <div className={`${ isVisible ? "w-80" : "w-12" } duration-500 bg-gray-100 flex flex-col relative`}>
+        <div className={`${ isVisible ? "w-80" : "w-12" } ${ isDevView ? "w-0" : "w-80" } duration-500 bg-gray-100 flex flex-col relative`}>
             {/* Tab Button Container */}
             <div>
                 {tabs.map((tab) => <TabButton key={tab.name} icon={tab.icon} selected={activeTab === tab.name} selectTab={() => setTab(tab.name)}/>)}
             </div>
-            <div className={`${ isVisible ? "visble" : "invisible" }`}>
+            <div className={`overflow-scroll ${ isVisible ? "visble" : "invisible"} grow `}>
                 <ActivePanel />
             </div>
-            <button onClick={() => setVisibility(false)} className={`${ isVisible ? "visble" : "invisible" } p-4 absolute inset-x-0 bottom-0 flex items-center justify-center bg-black text-white shadow-lg rounded-lg m-4`}>
+            <button onClick={() => setVisibility(false)} className={`${ isVisible ? "visble" : "invisible" } ${ isDevView ? "invisible" : "visible" } p-4 flex align-self-end items-center justify-center bg-black text-white shadow-lg rounded-lg m-4`}>
                 Hide Sidebar
             </button>
         </div>

@@ -8,8 +8,13 @@ export const SidePanelState = create((set) => ({
 }))
 
 export const SidePanelVisibility = create((set) => ({
-    isVisible: false,
+    isVisible: true,
     setVisibility: (isVisible) => set(() => ({ isVisible: isVisible }))
+}))
+
+export const devViewState = create((set) => ({
+    isDev: false,
+    setDevView: (isDevView) => set(() => ({ isDevView: isDevView }))
 }))
 
 export const PageState = create((set) => ({

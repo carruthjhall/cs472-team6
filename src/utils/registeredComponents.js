@@ -4,7 +4,6 @@ import BannerPreview from "../components/Banner/BannerPreview.png";
 import Testimonial from "../components/Testimonial/Testimonial";
 import TestimonialOptions from "../components/Testimonial/TestimonialOptions";
 import TestimonialPreview from "../components/Testimonial/TestimonialPreviewLight.png";
-import defaultPFP from "../components/Testimonial/Default_pfp.svg";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
 

@@ -17,7 +17,7 @@ export default function Testimonial({options}) {
 </svg>)
 
     return(
-        <div className="flex flex-col items-start p-8 bg-white dark:bg-gray-900 h-fit w-[456.58px]">
+        <div className="flex flex-col items-start p-8 bg-white dark:bg-gray-900 h-fit w-[456.58px] m-4">
             <div className={`w-fit h-6`}>
                 {union}
             </div>

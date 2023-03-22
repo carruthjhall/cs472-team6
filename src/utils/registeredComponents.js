@@ -15,9 +15,7 @@ import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
-<<<<<<< HEAD
     ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
-=======
     [
         'Education and Work',
         new Component(
@@ -55,5 +53,4 @@ export const registeredComponents = new Map([
         }
       )
     ]
->>>>>>> 6f2e1e92dfbb96f04722a68d6cbb5d152d122220
 ]);

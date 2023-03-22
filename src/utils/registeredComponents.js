@@ -25,6 +25,8 @@ export const registeredComponents = new Map([
             gradient: Gradients.default,
             description: `Over the past 12 years, I\'ve worked with a diverse range of clients, from startups to Fortune 500 companies. 
                             I love crafting interfaces that delight users and help businesses grow.`
+        })
+    ],
     ['AboutHeadImages', new Component('AboutHeadImages', AboutHeadImages, AboutHeadImagesOptions, AboutHeadImagesPreview, 
         {   image1: {image1}, 
             image2: {image2},

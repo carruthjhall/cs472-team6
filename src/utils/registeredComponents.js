@@ -21,10 +21,8 @@ import BlogPagePreview from "../components/BlogPage/BlogPagePreview.png";
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
-<<<<<<< Updated upstream
     ['Stats Section', new Component('Stats Section', StatsWrapper, StatsWrapperOptions, StatsWrapperPreview, {stats: [{number: "12+", text: "Years of Experience in Design"},{number: "100+", text: "Successfully Completed Projects"},{number: "50+", text: "Global Customers"}], gradient: Gradients.default})],
     ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
-=======
     ['BlogPage', new Component('BlogPage', BlogPage, BlogPageOptions, BlogPagePreview, 
       {overview: "Overview",
        header1: "Header1",
@@ -34,7 +32,6 @@ export const registeredComponents = new Map([
        paragraph3: "example\nexample1\nexample2",
        image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", 
        image2: "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"})],
->>>>>>> Stashed changes
     [
         'Education and Work',
         new Component(

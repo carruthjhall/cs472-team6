@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import PreviewPanel from "./components/PreviewPanel/PreviewPanel";
 import SidePanel from "./components/SidePanel/SidePanel";
 
+
 export default function App() {
   return (
     <div className="flex flex-col min-h-screen">

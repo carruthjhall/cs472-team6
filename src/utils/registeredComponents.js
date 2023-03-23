@@ -9,9 +9,13 @@ import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
+import CtaSection from "../components/CtaSection/CtaSection";
+import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
+import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
+    ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
     [
         'Education and Work',
         new Component(

@@ -25,10 +25,11 @@ const tabs = [
 
 function TabButton({icon, selected, selectTab}) {
     let setVisibility = SidePanelVisibility((state) => state.setVisibility);
+    let isDevView = devViewState((state) => state.isDevView);
 
     return (
         <button 
-            className={`py-2 px-3 ${selected ? 'bg-gray-400' : 'hover:bg-gray-300'}`}
+            className={`py-2 px-3 ${isDevView ? "invisible" : selected ? 'bg-gray-400' : 'hover:bg-gray-300'}`}
             onClick={() => {
                 selectTab();
                 setVisibility(true);

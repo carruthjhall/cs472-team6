@@ -7,7 +7,7 @@ export default function BlogPage({options}) {
     return (
         <div className={`bg-white text-black dark:bg-black dark:text-white`}>
         <div className={'py-20 px-40'}>
-        <div className= "font-normal font-baijamjuree text-4xl leading-normal">
+        <div className= "font-normal font-baijamjuree text-1xl md:text-4xl leading-normal">
             <h2 className='mb-4'>{overview}</h2> 
             <div className="font-inter font-normal text-base leading-6">{valueArray.map((value, index) => (
             <p key={index} className="my-paragraph mt-6 mb-10">{value}</p>

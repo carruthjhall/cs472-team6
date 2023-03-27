@@ -10,7 +10,7 @@ import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
-import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent"
+import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 
 export const registeredComponents = new Map([

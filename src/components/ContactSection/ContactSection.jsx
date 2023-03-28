@@ -42,7 +42,7 @@ export default function ContactSection({options}){
               text-black dark:text-white text-lg font-secondary md:w-[452px] md:h-[97px]">{displayDescr} </p>
 
               <div className="flex flex-col grid grid-rows-2 h-[110px]">
-                <div className="flex items-center justify-between mt-2.5 w-[260px] h-[54px]"> 
+                <div className="flex items-center  mt-2.5 w-[260px] h-[54px]"> 
                   <img src={emailIcon}></img> 
                   <span className="text-black dark:text-white text-[18px] font-semibold font-secondary px-4">{uEmail}</span>
                 </div>

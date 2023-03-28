@@ -1,25 +1,17 @@
-import AboutHeadImages from "../components/AboutHeadImages/AboutHeadImages";
-import AboutHeadImagesOptions from "../components/AboutHeadImages/AboutHeadImagesOptions";
-import AboutHeadImagesPreview from "../components/AboutHeadImages/AboutHeadImagesPreview.png";
-
-import Component from "../models/Component";
+import Component from "../../models/Component";
 import { Gradients } from "../../utils/utils";
 
-import image1 from "../components/AboutHeadImages/aboutImage1.svg";
-import image2 from "../components/AboutHeadImages/aboutImage2.svg";
-import image3 from "../components/AboutHeadImages/aboutImage3.svg";
-import image4 from "../components/AboutHeadImages/aboutImage4.svg";
+import AboutHeadImages from "./AboutHeadImages";
+import AboutHeadImagesOptions from "./AboutHeadImagesOptions";
+import AboutHeadImagesPreview from "./AboutHeadImagesPreview.png";
 
 export const AboutHeadImagesComponent = new Component(
-    'AboutHeadSection', 
-    AboutHeadSection, 
-    AboutHeadSectionOptions, 
-    AboutHeadSectionPreview, 
+    'AboutHeadImages', AboutHeadImages, AboutHeadImagesOptions, AboutHeadImagesPreview, 
     {   
-    	name: 'Kartik Bansal', 
-        gradient: Gradients.default,
-        description: `Over the past 12 years, I\'ve worked with a diverse range 
-        of clients, from startups to Fortune 500 companies. I love crafting 
-        interfaces that delight users and help businesses grow.`
+        image1: "https://imgur.com/XYOEKJD.png", 
+        image2: "https://imgur.com/fBYenwe.png",
+        image3: "https://imgur.com/L2e6qw3.png",
+        image4: "https://imgur.com/tUmGaNG.png",
+
     }
 );

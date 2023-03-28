@@ -95,4 +95,56 @@ describe('StatsWrapper Component', () => {
             value: Gradients['green-blue']
         }})
     })
+
+    it('StatsWrapperOptions handleStatChange/onChange function for text input', () => {
+        // create test object that the input handler should match
+        const changeTest = {
+            stats: [
+                { number: '30+', text: 'Years of Experience in Design' },
+                { number: '100+', text: 'Successfully Completed Projects' },
+                { number: '50+', text: 'Global Customers' }
+            ]
+        }
+        
+        // render component
+        const component = renderer.create(
+            <StatsWrapperOptions options={options} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify(changeTest))} />
+        )
+
+        // get reference to text onChange function
+        let numberOnChange = component.toTree().rendered.rendered[0].rendered.rendered[1].props.onChange
+        // simulate input change
+        numberOnChange({
+            target: {
+                name: 'number',
+                value: '30+'
+            }
+        })
+    })
+
+    it('StatsWrapperOptions handleStatChange/onChange function for number input', () => {
+        // create test object that the input handler should match
+        const changeTest = {
+            stats: [
+                { number: '12+', text: 'Years of Hard Work' },
+                { number: '100+', text: 'Successfully Completed Projects' },
+                { number: '50+', text: 'Global Customers' }
+            ]
+        }
+        
+        // render component
+        const component = renderer.create(
+            <StatsWrapperOptions options={options} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify(changeTest))} />
+        )
+
+        // get reference to text onChange function
+        let textOnChange = component.toTree().rendered.rendered[0].rendered.rendered[3].props.onChange
+        // simulate input change
+        textOnChange({
+            target: {
+                name: 'text',
+                value: 'Years of Hard Work'
+            }
+        })
+    })
 })

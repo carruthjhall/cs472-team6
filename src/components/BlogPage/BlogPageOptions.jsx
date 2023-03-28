@@ -8,7 +8,7 @@ export default function BlogPageOptions({ options, updateComponent }) {
     return (
       <div className="p-3">
         <label className="block">Overview:</label>
-        <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="Overview" value={overview} onChange={(handleChange)} />
+        <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="overview" value={overview} onChange={(handleChange)} />
         <label className="block">Paragraph:</label>
         <textarea
           className="border border-gray-400 p-2 rounded-lg w-full font-main"

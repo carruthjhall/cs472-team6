@@ -52,4 +52,31 @@ describe('StatsWrapper Component', () => {
             expect(textRendered).eq(options.stats[i].text);
         } 
     })
+
+    it('StatsWrapperOptions inputs render correct values', () => {
+        // render component
+        const component = renderer.create(
+            <StatsWrapperOptions options={options} />
+        )
+
+        // get json version of rendered component
+        let componentJSON = component.toJSON();
+
+        // for each stat make sure that its corresponding inputs have the correct values that were passed in
+        for(let i = 0; i < options.stats.length; i++){
+            // get statsOptions element (grouping of stats options inputs)
+            let statOptions = componentJSON.children[i];
+
+            // get number input and its value
+            let numberInput = statOptions.children[1];
+            let numberValue = numberInput.props.value;
+            // get text input and its value
+            let textInput = statOptions.children[3];
+            let textValue = textInput.props.value;
+
+            // test that the number/text values match the corresponding options passed in
+            expect(numberValue).eq(options.stats[i].number);
+            expect(textValue).eq(options.stats[i].text);
+        }
+    })
 })

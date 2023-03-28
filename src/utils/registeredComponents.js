@@ -12,19 +12,14 @@ import Component from "../models/Component";
 import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
-import CtaSection from "../components/CtaSection/CtaSection";
-import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
-import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 
 export const registeredComponents = new Map([
     ['Service Wrapper', new Component('Service Wrapper', ServiceWrapper, ServiceWrapperOptions, ServiceWrapperPreview, {Title: 'Web Design', Text: "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id m", ButtonText: "Contact Me", ButtonLink: "https://www.google.com/", gradient: Gradients.default, ImageLink: "https://i.imgur.com/0vBgKva.jpeg", Invert: "Image Left"})],
     ['Banner', BannerComponent],
-    ['Stats Section', new Component('Stats Section', StatsWrapper, StatsWrapperOptions, StatsWrapperPreview, {stats: [{number: "12+", text: "Years of Experience in Design"},{number: "100+", text: "Successfully Completed Projects"},{number: "50+", text: "Global Customers"}], gradient: Gradients.default})],
     ['CtaSection', CtaSectionComponent],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
-    ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
     [
         'Education and Work',
         new Component(

@@ -7,7 +7,7 @@ export default function Testimonial({options}) {
     const union = Array.from({length: stars}, () => <img src={starSVG} className="float-left md:max-2xl:mr-1 sm:mr-0"/>)
 
     return(
-        <div className="flex flex-col items-start p-8 bg-white dark:bg-gray-900 h-fit  md:max-2xl:w-[436.58px] m-4">
+        <div className="flex flex-col items-start p-8 bg-white dark:bg-gray-900 h-fit  md:w-[436.58px] m-4">
             <div className={`sm:min-w-[105px] w-fit h-max-[21px] overflow-hidden`}>
                 {union}
             </div>

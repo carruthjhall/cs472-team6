@@ -3,39 +3,25 @@ import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapp
 import EducationWorkExperience from "../components/EducationAndWork/EducationAndWork";
 import EducationWorkExperienceOptions from "../components/EducationAndWork/EducationAndWorkOptions";
 import EducationWorkExperiencePreview from "../components/EducationAndWork/EducationAndWorkDark.png";
+import {EducationAndWorkComponent} from '../components/EducationAndWork/EducationAndWorkComponent';
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
+import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
 import CtaSection from "../components/CtaSection/CtaSection";
 import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
 import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
+import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 
 export const registeredComponents = new Map([
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
     ['Stats Section', StatsWrapperComponent],
     ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
-    [
-        'Education and Work',
-        new Component(
-          'Education and Work',
-          EducationWorkExperience,
-          EducationWorkExperienceOptions,
-          EducationWorkExperiencePreview,
-          {
-            school1: 'School 1; Degree; Date',
-            school2: 'School 2; Degree; Date',
-            school3: 'School 3; Degree; Date',
-            job1: 'Company 1; Title; Date',
-            job2: 'Company 2; Title; Date',
-            job3: 'Company 3; Title; Date',
-            gradient: Gradients.default
-          }
-        )
-    ],
+    ['Education and Work', EducationAndWorkComponent],
     [
       'Skills',
       new Component(
@@ -54,5 +40,7 @@ export const registeredComponents = new Map([
           ]
         }
       )
-    ]
+    ],
+    ['ContactSection', contactSectionComponent],
+    ['FAQ', faqComponent]
 ]);

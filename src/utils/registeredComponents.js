@@ -8,9 +8,8 @@ import EducationWorkExperiencePreview from "../components/EducationAndWork/Educa
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
-import Sm from "../components/Sm/Sm";
-import SmOptions from "../components/Sm/SmOptions";
-import SmPreview from "../components/Sm/SmPreview.png";
+import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
+
 import Component from "../models/Component";
 import { Gradients } from "./utils";
 import CtaSection from "../components/CtaSection/CtaSection";
@@ -58,18 +57,5 @@ export const registeredComponents = new Map([
         }
       )
     ],
-    ['Sm', 
-        new Component(
-            'Sm', 
-            Sm, 
-            SmOptions, 
-            SmPreview, 
-            {title: "Follow Me", body: "Im Katrik Bansal, a designer who works with startups to build brands.", 
-            image: "https://i.imgur.com/TY7YztC.png", gradient: Gradients.default,
-            FbLink: "https://www.facebook.com", LiLink: "https://www.linkedin.com", 
-            TwLink: "https://www.twitter.com", InLink: "https://www.instagram.com",
-            DrLink: "https://www.dribbble.com", BhLink: "https://www.behance.net"
-            }
-        )
-    ]
+    ['SocialMedia', SocialMediaComponent]
 ]);

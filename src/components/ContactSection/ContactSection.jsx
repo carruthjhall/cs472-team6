@@ -36,13 +36,13 @@ export default function ContactSection({options}){
                         bg-white dark:bg-black md:px-10 py-10 lg:grid lg:grid-cols-2 lg:gap-28 justify-center">
 
             <div className='flex-grow row-span-2 py-5 font-main '>
-              <h2 className={`text-[64px] w-[400px] h-[80px] text-transparent bg-clip-text bg-gradient-to-r ${gradient} bg-red-400`}>{displayHeader}</h2>
+              <h2 className={`text-[64px] w-[400px] h-auto text-ellipsis whitespace-pre-wrap text-transparent bg-clip-text bg-gradient-to-r ${gradient} bg-red-400`}>{displayHeader}</h2>
               <br></br>
               <p className="flex flex-wrap flex-row justify-between whitespace-pre-wrap break-words overflow-hidden 
               text-black dark:text-white text-lg font-secondary md:w-[452px] md:h-[97px]">{displayDescr} </p>
 
               <div className="flex flex-col grid grid-rows-2 h-[110px]">
-                <div className="flex items-center  mt-2.5 w-[260px] h-[54px]"> 
+                <div className="flex items-center mt-2.5 w-[260px] h-[54px] "> 
                   <img src={emailIcon}></img> 
                   <span className="text-black dark:text-white text-[18px] font-semibold font-secondary px-4">{uEmail}</span>
                 </div>

@@ -6,15 +6,6 @@ import AboutHeadSection from "../components/AboutHeadSection/AboutHeadSection";
 import AboutHeadSectionOptions from "../components/AboutHeadSection/AboutHeadSectionOptions";
 import AboutHeadSectionPreview from "../components/AboutHeadSection/AboutHeadSectionPreview.png";
 
-import AboutHeadImages from "../components/AboutHeadImages/AboutHeadImages";
-import AboutHeadImagesOptions from "../components/AboutHeadImages/AboutHeadImagesOptions";
-import AboutHeadImagesPreview from "../components/AboutHeadImages/AboutHeadImagesPreview.png";
-import image1 from "../components/AboutHeadImages/aboutImage1.svg";
-import image2 from "../components/AboutHeadImages/aboutImage2.svg";
-import image3 from "../components/AboutHeadImages/aboutImage3.svg";
-import image4 from "../components/AboutHeadImages/aboutImage4.svg";
-
-
 import ServiceWrapper from "../components/ServiceWrapper/ServiceWrapper";
 import ServiceWrapperPreview from "../components/ServiceWrapper/ServiceWrapperPreview.png";
 import ServiceWrapperOptions from "../components/ServiceWrapper/ServiceWrapperOptions";

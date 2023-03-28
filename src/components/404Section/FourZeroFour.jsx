@@ -1,54 +1,23 @@
-export default function FourZeroFourDark() {
+import fourZeroFourImage from "./404_img.png";
+import primaryBtn from "./primary_btn_dark.png";
+
+export default function FourZeroFour() {
     return (
-        <div classname = "four-zero-four-dark">    
-            <body bgcolor = "#222222">    
-                <img scr = "https://www.figma.com/file/5hkfaxoU9R1e1hikIQQ2Sb/Portfolio-website-UI-Kit?node-id=128-1928&t=mnLfkxiCK10hTXjR-4"
-                 width = "340" height = "221.21" />
-            
-            <style> padding: 64px; </style>
-                
-            <p style = {{
-                position: 'absolute',
-                width: '138px',
-                height: '90px',
-                left: 'calc(50% - 138px/2 - 101px)',
-                top: '275.21px',
-                fontFamily: 'Bai Jamjuree',
-                fontStyle: 'normal',
-                fontWeight: 700,
-                fontSize: '72px',
-                lineHeight: '125%',
-                display: 'flex',
-                alignItems: 'center',
-                color: '#FFFFFF',
-            }}>404</p>    
-
-            <p></p>
-            <p></p>
-            
-            <p style = {{
-                position: 'absolute',
-                width: '176 px',
-                height: '30 px',
-                left: 'calc(50% - 176 px/2 - 82 px)',
-                top: '389.21 px',
-                //font-family: 'Bai Jamjuree',
-                //font-style: 'normal',
-                fontWeight: '700',
-                fontSize: '24 px',
-                //lineHeight: 125%,
-                /* identical to box height, or 30px */
-                display: 'flex',
-                alignItems: 'center',
-
-                color: '#FFFFFF',
-            }}>Page Not Found</p>
-
-            <p></p>
-            <button className = "flex h-14 bg-gray-200 items-center"> </button>
-
-            </body>
+        <div className="flex mx-auto content-center items-center">
+            <div className="flex-1"></div>
+            <div className="flex-none w-5/6">
+                <div className="flex w-full">
+                    <div className="flex-auto">
+                        <img src={fourZeroFourImage} width="450px"></img>
+                    </div>
+                    <div className="flex-1 my-auto mx-auto items-center content-center justify-center">
+                        <p className="font-main text-8xl dark:text-white text-black">404</p>
+                        <p className="font-main text-2xl py-4 leading-tight dark:text-white text-black">Page not found</p>
+                        <img className="pt-2" src={primaryBtn} height="221.21"></img>
+                    </div>
+                </div>
+            </div>
+            <div className="flex-1"></div>
         </div>
     )
 }
-

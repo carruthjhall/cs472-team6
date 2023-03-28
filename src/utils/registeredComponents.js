@@ -9,6 +9,7 @@ import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
+import {FourZeroFourComponent} from '../components/404Section/FourZeroFourComponent';
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
@@ -48,5 +49,6 @@ export const registeredComponents = new Map([
           ]
         }
       )
-    ]
+    ],
+    ['Four Zero Four', FourZeroFourComponent],
 ]);

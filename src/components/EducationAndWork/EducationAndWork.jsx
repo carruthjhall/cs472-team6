@@ -15,13 +15,6 @@ export default function EducationWorkExperience({ options }) {
 
     let isSchool = true;
 
-    function dot(str){
-        if(str.length > 0)
-        {
-            return (<span>&#x2022</span>);
-        }
-    }
-
     function returnSchoolOrJob(array){
         let dot;
 

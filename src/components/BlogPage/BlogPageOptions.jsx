@@ -1,5 +1,5 @@
 export default function BlogPageOptions({ options, updateComponent }) {
-    let {overview, header1, header2, paragraph1, paragraph2, paragraph3, paragraph3_1, paragraph3_2, paragraph3_3, paragraph3_4, image, image2} = options;
+    let {overview, paragraph1, image} = options;
   
     function handleChange(e) {
       updateComponent({ [e.target.name]: e.target.value });
@@ -18,7 +18,7 @@ export default function BlogPageOptions({ options, updateComponent }) {
           value = {paragraph1}
           onChange={(handleChange)}
         />
-        <label className="block">Image1 Url:</label>
+        <label className="block">Image Url:</label>
         <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="image" value={image} onChange={(handleChange)} />
       </div>
     )

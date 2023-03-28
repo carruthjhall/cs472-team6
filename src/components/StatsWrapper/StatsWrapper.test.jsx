@@ -79,4 +79,20 @@ describe('StatsWrapper Component', () => {
             expect(textValue).eq(options.stats[i].text);
         }
     })
+
+    it('StatsWrapperOptions handleChange function', () => {
+        // render component and test that handle change function returns the correct object value
+        const component = renderer.create(
+            <StatsWrapperOptions options={options} updateComponent={(change) => {expect(JSON.stringify(change)).eq(JSON.stringify({gradient: Gradients["green-blue"]}))}} />
+        )
+
+        // get reference to handle change function of component
+        let handleChange = component.toTree().rendered.rendered[3].props.handleChange;
+
+        // simulate an imput change
+        handleChange({target: {
+            name: 'gradient',
+            value: Gradients['green-blue']
+        }})
+    })
 })

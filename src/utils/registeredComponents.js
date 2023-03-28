@@ -13,6 +13,7 @@ import CtaSection from "../components/CtaSection/CtaSection";
 import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
 import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
+import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 
 
 export const registeredComponents = new Map([
@@ -40,5 +41,6 @@ export const registeredComponents = new Map([
         }
       )
     ],
-    ['FAQ', faqComponent],
+    ['ContactSection', contactSectionComponent],
+    ['FAQ', faqComponent]
 ]);

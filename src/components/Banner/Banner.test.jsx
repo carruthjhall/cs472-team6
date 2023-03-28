@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { Gradients } from '../../utils/utils';
 import Banner from './Banner';
+import { registeredComponents } from '../../utils/registeredComponents';
 
 
 describe('Banner Component', () => {
@@ -28,5 +29,51 @@ describe('Banner Component', () => {
         
         // expect the rendered/displayed words to match the options passed into the component
         expect(displayedWords).eq(options.words);
+    })
+
+    it('BannerOptions show correct input values',()=>{
+        // get the Banner registered component
+        let BannerComponent = registeredComponents.get('Banner');
+        let OptionsComponent = BannerComponent.optionsComponent;
+        let defaultOptions = BannerComponent.defaultOptions;
+
+        // render the BannerOptions component
+        const component = renderer.create(
+            <OptionsComponent options={defaultOptions} updateComponent={() => null}  />
+        )
+
+
+        let optionsComponentJSON = component.toJSON();
+
+        // get the input components from the json
+        let wordsInput = optionsComponentJSON.children[1];
+        let gradientInput = optionsComponentJSON.children[3];
+
+        // make sure that the value of the words input was set properly
+        expect(wordsInput.props.value).eq(defaultOptions.words);
+        // make sure that the value of the gradient input was set properly
+        expect(gradientInput.props.value).eq(defaultOptions.gradient);
+    })
+
+    it('BannerOptions handleChange function',()=>{
+        // get the Banner registered component
+        let BannerComponent = registeredComponents.get('Banner');
+        let OptionsComponent = BannerComponent.optionsComponent;
+        let defaultOptions = BannerComponent.defaultOptions;
+
+        // render the BannerOptions component
+        // In updateComponent prop make sure that component handleChange function is working as expected
+        const component = renderer.create(
+            <OptionsComponent options={defaultOptions} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify({gradient: Gradients["green-blue"]}))}  />
+        )
+
+        // Get handle change function from component
+        let handleChange = component.toTree().rendered.rendered[1].props.onChange;
+
+        // simulate a input change, specifically the gradient changing
+        handleChange({target: {
+            name: 'gradient',
+            value: Gradients["green-blue"]
+        }})
     })
 })

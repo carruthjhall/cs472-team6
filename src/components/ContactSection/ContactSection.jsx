@@ -41,13 +41,19 @@ export default function ContactSection({options}){
               <p className="flex flex-wrap flex-row justify-between whitespace-pre-wrap break-words overflow-hidden 
               text-black dark:text-white text-lg font-secondary md:w-[452px] md:h-[97px]">{displayDescr} </p>
 
-            <div className="flex flex-wrap items-start translate-y-[14.5px] mt-2.5 w-[260px] h-[100px]"> 
-              <img src={emailIcon}></img> 
-              <span className="text-black dark:text-white text-[18px] font-semibold font-secondary px-4">{uEmail}</span>
-              <img src={phoneIcon}></img>
-              <span className="text-black dark:text-white text-[18px] translate-y-[2.5px] font-bold font-secondary px-4">{uPhone}</span>
+              <div className="flex flex-col grid grid-rows-2 h-[110px]">
+                <div className="flex items-center justify-between mt-2.5 w-[260px] h-[54px]"> 
+                  <img src={emailIcon}></img> 
+                  <span className="text-black dark:text-white text-[18px] font-semibold font-secondary px-4">{uEmail}</span>
+                </div>
+                
+                <div className="flex items-center w-[460px]">
+                  <img src={phoneIcon}></img>
+                  <span className="text-black dark:text-white text-[18px] translate-y-[2.5px] font-bold font-secondary px-4">{uPhone}</span>
+                </div>
+              </div>
             </div>
-          </div>
+                
 
           <div className='pr-10 md:w-[864px] md:h-[668px] lg:w-[575px] lg:h-[668px] lg:-translate-x-10'>
             <form onSubmit={handleSubmit}>

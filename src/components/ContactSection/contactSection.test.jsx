@@ -22,15 +22,16 @@ describe('Contact Section Component', () => {
         )
         
         let mainDiv = component.toJSON();
-
+        
         let leftWrapper= mainDiv.children[0];
         let contact = leftWrapper.children[3]
-       
+        
         let header= leftWrapper.children[0].children.shift();
         let descr = leftWrapper.children[2].children.shift();
-        let email = contact.children[1].children.shift();
-        let phone = contact.children[3].children.shift();
+        let email = contact.children[0].children[1].children.shift()
+        let phone = contact.children[1].children[1].children.shift();
         
+
         expect(header).eq(options.displayHeader);
         expect(descr).eq(options.displayDescr);
         expect(email).eq(options.uEmail);

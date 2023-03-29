@@ -14,6 +14,8 @@ import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
 import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
+import { FooterComponent } from "../components/Footer/FooterComponent";
+import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 
 
 export const registeredComponents = new Map([
@@ -42,5 +44,7 @@ export const registeredComponents = new Map([
       )
     ],
     ['ContactSection', contactSectionComponent],
-    ['FAQ', faqComponent]
+    ['FAQ', faqComponent],
+    ['Navbar', NavBarComponent],
+    ['Footer', FooterComponent]
 ]);

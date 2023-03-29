@@ -1,5 +1,4 @@
 import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
-import {BannerComponent} from '../components/Banner/BannerComponent';
 import {EducationAndWorkComponent} from '../components/EducationAndWork/EducationAndWorkComponent';
 import {BannerComponent} from '../components/Banner/BannerComponent';
 import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapperComponent';

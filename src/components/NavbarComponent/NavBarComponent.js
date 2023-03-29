@@ -1,5 +1,5 @@
 import Component from '../../models/Component';
-import NavbarComponent from './NavbarComponent';
+import NavbarComponent from './NavbarComponent.jsx';
 import NavbarComponentOptions from './NavbarComponentOptions';
 import NavbarPreview from './NavbarPreview.png';
 

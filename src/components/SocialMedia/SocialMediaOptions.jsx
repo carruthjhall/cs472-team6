@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Gradients } from "../../utils/utils";
 
 export default function SmOptions({options, updateComponent}){
@@ -12,9 +12,9 @@ export default function SmOptions({options, updateComponent}){
     //     setChecked(!checked);
     // }
 
-    const Checkbox = () =>{
-        const [isChecked, setIsChecked] = useState(false);
-    }
+    // const Checkbox = () =>{
+    //     const [isChecked, setIsChecked] = useState(false);
+    // }
 
 
     

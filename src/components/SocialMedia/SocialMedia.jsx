@@ -1,4 +1,4 @@
-import React, {useState} from "React"
+// import React, {useState} from "React"
 export default function Sm({options}) {
     let {title, body, image, gradient, FbLink, LiLink, TwLink, InLink, DrLink, BhLink} = options;
 

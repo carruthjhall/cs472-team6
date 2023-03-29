@@ -30,6 +30,7 @@ import {FourZeroFourComponent} from '../components/404Section/FourZeroFourCompon
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
+import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
 
 
 export const registeredComponents = new Map([
@@ -67,5 +68,6 @@ export const registeredComponents = new Map([
     ['ContactSection', contactSectionComponent],
     ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
-    ['Footer', FooterComponent]
+    ['Footer', FooterComponent],
+    ['Companies', CompaniesComponent]
 ]);

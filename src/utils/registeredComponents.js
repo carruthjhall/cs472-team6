@@ -11,9 +11,7 @@ import SkillsPreview from "../components/Skills/SkillsDark.png";
 import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
-import CtaSection from "../components/CtaSection/CtaSection";
-import CtaSectionOptions from "../components/CtaSection/CtaSectionOptions";
-import CtaSectionPreview from "../components/CtaSection/CtaSectionPreview.png";
+import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
@@ -23,8 +21,8 @@ export const registeredComponents = new Map([
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
+    ['CtaSection', CtaSectionComponent],
     ['Stats Section', StatsWrapperComponent],
-    ['CtaSection', new Component('CtaSection', CtaSection, CtaSectionOptions, CtaSectionPreview, {link: "https://www.google.com/", word1: "See the impact of good, conversion-oriented design on your business.", word2: "Let's Work Together", gradient: Gradients.default})],
     ['Education and Work', EducationAndWorkComponent],
     [
       'Skills',

@@ -13,7 +13,7 @@ export default function Companies({options}){
             {logoList.slice(0,noOfLogos).map((company, index) => {
                     //let indexNo = index;
                     return(
-                        <Company key = {index} company={company}/>
+                        <Company key = {index} index = {index} company={company}/>
                     )
                 })}
             </div>
@@ -21,12 +21,12 @@ export default function Companies({options}){
     );
 }
 
-function Company({company, key}){
+function Company({company, index}){
     const {logoNo, url, darkUrl} = company;
 
     return(
         <picture>
-            <source srcset={`/src/components/Companies/Logos/DarkLogo${logoNo}.svg`} media="(prefers-color-scheme:dark)"/>
+            <source srcset={`/src/components/Companies/Logos/DarkLogo${index + 1}.svg`} media="(prefers-color-scheme:dark)"/>
             <img src={url} className="float-left"/>
         </picture>
     );

@@ -14,19 +14,19 @@ export default function CompaniesOptions({options, updateComponent}){
         <GradientSelect name={"gradient"} value={gradient} handleChange={handleChange}/>
         {logoList.slice(0,noOfLogos).map((company, index) => {
                     return(
-                        <CompanyOptions key = {index} company={company} handleChange={handleChange}/>
+                        <CompanyOptions key = {index} index = {index} company={company} handleChange={handleChange}/>
                     )
                 })}
         </div>
     );
 }
 
-function CompanyOptions({company, handleChange}){
-    const {url, darkUrl, logoNo} = company;
+function CompanyOptions({company, index, handleChange}){
+    const {url, darkUrl} = company;
 return(
     <div>
-        <label className="block">Logo {logoNo} URL</label>
-        <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="url" name={`logo ${logoNo}`} value={url} onChange={(handleChange)}></input>
+        <label className="block">Logo {index + 1} URL</label>
+        <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="url" name={`logo ${index + 1}`} value={url} onChange={(handleChange)}></input>
     </div>
 );
 }

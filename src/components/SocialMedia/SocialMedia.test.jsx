@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { Gradients } from '../../utils/utils';
 import SocialMedia from './SocialMedia';
-// import SocialMediaOptions from './SocialMediaOptions';
+import { registeredComponents } from '../../utils/registeredComponents';
 
 let options = {
     title: "Follow Me", body: "Im Katrik Bansal, a designer who works with startups to build brands.", 
@@ -25,8 +25,6 @@ describe('SocialMedia Component', () => {
 
         let TextRenders = SocialMediaDiv.children[0].children[1].children[0];
 
-        // renderedText = renderedText.children[0]
-
         let titleText = TextRenders.children[0].children[0]
         
         let bodyText = TextRenders.children[1].children[0]
@@ -36,34 +34,32 @@ describe('SocialMedia Component', () => {
     })
     it('SocialMedia Input Value Renders', () => {
         
+        let SocialMediaComponent = registeredComponents.get('SocialMedia');
+        let OptionsComponent = SocialMediaComponent.optionsComponent;
+        let defaultOptions = SocialMediaComponent.defaultOptions;
+
         const component = renderer.create(
-            <SocialMedia options={options}/>
+            <OptionsComponent options={defaultOptions} updateComponent = {() => null}   
+            />
         )
-        
 
-        let SocialMediaDiv = component.toJSON();
-        
-        let SocialMediaLinks = SocialMediaDiv.children[0].children[1].children[0].children[3];
+        let optionsJSON = component.toJSON();
 
-        // for(let i = 0; i < 6 ; i++){
-        //     let InputLink = SocialMediaLinks.children[i]
-        //     expect (InputLink.props.href).toEqual(options)
-        // } 
+        let FacebookL = optionsJSON.children[6].children[4]
+        let LinkedinL = optionsJSON.children[6].children[6]
+        let TwitterL = optionsJSON.children[6].children[8]
+        let InstagramL = optionsJSON.children[6].children[10]
+        let DribbbleL = optionsJSON.children[6].children[12]
+        let BehanceL = optionsJSON.children[6].children[14]
 
-        let FacebookL = SocialMediaLinks.children[0]
-        let LinkedinL = SocialMediaLinks.children[1]
-        let TwitterL = SocialMediaLinks.children[2]
-        let InstagramL = SocialMediaLinks.children[3]
-        let DribbbleL = SocialMediaLinks.children[4]
-        let BehanceL = SocialMediaLinks.children[5]
-
-        expect(FacebookL.props.href).toEqual(options.FbLink)
-        expect(LinkedinL.props.href).toEqual(options.LiLink)
-        expect(TwitterL.props.href).toEqual(options.TwLink)
-        expect(InstagramL.props.href).toEqual(options.InLink)
-        expect(DribbbleL.props.href).toEqual(options.DrLink)
-        expect(BehanceL.props.href).toEqual(options.BhLink)
+        expect(FacebookL.props.value).toEqual(options.FbLink)
+        expect(LinkedinL.props.value).toEqual(options.LiLink)
+        expect(TwitterL.props.value).toEqual(options.TwLink)
+        expect(InstagramL.props.value).toEqual(options.InLink)
+        expect(DribbbleL.props.value).toEqual(options.DrLink)
+        expect(BehanceL.props.value).toEqual(options.BhLink)
     })
+
     // it('SocialMedia handleChange function', () =>{
     //     const TestOptions={
     //         title: "Test Title", body: "Test Body", 
@@ -72,8 +68,12 @@ describe('SocialMedia Component', () => {
     //         TwLink: "https://www.bing.com/", InLink: "https://www.bing.com/",
     //         DrLink: "https://www.yahoo.com/", BhLink: "https://www.yahoo.com/"
     //     }
+    //     let SocialMediaComponent = registeredComponents.get('SocialMedia');
+    //     let OptionsComponent = SocialMediaComponent.optionsComponent;
+    //     let defaultOptions = SocialMediaComponent.defaultOptions;
+
     //     const component = renderer.create(
-    //         <SocialMedia options={options} updateComponent={(change) =>
+    //         <OptionsComponent options={options} updateComponent={(change) =>
     //         expect(JSON.stringify(change)).eq(JSON.stringify(TestOptions))}    
     //         />
     //     )

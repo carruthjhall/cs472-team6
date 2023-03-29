@@ -20,6 +20,7 @@ import EducationWorkExperiencePreview from "../components/EducationAndWork/Educa
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
+import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
@@ -63,6 +64,7 @@ export const registeredComponents = new Map([
         }
       )
     ],
+    ['SocialMedia', SocialMediaComponent],
     ['Four Zero Four', FourZeroFourComponent],
     ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],

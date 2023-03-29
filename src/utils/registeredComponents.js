@@ -1,3 +1,7 @@
+import Banner from "../components/Banner/Banner";
+import BannerOptions from "../components/Banner/BannerOptions";
+import BannerPreview from "../components/Banner/BannerPreview.png";
+import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
 import ServiceWrapper from "../components/ServiceWrapper/ServiceWrapper";
 import ServiceWrapperPreview from "../components/ServiceWrapper/ServiceWrapperPreview.png";
 import ServiceWrapperOptions from "../components/ServiceWrapper/ServiceWrapperOptions";
@@ -6,13 +10,19 @@ import {EducationAndWorkComponent} from '../components/EducationAndWork/Educatio
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
+import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
+import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
+import { FooterComponent } from "../components/Footer/FooterComponent";
+import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 
 export const registeredComponents = new Map([
+    ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
+    ['Testimonial', TestimonialComponent],
     ['Service Wrapper', new Component('Service Wrapper', ServiceWrapper, ServiceWrapperOptions, ServiceWrapperPreview, {Title: 'Web Design', Text: "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id m", ButtonText: "Contact Me", ButtonLink: "https://www.google.com/", gradient: Gradients.default, ImageLink: "https://i.imgur.com/0vBgKva.jpeg", Invert: "Image Left"})],
     ['Banner', BannerComponent],
     ['CtaSection', CtaSectionComponent],
@@ -37,5 +47,9 @@ export const registeredComponents = new Map([
           ]
         }
       )
-    ]
+    ],
+    ['ContactSection', contactSectionComponent],
+    ['FAQ', faqComponent],
+    ['Navbar', NavBarComponent],
+    ['Footer', FooterComponent]
 ]);

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Component } from 'react';
 import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { Gradients } from '../../utils/utils';
 import SocialMedia from './SocialMedia';
-import SocialMediaOptions from './SocialMediaOptions';
+// import SocialMediaOptions from './SocialMediaOptions';
 
 let options = {
     title: "Follow Me", body: "Im Katrik Bansal, a designer who works with startups to build brands.", 

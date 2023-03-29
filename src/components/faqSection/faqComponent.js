@@ -1,4 +1,4 @@
-import faqSection from "./faqSection";
+import faqSection from "./FAQSection";
 import faqSectionOptions from "./faqSectionOptions";
 import faqSectionPreview from "./faqSectionPreview.png"
 import { Gradients } from "../../utils/utils";

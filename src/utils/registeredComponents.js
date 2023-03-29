@@ -27,6 +27,7 @@ export const registeredComponents = new Map([
     ['Banner', BannerComponent],
     ['AboutHeadSection', AboutHeadSectionComponent],
     ['AboutHeadImages', AboutHeadImagesComponent],
+    ['Stats Section', StatsWrapperComponent],
     ['CtaSection', CtaSectionComponent],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],

@@ -1,5 +1,4 @@
 import Component from "../../models/Component";
-import { Gradients } from "../../utils/utils";
 
 import AboutHeadImages from "./AboutHeadImages";
 import AboutHeadImagesOptions from "./AboutHeadImagesOptions";

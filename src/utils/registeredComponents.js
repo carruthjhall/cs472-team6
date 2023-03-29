@@ -1,22 +1,9 @@
 import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
-import ServiceWrapper from "../components/ServiceWrapper/ServiceWrapper";
-import ServiceWrapperPreview from "../components/ServiceWrapper/ServiceWrapperPreview.png";
-import ServiceWrapperOptions from "../components/ServiceWrapper/ServiceWrapperOptions";
 import {BannerComponent} from '../components/Banner/BannerComponent';
 import {AboutHeadImagesComponent} from '../components/AboutHeadImages/AboutHeadImagesComponent';
 import {AboutHeadSectionComponent} from '../components/AboutHeadSection/AboutHeadSectionComponent';
-import StatsWrapper from "../components/StatsWrapper/StatsWrapper";
-import StatsWrapperOptions from "../components/StatsWrapper/StatsWrapperOptions";
-import StatsWrapperPreview from "../components/StatsWrapper/StatsWrapperPreview.png";
-import EducationWorkExperience from "../components/EducationAndWork/EducationAndWork";
-import EducationWorkExperienceOptions from "../components/EducationAndWork/EducationAndWorkOptions";
-import EducationWorkExperiencePreview from "../components/EducationAndWork/EducationAndWorkDark.png";
 import {EducationAndWorkComponent} from '../components/EducationAndWork/EducationAndWorkComponent';
-import {BannerComponent} from '../components/Banner/BannerComponent';
 import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapperComponent';
-import EducationWorkExperience from "../components/EducationAndWork/EducationAndWork";
-import EducationWorkExperienceOptions from "../components/EducationAndWork/EducationAndWorkOptions";
-import EducationWorkExperiencePreview from "../components/EducationAndWork/EducationAndWorkDark.png";
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
@@ -40,7 +27,7 @@ export const registeredComponents = new Map([
     ['Banner', BannerComponent],
     ['AboutHeadSection', AboutHeadSectionComponent],
     ['AboutHeadImages', AboutHeadImagesComponent],
-    ['Stats Section', new Component('Stats Section', StatsWrapper, StatsWrapperOptions, StatsWrapperPreview, {stats: [{number: "12+", text: "Years of Experience in Design"},{number: "100+", text: "Successfully Completed Projects"},{number: "50+", text: "Global Customers"}], gradient: Gradients.default})],
+    ['Stats Section', StatsWrapperComponent],
     ['CtaSection', CtaSectionComponent],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],

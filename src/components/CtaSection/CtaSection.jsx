@@ -6,7 +6,7 @@ export default function CtaSection({options}) {
   
   return (
     <div className={`bg-white text-black dark:bg-black dark:text-white`}>
-    <div className={'py-20 lg:px-40 md:px-20 sm:px-20'}>
+    <div className={'py-20 px-20 md:px-20 sm:px-20'}>
     <div className="font-bold font-baijamjuree
     lg:text-6xl lg:leading-non
     md:text-5xl md:leading-tight

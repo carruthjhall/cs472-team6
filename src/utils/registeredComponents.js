@@ -20,6 +20,7 @@ import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperCo
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
+import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
 
 export const registeredComponents = new Map([
     ['Banner', new Component('Banner', Banner, BannerOptions, BannerPreview, {words: 'Design,Develop,Discover', gradient: Gradients.default})],
@@ -51,5 +52,6 @@ export const registeredComponents = new Map([
     ['ContactSection', contactSectionComponent],
     ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
-    ['Footer', FooterComponent]
+    ['Footer', FooterComponent],
+    ['Companies', CompaniesComponent]
 ]);

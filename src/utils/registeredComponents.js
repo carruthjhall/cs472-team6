@@ -14,9 +14,11 @@ import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
+import {FourZeroFourComponent} from '../components/404Section/FourZeroFourComponent';
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
+
 
 export const registeredComponents = new Map([
     ['Testimonial', TestimonialComponent],
@@ -45,6 +47,8 @@ export const registeredComponents = new Map([
         }
       )
     ],
+    ['Four Zero Four', FourZeroFourComponent],
+    ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],
     ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],

@@ -41,9 +41,7 @@ export const registeredComponents = new Map([
         }
       )
     ],
-    ['SocialMedia', SocialMediaComponent]
-]);
-=======
+    ['SocialMedia', SocialMediaComponent],
     ['ContactSection', contactSectionComponent],
     ['FAQ', faqComponent]
 ]);

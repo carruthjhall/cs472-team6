@@ -15,6 +15,8 @@ module.exports = {
         "grad2": "#FF5E69",
         "grad3": "#FF8A56",
         "grad4": "#FFA84B",
+        "grayblack": "#1C1C22",
+        "graywhite": "#F0F2F5", 
       }
     },
   },

@@ -22,7 +22,7 @@ export default function Companies({options}){
 }
 
 function Company({company, index}){
-    const {logoNo, url, darkUrl} = company;
+    const {url, darkUrl} = company;
 
     return(
         <picture>

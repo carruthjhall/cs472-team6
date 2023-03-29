@@ -44,7 +44,7 @@ export const registeredComponents = new Map([
       )
     ],
     ['ContactSection', contactSectionComponent],
-    ['FAQ', faqComponent]
+    ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent]
 ]);

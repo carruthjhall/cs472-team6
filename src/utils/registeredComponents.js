@@ -14,6 +14,7 @@ import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
+import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
@@ -25,6 +26,7 @@ export const registeredComponents = new Map([
     ['Service Wrapper', new Component('Service Wrapper', ServiceWrapper, ServiceWrapperOptions, ServiceWrapperPreview, {Title: 'Web Design', Text: "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id m", ButtonText: "Contact Me", ButtonLink: "https://www.google.com/", gradient: Gradients.default, ImageLink: "https://i.imgur.com/0vBgKva.jpeg", Invert: "Image Left"})],
     ['Banner', BannerComponent],
     ['CtaSection', CtaSectionComponent],
+    ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
     ['Education and Work', EducationAndWorkComponent],
     [

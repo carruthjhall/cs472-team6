@@ -7,6 +7,7 @@ import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapp
 import Skills from "../components/Skills/Skills";
 import SkillsOptions from "../components/Skills/SkillsOptions";
 import SkillsPreview from "../components/Skills/SkillsDark.png";
+import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
 import { Gradients } from "./utils";
@@ -17,6 +18,7 @@ import {FourZeroFourComponent} from '../components/404Section/FourZeroFourCompon
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
+import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
 
 
 export const registeredComponents = new Map([
@@ -48,9 +50,11 @@ export const registeredComponents = new Map([
         }
       )
     ],
+    ['SocialMedia', SocialMediaComponent],
     ['Four Zero Four', FourZeroFourComponent],
     ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],
     ['Navbar', NavBarComponent],
-    ['Footer', FooterComponent]
+    ['Footer', FooterComponent],
+    ['Companies', CompaniesComponent]
 ]);

@@ -1,4 +1,16 @@
 import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
+import ServiceWrapper from "../components/ServiceWrapper/ServiceWrapper";
+import ServiceWrapperPreview from "../components/ServiceWrapper/ServiceWrapperPreview.png";
+import ServiceWrapperOptions from "../components/ServiceWrapper/ServiceWrapperOptions";
+import {BannerComponent} from '../components/Banner/BannerComponent';
+import {AboutHeadImagesComponent} from '../components/AboutHeadImages/AboutHeadImagesComponent';
+import {AboutHeadSectionComponent} from '../components/AboutHeadSection/AboutHeadSectionComponent';
+import StatsWrapper from "../components/StatsWrapper/StatsWrapper";
+import StatsWrapperOptions from "../components/StatsWrapper/StatsWrapperOptions";
+import StatsWrapperPreview from "../components/StatsWrapper/StatsWrapperPreview.png";
+import EducationWorkExperience from "../components/EducationAndWork/EducationAndWork";
+import EducationWorkExperienceOptions from "../components/EducationAndWork/EducationAndWorkOptions";
+import EducationWorkExperiencePreview from "../components/EducationAndWork/EducationAndWorkDark.png";
 import {EducationAndWorkComponent} from '../components/EducationAndWork/EducationAndWorkComponent';
 import {BannerComponent} from '../components/Banner/BannerComponent';
 import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapperComponent';
@@ -15,14 +27,19 @@ import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
+import {FourZeroFourComponent} from '../components/404Section/FourZeroFourComponent';
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
+
 
 export const registeredComponents = new Map([
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
+    ['AboutHeadSection', AboutHeadSectionComponent],
+    ['AboutHeadImages', AboutHeadImagesComponent],
+    ['Stats Section', new Component('Stats Section', StatsWrapper, StatsWrapperOptions, StatsWrapperPreview, {stats: [{number: "12+", text: "Years of Experience in Design"},{number: "100+", text: "Successfully Completed Projects"},{number: "50+", text: "Global Customers"}], gradient: Gradients.default})],
     ['CtaSection', CtaSectionComponent],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
@@ -47,6 +64,8 @@ export const registeredComponents = new Map([
       )
     ],
     ['SocialMedia', SocialMediaComponent],
+    ['Four Zero Four', FourZeroFourComponent],
+    ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],
     ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],

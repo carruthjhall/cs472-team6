@@ -11,12 +11,13 @@ export const SkillsComponent = new Component(
     SkillsPreview,
     {
         title: 'What I Do.',
+        noOfSkills: 5,
         skillsList: [
-        {name: "Figma", files:  "", image: "/src/components/Skills/SampleLogos/figma.png"},
-        {name: "Photoshop", files:  "", image: "/src/components/Skills/SampleLogos/photoshop.png"},
-        {name: "HTML", files:  "", image: "/src/components/Skills/SampleLogos/html.png"},
-        {name: "Webflow", files:  "", image: "/src/components/Skills/SampleLogos/webflow.png"},
-        {name: "SEQ", files:  "", image: "/src/components/Skills/SampleLogos/seo.png"}
+            {name: "Figma", image: "/src/components/Skills/SampleLogos/figma.png"},
+            {name: "Photoshop", image: "/src/components/Skills/SampleLogos/photoshop.png"},
+            {name: "HTML", image: "/src/components/Skills/SampleLogos/html.png"},
+            {name: "Webflow", image: "/src/components/Skills/SampleLogos/webflow.png"},
+            {name: "SEQ", image: "/src/components/Skills/SampleLogos/seo.png"}
         ]
     }
 )

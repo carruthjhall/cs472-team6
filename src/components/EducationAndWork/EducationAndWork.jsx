@@ -12,9 +12,9 @@ export default function EducationWorkExperience({ options }) {
     
         return( 
             <div>
-                <div className={`font-main text-[20px]`}> {primary} </div>
-                <p className={`float-left font-secondary pb-3 text-[15px]`}> {secondary} </p>
-                <p className={`float-right font-secondary pb-3 text-[15px]`}> {dot} {date} </p>
+                <div className={`font-main text-[24px]`}> {primary} </div>
+                <p className={`float-left font-secondary pb-3 text-[16px]`}> {secondary} </p>
+                <p className={`float-right font-secondary pb-3 text-[15px] md:text-[16px]`}> {dot} {date} </p>
                 <hr className={`border-black dark:border-white clear-both`}></hr>
             </div>
         );
@@ -27,7 +27,7 @@ export default function EducationWorkExperience({ options }) {
                         lg:flex-row lg:w-[1200px]
                         bg-white text-black dark:bg-black dark:text-white`}>
             <div className="md:w-[560px]">
-                <div className={`pb-6 text-3xl whitespace-nowrap font-main text-transparent bg-clip-text w-[150px] bg-gradient-to-r ${gradient}`} >Education</div>
+                <div className={`pb-6 text-[32px] md:text-[48px] whitespace-nowrap font-main text-transparent bg-clip-text w-[156px] md:w-[234px] bg-gradient-to-r ${gradient}`} >Education</div>
                 {schoolList.slice(0,schoolCount).map((school, index) => {
                         return(
                             <SchoolOrJob key={index} schoolOrJob={school} />
@@ -36,7 +36,7 @@ export default function EducationWorkExperience({ options }) {
             </div>
             <div className="h-[30px] lg:h-[0px] lg:w-[80px]"></div>
             <div className="md:w-[560px]">
-                <div className={`pb-6 text-3xl whitespace-nowrap font-main text-transparent bg-clip-text w-[250px] bg-gradient-to-r ${gradient}`} >Work Experience</div>
+                <div className={`pb-6 text-[32px] md:text-[48px] whitespace-nowrap font-main text-transparent bg-clip-text w-[256px] md:w-[384px] bg-gradient-to-r ${gradient}`} >Work Experience</div>
                 {jobList.slice(0,jobCount).map((job, index) => {
                         return(
                             <SchoolOrJob key={index} schoolOrJob={job} />

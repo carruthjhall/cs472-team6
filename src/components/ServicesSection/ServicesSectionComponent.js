@@ -1,11 +1,21 @@
 import ServicesSection from "./ServicesSection";
 import ServicesSectionPreview from "./ServicesSectionPreview.png";
 import { Gradients } from "../../utils/utils";
+import Component from "../../models/Component";
+import ServicesSectionOptions from "./ServicesSectionOptions";
+
+export class ServiceOptions {
+    constructor(name, gradient, picture){
+        this.name = name;
+        this.gradient = gradient;
+        this.picture = picture;
+    }
+}
 
 export const ServicesSectionComponent = new Component(
     'Services Section', 
     ServicesSection, 
-    null, 
+    ServicesSectionOptions, 
     ServicesSectionPreview, 
     { 
         services: [
@@ -17,10 +27,3 @@ export const ServicesSectionComponent = new Component(
     }
 );
 
-export class ServiceOptions {
-    constructor(name, gradient, picture){
-        this.name = name;
-        this.gradient = gradient;
-        this.picture = picture;
-    }
-}

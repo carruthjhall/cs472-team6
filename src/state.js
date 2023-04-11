@@ -17,6 +17,11 @@ export const devViewState = create((set) => ({
     setDevView: (isDevView) => set(() => ({ isDevView: isDevView }))
 }))
 
+export const ExportModal = create((set) => ({
+  shown: false,
+  setShown: (shown) => set(() => ({ shown }))
+}))
+
 export const PageState = create((set) => ({
     componentsList: [],
     pageOptions: new PageOptions({}),

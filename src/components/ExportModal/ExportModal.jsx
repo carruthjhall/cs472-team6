@@ -9,6 +9,7 @@ export default function ExportModal() {
   const componentsList = PageState((state) => state.componentsList);
   const pageOptions = PageState((state) => state.pageOptions);
 
+  let webcontainerInstance;
 
   function handleExportData() {
     const zip = new JSZip();
@@ -16,6 +17,13 @@ export default function ExportModal() {
     zip.generateAsync({ type: "blob" }).then((content) => {
       saveAs(content, "portfolio.zip");
     });
+  }
+
+  async function handleExportWebsite(){
+
+
+    
+    webcontainerInstance = await WebContainer.boot();
   }
 
 
@@ -48,7 +56,7 @@ export default function ExportModal() {
 
         {/* Export Buttons */}
         <button onClick={() => handleExportData()} className="py-2 px-4 bg-blue-400 mx-auto mb-4 rounded-lg block font-bold text-white hover:bg-blue-600">Export Data</button>
-        <button className="py-2 px-4 bg-blue-400 mx-auto rounded-lg block font-bold text-white hover:bg-blue-600">Export Website</button>
+        <button onClick={() => handleExportWebsite()} className="py-2 px-4 bg-blue-400 mx-auto rounded-lg block font-bold text-white hover:bg-blue-600">Export Website</button>
       </div>
     </div>
   );

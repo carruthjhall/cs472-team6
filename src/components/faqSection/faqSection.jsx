@@ -1,13 +1,10 @@
 import React from "react";
 import Accordion from "./Accordion";
-import { PageState } from "../../state"
 
 
 export default function faqSection({options}){
 
     const {flavorText, q1, ans1, q2, ans2, q3, ans3, q4, ans4, q5, ans5, gradient, contactBttn} = options
-
-    const componentsList = PageState((state) => state.componentsList);
 
     const questionAccordion = [
         {question: `${q1}`,

@@ -2,6 +2,8 @@ import { ExportModalState, PageState } from "../../state";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { toJSON } from "../../utils/utils";
+import { WebContainer } from '@webcontainer/api';
+import { files } from "../../utils/files.js";
 
 export default function ExportModal() {
   const shown = ExportModalState((state) => state.shown);
@@ -21,9 +23,11 @@ export default function ExportModal() {
 
   async function handleExportWebsite(){
 
-
-    
     webcontainerInstance = await WebContainer.boot();
+    await webcontainerInstance.mount(files);
+
+    const packageJSON = await webcontainerInstance.fs.readFile('package.json', 'utf-8');
+    console.log(packageJSON);
   }
 
 

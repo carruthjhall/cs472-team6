@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { registeredComponents } from '../../utils/registeredComponents';
 import { Gradients } from '../../utils/utils';
-import FAQSection from './FAQSection';
+import FAQSection from './faqSection';
 import Accordion from './Accordion'
 
 
@@ -33,7 +33,7 @@ describe('FAQ Component', () => {
         let faqDisplay = mainDiv.children[0]
         
         let faqText = faqDisplay.children[1].children[0].children.shift();
-        let contBtn = faqDisplay.children[2].children[0].children.shift()
+        let contBtn = faqDisplay.children[2].children[0].children[0].children[0]
 
         expect(faqText).eq(options.flavorText)
         expect(contBtn).eq(options.contactBttn)

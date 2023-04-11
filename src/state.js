@@ -17,7 +17,7 @@ export const devViewState = create((set) => ({
     setDevView: (isDevView) => set(() => ({ isDevView: isDevView }))
 }))
 
-export const ExportModal = create((set) => ({
+export const ExportModalState = create((set) => ({
   shown: false,
   setShown: (shown) => set(() => ({ shown }))
 }))

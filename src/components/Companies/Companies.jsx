@@ -23,10 +23,9 @@ export default function Companies({options}){
 
 function Company({company, index}){
     const {url, darkUrl} = company;
-
     return(
         <picture>
-            <source srcset={`/src/components/Companies/Logos/DarkLogo${index + 1}.svg`} media="(prefers-color-scheme:dark)"/>
+            <source srcset={!url === `/src/components/Companies/Logos/Logo${index + 1}.svg` ? url : darkUrl} media="(prefers-color-scheme:dark)"/>
             <img src={url} className="float-left"/>
         </picture>
     );

@@ -61,6 +61,14 @@ export default function Companies({options}){
     );
 }
 
+<<<<<<< HEAD
+=======
+function handleDarkChange(index, event){
+    let newLogos = [...logoList];
+    newLogos[index] = {...newLogos[index], [event.target.name]: event.target.value};
+    updateComponent({logoList: newLogos});
+}
+>>>>>>> Fixed sample logo bug
 
 function Company({company, index}){
     const {url, darkUrl} = company;

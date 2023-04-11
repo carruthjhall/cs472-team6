@@ -13,3 +13,19 @@ export const Direction = {
     UP: 'up',
     DOWN: 'down'
 }
+
+export function toJSON(object) {
+  return JSON.stringify(
+    object,
+    (key, value) => {
+      if (value instanceof Map) {
+        return Object.fromEntries(value.entries());
+      } else if (value instanceof Set) {
+        return [...value];
+      }
+
+      return value;
+    },
+    2
+  );
+}

@@ -11,8 +11,6 @@ export default function ExportModal() {
   const componentsList = PageState((state) => state.componentsList);
   const pageOptions = PageState((state) => state.pageOptions);
 
-  let webcontainerInstance;
-
   function handleExportData() {
     const zip = new JSZip();
     zip.file("portfolio.json", toJSON({componentsList, pageOptions}));
@@ -21,10 +19,24 @@ export default function ExportModal() {
     });
   }
 
+  function containerExists(){
+    return Array.from(document.getElementsByTagName('iframe')).some(element => element.src.includes('stackblitz'))
+  }
+
   async function handleExportWebsite(){
-    webcontainerInstance = await WebContainer.boot();
-    await webcontainerInstance.mount(files);
-    webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}))
+    if (!containerExists()){
+      window.webcontainerInstance = await WebContainer.boot();
+    }
+    
+    await window.webcontainerInstance.mount(files);
+    await window.webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}))
+    await readContainerFile('/src/pageData.js');
+  }
+
+  // TODO: Used for testing (Delete afterwards)
+  async function readContainerFile(filename) {
+    const file = await window.webcontainerInstance.fs.readFile(filename, 'utf-8');
+    console.log(file);
   }
 
   return (

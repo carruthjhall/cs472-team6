@@ -24,19 +24,51 @@ export default function ExportModal() {
   }
 
   async function handleExportWebsite(){
-    if (!containerExists()){
+    // only boot webcontainer if it does not exist
+    if (!window.webcontainerInstance && !containerExists()){
       window.webcontainerInstance = await WebContainer.boot();
     }
     
+    // load webcontainer filesystem
     await window.webcontainerInstance.mount(files);
+    // load pageState elements into webcontainer filesystem
     await window.webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}))
-    await readContainerFile('/src/pageData.js');
+    
+    // install project dependencies
+    const installExit = await installDependencies();
+    if (installExit !== 0){
+      alert('Error: Website could not be exported')
+    }
+
+    // build project
+    const buildExit = await buildWebsite();
+    if (buildExit !== 0){
+      alert('Build Error: Website could not be exported')
+    }
+
   }
 
-  // TODO: Used for testing (Delete afterwards)
+  
   async function readContainerFile(filename) {
     const file = await window.webcontainerInstance.fs.readFile(filename, 'utf-8');
-    console.log(file);
+    return file;
+  }
+
+  async function installDependencies(){
+    const installProcess = await window.webcontainerInstance.spawn('npm', ['install']);
+    return installProcess.exit;
+  }
+
+  async function buildWebsite() {
+    const buildProcess = await window.webcontainerInstance.spawn('npm', ['run', 'build']);
+
+    buildProcess.output.pipeTo(new WritableStream({
+      write(data) {
+        console.log(data);
+      }
+    }));
+
+    return buildProcess.exit;
   }
 
   return (

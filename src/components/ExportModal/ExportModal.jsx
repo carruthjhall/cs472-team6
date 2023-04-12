@@ -22,11 +22,10 @@ export default function ExportModal() {
   }
 
   async function handleExportWebsite(){
-
     webcontainerInstance = await WebContainer.boot();
     await webcontainerInstance.mount(files);
 
-    const packageJSON = await webcontainerInstance.fs.readFile('package.json', 'utf-8');
+    const packageJSON = await webcontainerInstance.fs.readFile('src/index.css', 'utf-8');
     console.log(packageJSON);
   }
 

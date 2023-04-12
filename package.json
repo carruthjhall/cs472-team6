@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "npm run fs && vite --host 0.0.0.0",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run fs && vite build",
+    "preview": "vite preview",
+    "fs": "node ./filesystem.js" 
   },
   "dependencies": {
     "@webcontainer/api": "^1.1.3",

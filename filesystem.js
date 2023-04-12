@@ -16,6 +16,7 @@ const publicFiles = [
 const srcFiles = [
   'src/index.css',
   'src/main.jsx',
+  'webcontainer/App.jsx'
 ]
 
 class Directory {

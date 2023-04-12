@@ -24,8 +24,8 @@ export default function ExportModal() {
   async function handleExportWebsite(){
     webcontainerInstance = await WebContainer.boot();
     await webcontainerInstance.mount(files);
+    webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}))
   }
-
 
   return (
     <div

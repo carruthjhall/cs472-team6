@@ -19,7 +19,9 @@ export const devViewState = create((set) => ({
 
 export const ExportModalState = create((set) => ({
   shown: false,
-  setShown: (shown) => set(() => ({ shown }))
+  loading: false,
+  setShown: (shown) => set(() => ({ shown })),
+  setLoading: (loading) => set(() => ({ loading }))
 }))
 
 export const PageState = create((set) => ({

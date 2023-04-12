@@ -37,21 +37,56 @@ export default function ExportModal() {
     // install project dependencies
     const installExit = await installDependencies();
     if (installExit !== 0){
-      alert('Error: Website could not be exported')
+      alert('Error: Website could not be exported');
+      return;
     }
 
     // build project
     const buildExit = await buildWebsite();
     if (buildExit !== 0){
-      alert('Build Error: Website could not be exported')
+      alert('Build Error: Website could not be exported');
+      return;
     }
+
+    // create zip file
+    const siteZip = new JSZip();
+    // create sub folder for dist directory
+    let distFolder = siteZip.folder('dist');
+    // process and zip web container dist directory that was created by build step above
+    await zipFolder('/dist', distFolder);
+    // save the siteZip folder to the user
+    siteZip.generateAsync({ type: "blob" }).then((content) => {
+      saveAs(content, "portfolio.zip");
+    });
 
   }
 
+  async function zipFolder(folder, zipDir){
+    // get files in directory
+    let distFiles = await readContainerDir(folder);
+    // process each file in directory
+    for (const file of distFiles){
+      // if the file is a directory then call function recursively
+      if (file.isDirectory()){
+        // create new sub directory in zip
+        let subDir = zipDir.folder(file.name);
+        // call recursively to process and zip all files in sub directory
+        await zipFolder(`${folder}/${file.name}`, subDir);
+      } else { // if the file is a file then simply add it to the current zip directory
+        let fileContents = await readContainerFile(`${folder}/${file.name}`);
+        zipDir.file(file.name, fileContents);
+      }
+    }
+  }
   
   async function readContainerFile(filename) {
     const file = await window.webcontainerInstance.fs.readFile(filename, 'utf-8');
-    return file;
+    return file || '';
+  }
+
+  async function readContainerDir(directory) {
+    const files = await window.webcontainerInstance.fs.readdir(directory, {encoding: 'utf-8', withFileTypes: true});
+    return files || [];
   }
 
   async function installDependencies(){

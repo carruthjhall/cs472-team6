@@ -6,7 +6,7 @@ const baseFiles = [
   'webcontainer/postcss.config.js',
   'webcontainer/vite.config.js',
   'index.html',
-  'tailwind.config.cjs'
+  'tailwind.config.cjs',
 ]
 
 const publicFiles = [
@@ -16,8 +16,16 @@ const publicFiles = [
 const srcFiles = [
   'src/index.css',
   'src/main.jsx',
-  'webcontainer/App.jsx'
+  'webcontainer/App.jsx',
+  'webcontainer/registeredComponents.js'
 ]
+
+const componentFiles = new Map([
+  ['Banner', [
+    'src/components/Banner/Banner.jsx',
+    'src/components/Banner/star.svg'
+  ]],
+]);
 
 class Directory {
   directory = {};
@@ -58,5 +66,14 @@ for (const file of srcFiles){
   files['src'].addFile(path.basename(file), Array.from(fs.readFileSync(path.join('./', file))));
 }
 
+files['src'].addDir('components');
+let componentsFolder = files['src'].directory['components'];
+for (const [folder, files] of componentFiles){
+  componentsFolder.addDir(folder);
+  let componentFolder = componentsFolder.directory[folder];
+  for (const file of files){
+    componentFolder.addFile(path.basename(file), Array.from(fs.readFileSync(path.join('./', file))));
+  }
+}
 
-fs.writeFileSync('./src/utils/files.js', "export const files = " + JSON.stringify(files))
+fs.writeFileSync('./src/utils/files.js', "export const files = " + JSON.stringify(files));

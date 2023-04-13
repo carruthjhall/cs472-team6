@@ -20,6 +20,8 @@ export const MoreArticlesComponent = new Component(
         buttonLink4: "www.youtube.com",
         buttonText1: "UI/UX",
         buttonText2: "Web Design",
+        buttonText3: "UI/UX",
+        buttonText4: "Web Design",
         text2: "Lorem ipsum dolor sit amet consectetur.",
         text3: "Lorem ipsum dolor sit amet consectetur.",
         author: "By kartik Bansal",

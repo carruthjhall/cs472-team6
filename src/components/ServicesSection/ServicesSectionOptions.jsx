@@ -20,13 +20,14 @@ export default function ServicesSectionOptions({options, updateComponent}) {
         <div className="p-3">
             <label className="options-label">Header:</label>
             <input type="text" name="header" className="options-input" value={header} onChange={handleChange} />
+            <button className="options-btn bg-blue-500 hover:bg-blue-700 font-bold text-white">Add Item</button>
             {services.map((service, index) => <ServiceOptions key={index} service={service} index={index} handleChange={handleServiceChange}  />)}
         </div>
     )
 }
 
 function ServiceOptions({index, service, handleChange}){
-    const { name, gradient, picture } = service;
+    const { name, gradient, picture, url } = service;
     const imageInput = useRef(null);
 
     // handles updating state (saving the image) after the user has selected an image
@@ -63,11 +64,13 @@ function ServiceOptions({index, service, handleChange}){
             <label className="options-label font-bold">Item {index+1}:</label>
             <label className="options-label">Name:</label>
             <input type="text" className="options-input" name="name" value={name} onChange={e => handleChange(index, e)} />
+            <label className="options-label">URL:</label>
+            <input type="text" className="options-input" name="url" value={url} onChange={e => handleChange(index, e)} />
             <label className="options-label">Image:</label>
             <input name="picture" type="text" className="options-input" value={picture} onChange={e => handleChange(index, e)}/>
             <p className="font-bold">OR</p>
             <input ref={imageInput} name="picture" onChange={handleImageImport} className="hidden" type="file" accept="image/jpeg, image/png, image/jpg"></input>
-            <button className="px-4 py-2 my-3 bg-gray-200 hover:bg-gray-400 rounded-xl" onClick={handleSelect}>Select Image</button>
+            <button className="options-btn" onClick={handleSelect}>Select Image</button>
             <GradientSelect name={"gradient"} value={gradient} handleChange={e => handleChange(index, e)} />
         </div>
     )

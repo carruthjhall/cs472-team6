@@ -17,7 +17,8 @@ export const ServicesSectionComponent = new Component(
     ServicesSection, 
     ServicesSectionOptions, 
     ServicesSectionPreview, 
-    { 
+    {
+        header: 'Services', 
         services: [
             new ServiceOptions('UI/UX Design', Gradients.default, "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"),
             new ServiceOptions('Graphic Design', Gradients.default, "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"),

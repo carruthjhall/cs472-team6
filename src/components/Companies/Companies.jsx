@@ -61,6 +61,7 @@ export default function Companies({options}){
     );
 }
 
+
 function Company({company, index}){
     const {url, darkUrl} = company;
     return(

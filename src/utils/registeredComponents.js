@@ -19,6 +19,7 @@ import { contactSectionComponent } from "../components/ContactSection/contactSec
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
+import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
 
 
 export const registeredComponents = new Map([
@@ -58,5 +59,6 @@ export const registeredComponents = new Map([
     ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
-    ['Companies', CompaniesComponent]
+    ['Companies', CompaniesComponent],
+    ['Home Hero Section 2', HomeHeroSection2Component]
 ]);

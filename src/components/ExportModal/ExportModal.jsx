@@ -31,7 +31,7 @@ export default function ExportModal() {
     setLoading(true);
     // only boot webcontainer if it does not exist
     if (!window.webcontainerInstance && !containerExists()){
-      window.webcontainerInstance = await WebContainer.boot();
+      window.webcontainerInstance = await WebContainer.boot({coep: 'credentialless'});
     }
     
     // load webcontainer filesystem

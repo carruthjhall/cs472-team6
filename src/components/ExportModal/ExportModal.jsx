@@ -1,7 +1,7 @@
 import { ExportModalState, PageState } from "../../state";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import { toJSON } from "../../utils/utils";
+import { createIndexHTML, toJSON } from "../../utils/utils";
 import { WebContainer } from '@webcontainer/api';
 import { files } from "../../utils/files.js";
 
@@ -24,7 +24,7 @@ export default function ExportModal() {
   }
 
   function containerExists(){
-    return Array.from(document.getElementsByTagName('iframe')).some(element => element.src.includes('stackblitz'))
+    return Array.from(document.getElementsByTagName('iframe')).some(element => element.src.includes('stackblitz'));
   }
 
   async function handleExportWebsite(){
@@ -37,7 +37,9 @@ export default function ExportModal() {
     // load webcontainer filesystem
     await window.webcontainerInstance.mount(files);
     // load pageState elements into webcontainer filesystem
-    await window.webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}))
+    await window.webcontainerInstance.fs.writeFile('/src/pageData.js', 'export const pageData = ' + toJSON({componentsList, pageOptions}));
+    // load custom index.html from pageOptions into webcontainer filesystem
+    await window.webcontainerInstance.fs.writeFile('index.html', createIndexHTML(pageOptions));
     
     // install project dependencies
     const installExit = await installDependencies();

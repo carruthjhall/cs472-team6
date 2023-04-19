@@ -19,9 +19,11 @@ import { contactSectionComponent } from "../components/ContactSection/contactSec
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
+import { CtaSection2Component } from "../components/CtaSection2/CtaSection2Component";
 
 
 export const registeredComponents = new Map([
+    ['CtaSection2', CtaSection2Component],
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],

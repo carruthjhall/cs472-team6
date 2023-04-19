@@ -19,11 +19,10 @@ import { contactSectionComponent } from "../components/ContactSection/contactSec
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
-import { CtaSection2Component } from "../components/CtaSection2/CtaSection2Component";
+import { CtaSection2Component } from "../components/CtaSection2/CtaSection2Component.js";
 
 
 export const registeredComponents = new Map([
-    ['CtaSection2', CtaSection2Component],
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
@@ -31,6 +30,7 @@ export const registeredComponents = new Map([
     ['AboutHeadImages', AboutHeadImagesComponent],
     ['Stats Section', StatsWrapperComponent],
     ['CtaSection', CtaSectionComponent],
+    ['CtaSection2', CtaSection2Component],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
     ['Education and Work', EducationAndWorkComponent],

@@ -11,8 +11,8 @@ export const CtaSection2Component = new Component(
     CtaSection2Preview, 
     {
         link: "https://www.google.com/", 
-        word1: "See the impact of good, conversion-oriented design on your business.", 
-        word2: "Let's Work Together", 
+        text: "Interested in working with me?", 
+        button: "GET IN TOUCH",
         gradient: Gradients.default
     }
 )

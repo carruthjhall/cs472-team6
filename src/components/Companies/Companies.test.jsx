@@ -60,6 +60,5 @@ describe('Companies Component', () => {
             
             //Does the logo wrapper div have 4 rows of logos?
             expect(companyRows).to.have.lengthOf(4);
-        //}
     })
 })

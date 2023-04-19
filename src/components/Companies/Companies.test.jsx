@@ -1,5 +1,5 @@
 import { Gradients } from '../../utils/utils';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it} from 'vitest';
 import Companies from './Companies';
 import React from 'react';
 import renderer from 'react-test-renderer';

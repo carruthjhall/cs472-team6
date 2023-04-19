@@ -1,5 +1,3 @@
-import { Gradients } from "../../utils/utils";
-import logo1 from "./Logos/Logo1.svg";
 import React from "react";
 
 export default function Companies({options}){

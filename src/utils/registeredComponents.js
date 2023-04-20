@@ -56,7 +56,6 @@ export const registeredComponents = new Map([
     ['Four Zero Four', FourZeroFourComponent],
     ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],
-    ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],

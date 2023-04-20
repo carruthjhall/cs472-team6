@@ -5,7 +5,7 @@ export default function CtaSection({options}) {
   const isgreenblue = gradient === 'from-green-400 to-blue-500';
   return (
     <div className={`flex bg-white text-black dark:bg-black dark:text-white lg:max-w-[1036px] md:max-w-[864px] max-w-[340px] mx-auto item-center`}>
-    <div className={'py-20 px-[25px] md:px-[80px] lg:px-[202px]'}>
+    <div className={'py-20 px-[25px] md:px-[80px]'}>
     <div className="font-bold font-main
     lg:text-5xl
     md:text-4xl 

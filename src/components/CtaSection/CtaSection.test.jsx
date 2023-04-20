@@ -12,8 +12,10 @@ describe('CtaSection Component', () => {
             link: "https://www.google.com/", 
             word1: "See the impact of good, conversion-oriented design on your business.", 
             word2: "Let's Work Together", 
-            gradient: Gradients.default
+            gradient: Gradients['green-blue']
         }
+
+        let isgreenblue = "/src/components/CtaSection/vector2.svg"
 
         // render the component
         const component = renderer.create(
@@ -28,6 +30,35 @@ describe('CtaSection Component', () => {
         // expect the rendered/displayed words to match the options passed into the component
         expect(displayedWords[0]).eq(options.word1);
 
+        // get component version of dom
+        let displayedWords1 = component.toJSON();
+        // get the src path of the svg file;
+        displayedWords1 = displayedWords1.children[0].children[0].children[1].children[0].children[0].children[1];
+        //expect the src path to match the options passed into the component
+        expect(displayedWords1.props.src).eq(isgreenblue);
+    })
+
+    it('Check the gradient', () => {
+        let options = {
+            link: "https://www.google.com/", 
+            word1: "See the impact of good, conversion-oriented design on your business.", 
+            word2: "Let's Work Together", 
+            gradient: Gradients.default
+        }
+
+        let isgreenblue = "/src/components/CtaSection/vector.svg"
+
+        // render the component
+        const component = renderer.create(
+            <CtaSection options={options}/>
+        )
+
+        // get component version of dom
+        let displayedWords1 = component.toJSON();
+        // get the src path of the svg file;
+        displayedWords1 = displayedWords1.children[0].children[0].children[1].children[0].children[0].children[1];
+        //expect the src path to match the options passed into the component
+        expect(displayedWords1.props.src).eq(isgreenblue);
     })
 
     it('CtaSectionOptions show correct input values',()=>{

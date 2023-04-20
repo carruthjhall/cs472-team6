@@ -4,15 +4,17 @@ import Accordion from "./Accordion";
 
 export default function faqSection({options}){
 
-    const {flavorText, q1, ans1, q2, ans2, q3, ans3, q4, ans4, q5, ans5, gradient, contactBttn} = options
+    const {flavorText, q1, ans1, q2, ans2, q3, ans3, q4, ans4, q5, ans5, gradient, contactBttn, contactLink} = options
 
     const questionAccordion = [
         {question: `${q1}`,
-         answer: `${ans1}`
+         answer: `${ans1}`,
+         id: "q1"
         },
         {
          question: `${q2}`,
-         answer: `${ans2}`
+         answer: `${ans2}`,
+         id:"q2"
         },
         {
             question: `${q3}`,
@@ -44,12 +46,11 @@ export default function faqSection({options}){
                     <p className="font-secondary pb-10 text-black font-semibold dark:text-white">{flavorText}</p>
                </div>
 
-               <div className="">
-                    <a href="#ContactSection">
-                        <button type="submit" className={`rounded-full w-48 h-14 -translate-y-6 bg-gradient-to-r ${gradient} font-secondary font-bold text-black dark:text-white`}>{contactBttn}</button>
-                    </a>
-               </div>
-                
+               <div>
+                <a href={contactLink} target="_blank">
+                    <button type="submit" className={`rounded-full w-48 h-14 -translate-y-6 bg-gradient-to-r ${gradient} font-secondary font-bold text-black dark:text-white break-words`}>{contactBttn}</button>
+                </a>
+               </div> 
             </div>
 
             {/*Question Accordion */}

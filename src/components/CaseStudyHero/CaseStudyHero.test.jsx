@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { registeredComponents } from '../../utils/registeredComponents';
 import { Gradients } from '../../utils/utils';
 import CaseStudyHero from './CaseStudyHero';
+import { Children } from 'react';
 
 describe('CaseStudyHero Component', ()=> {
     it('Text renders properly', ()=> {
@@ -29,7 +30,6 @@ describe('CaseStudyHero Component', ()=> {
         let about = main.children[3]   
         
         expect(head.children[0].children.shift()).eq(options.projTask)
-        expect(head.children[1].children.shift()).eq(options.clientNameHeader)
         expect(info.children[0].children[1].children[0].children[0]).eq(options.clientName)
         expect(info.children[1].children[1].children[0].children[0]).eq(options.role)
         expect(info.children[2].children[1].children[0].children[0]).eq(options.location)
@@ -48,14 +48,16 @@ describe('CaseStudyHero Component', ()=> {
         
         let optionsComponentJSON = component.toJSON()
 
-        expect(optionsComponentJSON.children[0].children[1].children[1].props.value).eq(defaultOptions.clientName)
-        expect(optionsComponentJSON.children[0].children[1].children[3].props.value).eq(defaultOptions.clientNameHeader)
-        expect(optionsComponentJSON.children[0].children[1].children[5].props.value).eq(defaultOptions.projTask)
-        expect(optionsComponentJSON.children[0].children[1].children[7].props.value).eq(defaultOptions.role)
-        expect(optionsComponentJSON.children[0].children[1].children[9].props.value).eq(defaultOptions.location)
-        expect(optionsComponentJSON.children[0].children[1].children[13].props.value).eq(defaultOptions.briefDescr)
-        expect(optionsComponentJSON.children[0].children[1].children[15].props.value).eq(defaultOptions.extendDescr)
-        expect(optionsComponentJSON.children[2].props.value).eq(defaultOptions.gradient)
+        let project = optionsComponentJSON.children[0].children[1]
+        let about = optionsComponentJSON.children[1].children[1]
+
+        expect(project.children[1].props.value).eq(defaultOptions.projTask)
+        expect(project.children[3].props.value).eq(defaultOptions.clientName)
+        expect(project.children[5].props.value).eq(defaultOptions.role)
+        expect(project.children[7].props.value).eq(defaultOptions.location)
+        expect(about.children[1].props.value).eq(defaultOptions.briefDescr)
+        expect(about.children[3].props.value).eq(defaultOptions.extendDescr)
+        expect(optionsComponentJSON.children[5].props.value).eq(defaultOptions.gradient)
     })
 
     it('CaseStudyHeroOptions handleChange function', () =>{
@@ -67,8 +69,7 @@ describe('CaseStudyHero Component', ()=> {
             <OptionsComponent options={defaultOptions} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify({gradient: Gradients["green-blue"]}))}/>
         )
 
-        let handleChange = component.toTree().rendered.rendered[2].props.onChange;
-        console.log(handleChange);
+        let handleChange = component.toTree().rendered.rendered[5].props.onChange;
 
         handleChange({target: {
             name: 'gradient',

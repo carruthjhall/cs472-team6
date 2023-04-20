@@ -10,12 +10,11 @@ export const CaseStudyHeroComponent = new Component(
     CaseStudyHeroOptions,
     CaseStudyHeroPreview,
     {
-        clientNameHeader: "Con Cubo",
-        clientName: "Con Cubo GmbH",
+        clientName: "Con Cubo",
         projTask: "SaaS Tool Design",
         role: "Project Designer",
         location: "Hamburg and Remote",
-        projPreview: "https://i.imgur.com/1oXtldB.png",
+        projPreview: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/CaseStudyPlaceholder.png",
         briefDescr: "Design an SaaS tool to visualize and manage complex organizations", 
         extendDescr: "The newly founded startup wants to support organizations and teams in the design, control and optimization of their work.\n\nThe tool aims to be an intelligent companion in setting up highly efficient organization structures to tackle overhead and lacks of transparency.", 
         gradient: Gradients.default

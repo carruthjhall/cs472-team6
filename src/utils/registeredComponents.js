@@ -1,4 +1,5 @@
 import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
+import { TestimonialSectionComponent } from "../components/TestimonialSection/TestimonialSectionComponent";
 import {BannerComponent} from '../components/Banner/BannerComponent';
 import {AboutHeadImagesComponent} from '../components/AboutHeadImages/AboutHeadImagesComponent';
 import {AboutHeadSectionComponent} from '../components/AboutHeadSection/AboutHeadSectionComponent';
@@ -25,6 +26,7 @@ import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHe
 
 export const registeredComponents = new Map([
     ['Testimonial', TestimonialComponent],
+    ['Testimonial Section', TestimonialSectionComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
     ['AboutHeadSection', AboutHeadSectionComponent],

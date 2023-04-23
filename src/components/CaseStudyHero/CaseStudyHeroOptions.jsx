@@ -6,9 +6,21 @@ export default function CaseStudyHeroOptions({options, updateComponent}){
     function handleChange(e) {
         updateComponent({ [e.target.name]: e.target.value});
     }
+
+    function handleUpload(m){
+        if(m.target.files.length > 0){
+            const file = m.target.files[0]
+            const reader = new FileReader()
+
+            reader.readAsDataURL(file)
+            reader.onload = () => {
+                updateComponent({[m.target.name]: reader.result})
+            }
+        }
+    }
     
     return (
-        <div className="p-3">
+        <div className="pl-3.5 pb-3">
             <details className="pb-1">
                 <summary>Header</summary>
                     <div className="pl-4">
@@ -26,7 +38,7 @@ export default function CaseStudyHeroOptions({options, updateComponent}){
                     </div>
             </details>
 
-            <details>
+            <details className="pt-2">
                 <summary>About Project</summary>
                 <div className="pl-4">
                     <label className="block">Brief Project Description:</label>
@@ -37,8 +49,9 @@ export default function CaseStudyHeroOptions({options, updateComponent}){
                 </div>
             </details>
 
-            <label className="block" title="Use an image upload site such as imgur.com to showcase your work.">Project Picture(URL):</label>
-            <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="url" name="projPreview" value={projPreview} onChange={(handleChange)}></input>
+            <label className="block mb-2 pt-4" htmlFor="file_input">Upload Image of your Work:</label>
+            <input className="block w-full text-sm text-black cursor-pointer" type="file" name="projPreview" accept="image/png, image/jpeg, image/svg+xml" onChange={e => handleUpload(e)}/>
+            <p className="mt-2 ml-1 text-xs pb-4" id="file_input_help">PNG, JPG, or SVG.</p>
 
             <label className="block">Gradient:</label>
             <select value={gradient} name="gradient" onChange={handleChange} className='p-2 rounded-lg bg-gray-200'>

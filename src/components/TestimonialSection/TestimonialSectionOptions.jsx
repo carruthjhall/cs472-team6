@@ -1,6 +1,7 @@
 import { Gradients } from "../../utils/utils";
 import TestimonialOptions from "../Testimonial/TestimonialOptions";
 import React from "react";
+import GradientSelect from "../GradientSelect/GradientSelect";
 
 
 
@@ -36,10 +37,7 @@ export default function TestimonialSectionOptions({options, updateComponent}){
         <div className="p-3">
             <label className="block">Number of Testimonials:</label>
             <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="number" name="noOfTestimonials" value={noOfTestimonials} min="1" max="8" onChange={(handleChange)}/>
-            <label className="block">Gradient:</label>
-            <select value={gradient} name="gradient" className="p-2 rounded-lg bg-gray-200" onChange={(handleChange)}>
-                {Array.from(Object.entries(Gradients)).map(([key, value]) => <option key={key} value={value}></option>)}
-            </select>
+            <GradientSelect name={"gradient"} value={gradient} handleChange={handleChange} />
             <details className="bg-white mx-1 rounded-lg" open>
                 <summary className="mb-2 mt-2 cursor-pointer">Testimonial List</summary>
             {testimonialList.slice(0,noOfTestimonials).map((testimonial, index) => {

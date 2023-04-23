@@ -10,7 +10,7 @@ export default function TestimonialSection({options}){
     return(
         <div className="lg:w-[1028px] m-3 lg:m-auto flex flex-col">
             <h2 className="text-main font-bold text-[32px] md:text-[64px] mt-11 mb-11 dark:text-[#F0F2F5] flex justify-center">Client &#20;<span className={`text-transparent bg-clip-text bg-gradient-to-r ${gradient}`}> Testimonials</span></h2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center flex_col">
                 {testimonialList.slice(0,noOfTestimonials).map((testimonial, index) => {
                     return(
                         <SingleTestimonial key = {index} index = {index} testimonial = {testimonial} className="flex-[1_1_50%]"/>

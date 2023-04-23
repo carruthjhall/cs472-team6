@@ -13,10 +13,13 @@ export default function faqSectionOptions({options, updateComponent}){
         <div className="pl-3 pb-3">
             <label className="pl-2.5 block">Flavor Text:</label>
             <input className={`block translate-x-2 mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="flavorText" value={flavorText} onChange={(handleChange)} />
-            <label className="pl-2.5 block">Contact Me Button:</label>
+
+            <label className="pl-2.5 block">Contact Button Text:</label>
             <input className={`block translate-x-2 mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="contactBttn" value={contactBttn} onChange={(handleChange)} />
+
             <label className="pl-2.5 block">Contact Link:</label>
             <input className={`block translate-x-2 mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="contactLink" value={contactLink} onChange={(handleChange)} />
+
             <details className="pl-2.5 pb-1">
                 <summary>Question 1</summary>
                     <div className="pl-4">

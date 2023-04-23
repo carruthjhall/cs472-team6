@@ -8,13 +8,11 @@ export default function faqSection({options}){
 
     const questionAccordion = [
         {question: `${q1}`,
-         answer: `${ans1}`,
-         id: "q1"
+         answer: `${ans1}`
         },
         {
          question: `${q2}`,
-         answer: `${ans2}`,
-         id:"q2"
+         answer: `${ans2}`
         },
         {
             question: `${q3}`,
@@ -55,8 +53,8 @@ export default function faqSection({options}){
 
             {/*Question Accordion */}
             <div className="overflow-auto lg:w-[608px] lg:h-[325px] md:w-[875px] md:h-[370px] h-[365px]"> 
-                {questionAccordion.map( ({question, answer}) => 
-                ( <Accordion question={question} answer={answer}/>))}
+                {questionAccordion.map( ({question, answer}, index) => 
+                ( <Accordion question={question} answer={answer} key={index}/>))}
               
             </div>
             

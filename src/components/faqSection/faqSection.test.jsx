@@ -4,7 +4,6 @@ import { describe, expect, it } from 'vitest';
 import { registeredComponents } from '../../utils/registeredComponents';
 import { Gradients } from '../../utils/utils';
 import FAQSection from './faqSection';
-import Accordion from './Accordion'
 
 
 describe('FAQ Component', () => {
@@ -45,7 +44,7 @@ describe('FAQ Component', () => {
         let FAQComponent = registeredComponents.get('FAQ')
         let OptionsComponent = FAQComponent.optionsComponent
         let options = FAQComponent.defaultOptions
-
+        
         const component = renderer.create(
             < OptionsComponent options={options}  
             updateComponent={()=> null} />
@@ -54,19 +53,21 @@ describe('FAQ Component', () => {
 
         let flav = optComp.children[1].props.value
         let contact = optComp.children[3].props.value
-        let ques1 = optComp.children[4].children[1].children[1].props.value;
-        let answ1 = optComp.children[4].children[1].children[3].props.value
-        let ques2 = optComp.children[5].children[1].children[1].props.value
-        let answ2 = optComp.children[5].children[1].children[3].props.value
-        let ques3 = optComp.children[6].children[1].children[1].props.value
-        let answ3 = optComp.children[6].children[1].children[3].props.value
-        let ques4 = optComp.children[7].children[1].children[1].props.value
-        let answ4 = optComp.children[7].children[1].children[3].props.value
-        let ques5 = optComp.children[8].children[1].children[1].props.value
-        let answ5 = optComp.children[8].children[1].children[3].props.value
+        let link = optComp.children[5].props.value
+        let ques1 = optComp.children[6].children[1].children[1].props.value
+        let answ1 = optComp.children[6].children[1].children[3].props.value
+        let ques2 = optComp.children[7].children[1].children[1].props.value
+        let answ2 = optComp.children[7].children[1].children[3].props.value
+        let ques3 = optComp.children[8].children[1].children[1].props.value
+        let answ3 = optComp.children[8].children[1].children[3].props.value
+        let ques4 = optComp.children[9].children[1].children[1].props.value
+        let answ4 = optComp.children[9].children[1].children[3].props.value
+        let ques5 = optComp.children[10].children[1].children[1].props.value
+        let answ5 = optComp.children[10].children[1].children[3].props.value
 
         expect(flav).eq(options.flavorText)
         expect(contact).eq(options.contactBttn)
+        expect(link).eq(options.contactLink)
         expect(ques1).eq(options.q1)
         expect(answ1).eq(options.ans1)
         expect(ques2).eq(options.q2)

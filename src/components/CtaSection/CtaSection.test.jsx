@@ -40,13 +40,14 @@ describe('CtaSection Component', () => {
 
     it('Check the gradient', () => {
         let options = {
-            link: "https://www.google.com/", 
+            link: "", 
             word1: "See the impact of good, conversion-oriented design on your business.", 
             word2: "Let's Work Together", 
             gradient: Gradients.default
         }
 
         let isgreenblue = "/src/components/CtaSection/vector.svg"
+        let href = "#0"
 
         // render the component
         const component = renderer.create(
@@ -54,11 +55,17 @@ describe('CtaSection Component', () => {
         )
 
         // get component version of dom
-        let displayedWords1 = component.toJSON();
+        let displayedWords = component.toJSON();
         // get the src path of the svg file;
-        displayedWords1 = displayedWords1.children[0].children[0].children[1].children[0].children[0].children[1];
+        let displayedWords1 = displayedWords.children[0].children[0].children[1].children[0].children[0].children[1];
         //expect the src path to match the options passed into the component
         expect(displayedWords1.props.src).eq(isgreenblue);
+
+        // get the link in href;
+        let displayedWords2 = displayedWords.children[0].children[0].children[1].children[0].children[0];
+        //expext the link tao match the options passed in to the component
+        expect(displayedWords2.props.href).eq(href);
+
     })
 
     it('CtaSectionOptions show correct input values',()=>{

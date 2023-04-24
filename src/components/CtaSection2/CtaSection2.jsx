@@ -11,10 +11,10 @@ export default function CtaSection2({options}) {
     w-auto h-auto
     flex justify-center items-center`}>
     <div class="flex flex-col items-center text-center">
-    <h2 class="font-bold font-baijamjuree 
-    lg:text-[84px] lg:px-10 lg:mt-[100px]
+    <h2 class="font-bold font-main 
+    lg:text-[84px] lg:px-15 lg:mt-[80px]
     md:text-[48px] md:px-[125px]
-    text-[24px] px-5 mt-[28px]">{text}</h2>
+    text-[24px] px-10 mt-[28px]">{text}</h2>
     <a href={link} class="font-Manrope font-semibold
     lg:font-inter lg:font-normal lg:font-semibold lg:text-base lg:leading-6 lg:mt-[48px] lg:mb-[108px]
     md:font-inter md:font-normal md:font-semibold md:text-base md:leading-6 md:mt-[24px] md:mb-[47px]

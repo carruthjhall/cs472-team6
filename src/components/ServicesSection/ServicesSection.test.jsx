@@ -150,7 +150,7 @@ describe('ServicesSection Component', () => {
         let servicesSectionOptions = component.toTree();
         let serviceOption = servicesSectionOptions.rendered.rendered[3];
         // drill into component and get access to DeleteBtn
-        let deleteBtn = serviceOption.rendered.rendered.at(-1);
+        let deleteBtn = serviceOption.rendered.rendered.at(-1).rendered.at(-1);
         let clickDeleteBtn = deleteBtn.props.onClick;
         
         const numOfServicesBefore = PageState.getState().componentsList[0].options.services.length;
@@ -173,9 +173,10 @@ describe('ServicesSection Component', () => {
         )
         let servicesSectionOptions = component.toTree();
         // drill into component to get serviceOption
-        let serviceOption = servicesSectionOptions.rendered.rendered[3];
+        let serviceOption = servicesSectionOptions.rendered.rendered[3].rendered.rendered.at(-1).rendered;
+        
         // drill into component to get inputs
-        const [itemLabel, nameLabel, nameInput, urlLabel, urlInput, imageLabel, picture1Input, orPTag, picture2Input, selectImageBtn, gradientSelect, deleteBtn] = serviceOption.rendered.rendered;
+        const [nameLabel, nameInput, urlLabel, urlInput, imageLabel, picture1Input, orPTag, picture2Input, selectImageBtn, gradientSelect, deleteBtn] = serviceOption;
         
         // set test values
         const testName = 'Test Service 1';

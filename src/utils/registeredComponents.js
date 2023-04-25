@@ -13,6 +13,7 @@ import Component from "../models/Component";
 import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
+import { BlogPageHeroSectionComponent } from "../components/BlogPageHeroSection/BlogPageHeroSectionComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 import {FourZeroFourComponent} from '../components/404Section/FourZeroFourComponent';
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
@@ -25,6 +26,7 @@ export const registeredComponents = new Map([
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
+    ['BlogPageHeroSection', BlogPageHeroSectionComponent],
     ['AboutHeadSection', AboutHeadSectionComponent],
     ['AboutHeadImages', AboutHeadImagesComponent],
     ['Stats Section', StatsWrapperComponent],

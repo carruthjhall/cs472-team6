@@ -1,11 +1,13 @@
 import Icon from "../Icon/Icon";
 import { PageState, devViewState } from "../../state"
 import FileInput from "../FileInput/FileInput";
+import { devViewState, ExportModalState } from "../../state"
 
 export default function Navbar() {
     const setPageState = PageState((state) => state.setPageState)
     let isDevView = devViewState((state) => state.isDevView);
     let setDevView = devViewState((state) => state.setDevView);
+    let setShown = ExportModalState((state) => state.setShown);
 
     return (
         <nav className="flex h-14 bg-gray-200 items-center">

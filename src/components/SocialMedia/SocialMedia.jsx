@@ -24,22 +24,22 @@ export default function Sm({options}) {
 
                         <div className="mx-10 grid grid-flow-col-dense">
                             <a href={FbLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://i.imgur.com/VgkNYXI.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/facebook.png?raw=true"></img>
                             </a>
                             <a href={LiLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://i.imgur.com/NGBriju.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/linkedIn.png?raw=true"></img>
                             </a>
                             <a href={TwLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://i.imgur.com/iYkheW1.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/twitter.png?raw=true"></img>
                             </a>
                             <a href={InLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://i.imgur.com/M6yBwxS.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/instagram.png?raw=true"></img>
                             </a>
                             <a href={DrLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://cdn.freebiesupply.com/logos/large/2x/dribbble-icon-1-logo-png-transparent.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/dribble.png?raw=true"></img>
                             </a>
                             <a href={BhLink}>
-                                <img className={`h-[20px] w-[20px]`}src="https://i.imgur.com/HQR1o0z.png"></img>
+                                <img className={`h-[20px] w-[20px]`} src="https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/behance.png?raw=true"></img>
                             </a>
                         </div>
                     </div> 

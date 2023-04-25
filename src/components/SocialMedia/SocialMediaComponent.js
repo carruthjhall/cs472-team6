@@ -11,7 +11,7 @@ export const SocialMediaComponent = new Component(
     SocialMediaPreview, 
     {
         title: "Follow Me", body: "Im Katrik Bansal, a designer who works with startups to build brands.", 
-        image: "https://i.imgur.com/TY7YztC.png", gradient: Gradients.default,
+        image: "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/SocialMedia_image.png?raw=true", gradient: Gradients.default,
         FbLink: "https://www.facebook.com", LiLink: "https://www.linkedin.com", 
         TwLink: "https://www.twitter.com", InLink: "https://www.instagram.com",
         DrLink: "https://www.dribbble.com", BhLink: "https://www.behance.net"

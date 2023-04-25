@@ -1,4 +1,4 @@
-export default langCodes = {
+export const LangCodes = {
     "Abkhazian": "ab",
     "Afar": "aa",
     "Afrikaans": "af",

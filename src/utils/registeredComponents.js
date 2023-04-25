@@ -59,6 +59,6 @@ export const registeredComponents = new Map([
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
-    ['MoreArticles', MoreArticlesComponent]
+    ['MoreArticles', MoreArticlesComponent],
     ['Services Section', ServicesSectionComponent]
 ]);

@@ -10,7 +10,7 @@ export default function BlogPageHeroSection({options}) {
         </p>
         
         /* Name */
-        <p className = {`text-lg sm:text-xl md:text-2xl lg:text-lg xl:text-base 2xl:text-lg break-words bg-gradient-to-r ${gradient} inline-block text-transparent mb-12 bg-clip-text`} style={{ maxWidth: "289px" }}>
+        <p className = {`text-lg sm:text-xl md:text-2xl lg:text-lg xl:text-base 2xl:text-lg font-bold font-main break-words bg-gradient-to-r ${gradient} inline-block text-transparent mb-12 bg-clip-text`} style={{ maxWidth: "289px" }}>
         {name}
         </p>
 

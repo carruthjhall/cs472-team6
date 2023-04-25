@@ -21,10 +21,11 @@ describe('BlogPageHeroSection Component', () => {
 
         // get component version of dom
         let displayedWords = component.toJSON();
+        console.log();
         // expect the rendered/displayed title to match the options passed into the component
-        expect(displayedWords.children[0].children[1].children[0]).eq(options.title);
+        expect(displayedWords.children[0].children[0].children[0]).eq(options.title);
         // expect the rendered/displayed name to match the options passed into the component
-        expect(displayedWords.children[0].children[3].children[0]).eq(options.name);
+        expect(displayedWords.children[0].children[1].children[0]).eq(options.name);
     })
 
     it('BlogPageHeroSectionOptions show correct input values',()=>{
@@ -40,7 +41,6 @@ describe('BlogPageHeroSection Component', () => {
 
 
         let optionsComponentJSON = component.toJSON();
-        console.log()
         // get the input components from the json
         let titleInput = optionsComponentJSON.children[1];
         let nameInput = optionsComponentJSON.children[3];

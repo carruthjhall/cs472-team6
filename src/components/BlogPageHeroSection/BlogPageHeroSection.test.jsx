@@ -21,7 +21,6 @@ describe('BlogPageHeroSection Component', () => {
 
         // get component version of dom
         let displayedWords = component.toJSON();
-        console.log();
         // expect the rendered/displayed title to match the options passed into the component
         expect(displayedWords.children[0].children[0].children[0]).eq(options.title);
         // expect the rendered/displayed name to match the options passed into the component

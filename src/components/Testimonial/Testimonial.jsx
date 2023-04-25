@@ -4,7 +4,7 @@ export default function Testimonial({options}) {
     //TO-DO: Add gradient functionality to the stars
     const {stars, starGradient, testimonialBody, custPicture, custName, custPosition} = options;
 
-    const union = Array.from({length: stars}, () => <img src={starSVG} className="float-left md:max-2xl:mr-1 sm:mr-0"/>)
+    const union = Array.from({length: stars}, (value, index) => <img src={starSVG} key={index} className="float-left md:max-2xl:mr-1 sm:mr-0"/>)
 
     return(
         <div className="flex flex-col items-start p-8 bg-white dark:bg-gray-900 h-fit  md:w-[436.58px] m-4">

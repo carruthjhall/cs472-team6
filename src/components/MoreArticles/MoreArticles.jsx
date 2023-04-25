@@ -15,19 +15,23 @@ export default function MoreArticles({ options }) {
                         <img src={imgLink1} className="w-[300px] h-[192px] md:w-[361px] 
                              md:h-[231.19px] lg:w-[436px] lg:h-[280px] mb-4" alt="ArticleImage"></img>
                         <div className="mb-6">
-                            <button className="w-[79px] h-[40px] md:w-[93px] md:h-[44px] rounded-[40px] bg-black 
-                                dark:bg-white mr-4 text-white dark:text-black font-bold" href={buttonLink1}>
-                                {buttonText1}
-                            </button>
-                            <button className="w-[120px] h-[40px] md:w-[140px] md:h-[44px] rounded-[40px] bg-black 
-                                dark:bg-white text-white dark:text-black font-bold" href={buttonLink2}>
-                                {buttonText2}
-                            </button>
+                            <a href={buttonLink1}>   
+                                <button className="w-[79px] h-[40px] md:w-[93px] md:h-[44px] rounded-[40px] bg-black 
+                                    dark:bg-white mr-4 text-white dark:text-black font-bold" href={buttonLink1}>
+                                    {buttonText1}
+                                </button>
+                            </a>
+                            <a href={buttonLink2}>   
+                                <button className="w-[120px] h-[40px] md:w-[140px] md:h-[44px] rounded-[40px] bg-black 
+                                    dark:bg-white text-white dark:text-black font-bold" href={buttonLink2}>
+                                    {buttonText2}
+                                </button>
+                            </a>
                         </div>
                         <div className="w-[300px] h-[78px] md:w-[362px] md:h-[80px] lg:w-[360px] lg:h-[84px]"> 
-                            <div className="text-[26px] md:text-[32px] font-bold text-black dark:text-white leading-8">{text2}</div>
+                            <div className="text-[26px] md:text-[32px] font-bold text-black dark:text-white leading-10 mb-4">{text2}</div>
+                            <div className="text-[18px] font-Inter font-bold text-black dark:text-white">{author}</div>
                         </div>
-                        <div className="text-[18px] font-Inter font-bold text-black dark:text-white">{author}</div>
                     </div>
                 </div>
                 <div className="flex-initial">
@@ -35,19 +39,23 @@ export default function MoreArticles({ options }) {
                         <img src={imgLink2} className="w-[300px] h-[192px] md:w-[361px] 
                              md:h-[231.19px] lg:w-[436px] lg:h-[280px] mb-4" alt="ArticleImage"></img>
                         <div className="mb-6">
-                            <button className="w-[79px] h-[40px] md:w-[93px] md:h-[44px] rounded-[40px] bg-black 
-                                dark:bg-white mr-4 text-white dark:text-black font-bold" href={buttonLink3}>
-                                {buttonText3}
-                            </button>
-                            <button className="w-[120px] h-[40px] md:w-[140px] md:h-[44px] rounded-[40px] bg-black 
-                                dark:bg-white text-white dark:text-black font-bold" href={buttonLink4}>
-                                {buttonText4}
-                            </button>
+                            <a href={buttonLink3}>    
+                                <button className="w-[79px] h-[40px] md:w-[93px] md:h-[44px] rounded-[40px] bg-black 
+                                    dark:bg-white mr-4 text-white dark:text-black font-bold" href={buttonLink3}>
+                                    {buttonText3}
+                                </button>
+                            </a>
+                            <a href={buttonLink4}>
+                                <button className="w-[120px] h-[40px] md:w-[140px] md:h-[44px] rounded-[40px] bg-black 
+                                    dark:bg-white text-white dark:text-black font-bold" href={buttonLink4}>
+                                    {buttonText4}
+                                </button>
+                            </a>
                         </div>
                         <div className="w-[300px] h-[78px] md:w-[362px] md:h-[80px] lg:w-[360px] lg:h-[84px]"> 
-                            <div className="text-[26px] md:text-[32px] font-bold text-black dark:text-white leading-8">{text3}</div>
+                            <div className="text-[26px] md:text-[32px] font-bold text-black dark:text-white leading-10 mb-4">{text3}</div>
+                            <div className="text-[18px] font-Inter font-bold text-black dark:text-white">{author2}</div>
                         </div>
-                        <div className="text-[18px] font-Inter font-bold text-black dark:text-white">{author2}</div>
                     </div>
                 </div>
             </div>  

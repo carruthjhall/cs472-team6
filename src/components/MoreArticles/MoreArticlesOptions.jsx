@@ -18,7 +18,7 @@ export default function MoreArticlesOptions({options, updateComponent}) {
             <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="text1" value={text1} onChange={(handleChange)}/>
 
             <details className="bg-white w-[300px] rounded-lg">
-                <summary className="pl-1 mb-2 cursor-pointer font-bold">Article left\top</summary>
+                <summary className="pl-1 mb-2 cursor-pointer font-bold">Left\Top Article</summary>
                     <div className="pl-6">  
                         <label className="block">Image link:</label>
                         <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="imgLink1" value={imgLink1} onChange={(handleChange)} />  
@@ -38,7 +38,7 @@ export default function MoreArticlesOptions({options, updateComponent}) {
             </details>
             
             <details className="bg-white w-[300px] rounded-lg">
-                <summary className="pl-1 mb-2 cursor-pointer font-bold">Article right\bottom</summary>
+                <summary className="pl-1 mb-2 cursor-pointer font-bold">Right\Bottom Article</summary>
                     <div className="pl-6">     
                         <label className="block">Image link:</label>
                         <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="imgLink2" value={imgLink2} onChange={(handleChange)} />

@@ -1,6 +1,7 @@
 import { Gradients } from '../../utils/utils';
 import { describe, expect, it} from 'vitest';
 import Companies from './Companies';
+import CompaniesOptions from './CompaniesOptions';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
@@ -46,7 +47,6 @@ describe('Companies Component', () => {
     })
 
     it('Logos change position on resize', ()=> {
-        console.log("Start test");
         window.innerWidth = 500;
         window.dispatchEvent(new Event('resize'));
         const testCompanies = renderer.create(
@@ -60,5 +60,41 @@ describe('Companies Component', () => {
             
             //Does the logo wrapper div have 4 rows of logos?
             expect(companyRows).to.have.lengthOf(4);
+
+            testCompanies.unmount();
+    })
+
+    it('CompaniesOptions default options render correctly', ()=> {
+        const testCompaniesOptions = renderer.create(
+            <CompaniesOptions options={options}/>
+        )
+            //JSON representation of component
+            let companiesOptionsJSON = testCompaniesOptions.toJSON();
+
+            //Accesses rendered number of logos in input box
+            let defaultNoOfLogos = companiesOptionsJSON.children[1].props.value;
+            
+            //Does the input box render the default number of logos (12)?
+            expect(defaultNoOfLogos).eq(options.noOfLogos);
+
+            testCompaniesOptions.unmount();
+
+    })
+
+    it('CompaniesOptions handle', ()=> {
+        const testCompaniesOptions = renderer.create(
+            <CompaniesOptions options={options}/>
+        )
+            //JSON representation of component
+            let companiesOptionsJSON = testCompaniesOptions.toJSON();
+
+            //Accesses rendered number of logos in input box
+            let defaultNoOfLogos = companiesOptionsJSON.children[1].props.value;
+            
+            //Does the input box render the default number of logos (12)?
+            expect(defaultNoOfLogos).eq(options.noOfLogos);
+
+            testCompaniesOptions.unmount();
+
     })
 })

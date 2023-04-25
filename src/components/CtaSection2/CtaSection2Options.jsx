@@ -1,4 +1,4 @@
-import { Gradients } from "../../utils/utils";
+import GradientSelect from "../GradientSelect/GradientSelect";
 
 export default function CtaSection2Options({ options, updateComponent }) {
     let {link, text, button, gradient} = options;
@@ -15,10 +15,7 @@ export default function CtaSection2Options({ options, updateComponent }) {
         <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="text" value={text} onChange={(handleChange)} />
         <label className="block">Button:</label>
         <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="button" value={button} onChange={(handleChange)} />
-        <label className="block">Gradient:</label>
-            <select value={gradient} name="gradient" onChange={handleChange} className='p-2 rounded-lg bg-gray-200'>
-                {Array.from(Object.entries(Gradients)).map(([key, value]) => <option key={key} value={value}>{key}</option>)}
-            </select>
+        <GradientSelect name={"gradient"} value={gradient} handleChange={e => handleChange(e)} />
       </div>
     )
   }

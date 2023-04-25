@@ -3,7 +3,9 @@ import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { Gradients } from '../../utils/utils';
 import CtaSection2 from './CtaSection2';
+import { PageState } from '../../state';
 import { registeredComponents } from '../../utils/registeredComponents';
+import PageComponent from '../../models/PageComponent'
 
 
 describe('CtaSection2 Component', () => {
@@ -47,8 +49,7 @@ describe('CtaSection2 Component', () => {
         let linkInput = optionsComponentJSON.children[1];
         let textInput = optionsComponentJSON.children[3];
         let buttonInput = optionsComponentJSON.children[5];
-        let gradientInput = optionsComponentJSON.children[7];
-
+        let gradientInput = optionsComponentJSON.children[6].children[1];
         // make sure that the value of the link input was set properly
         expect(linkInput.props.value).eq(defaultOptions.link);
         // make sure that the value of the text input was set properly
@@ -68,7 +69,7 @@ describe('CtaSection2 Component', () => {
         // render the CtaSection2Options component
         // In updateComponent prop make sure that component handleChange function is working as expected
         const component = renderer.create(
-            <OptionsComponent options={defaultOptions} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify({gradient: Gradients["green-blue"]}))}  />
+            <OptionsComponent options={defaultOptions} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify({text:"let's work together"}))}  />
         )
 
         // Get handle change function from component
@@ -76,9 +77,53 @@ describe('CtaSection2 Component', () => {
 
         // simulate a input change, specifically the gradient changing
         handleChange({target: {
-            name: 'gradient',
-            value: Gradients["green-blue"]
+            name: 'text',
+            value: "let's work together"
         }})
+    })
+
+    it('Test handleServiceChange function', () => {
+        
+        let initailComponentsList = [new PageComponent(registeredComponents.get('CtaSection2').name, {
+            link: "https://www.google.com/", 
+            text: "Interested in working with me?", 
+            button: "GET IN TOUCH",
+            gradient: Gradients.default
+        })]
+        let initialPageOptions = {
+            title: 'Portfolio',
+            icon: '',
+            author: '',
+            description: 'My Portfolio',
+            language: 'en-US'
+        }
+        PageState.setState({...PageState.getState(), 
+            componentsList: initailComponentsList,
+            pageOptions: initialPageOptions
+        })
+
+        // get page component instance from state
+        let pageComponent = PageState.getState();
+        // render page component
+        const component = renderer.create(
+            <CtaSection2 options={PageState.getState().componentsList[0].options} updateComponent={(options) => PageState.getState().updateComponentOptions(pageComponent.id, options)}/>
+        )
+        let CtaSection2Options = component.toTree();
+        // drill into component to get serviceOption
+
+        // drill into component to get inputs
+        const [gradientSelect] = Option;
+
+        // test handleChange for gradient
+        gradientSelect.props.handleChange({
+            target: {
+                name: 'gradient',
+                value: Gradients['green-blue']
+            }
+        })
+        // test that change occurred
+        let updatedGradient = PageState.getState().componentsList[0].options.services[0].gradient;
+        expect(updatedGradient).eq(Gradients['green-blue'])
     })
 
 })

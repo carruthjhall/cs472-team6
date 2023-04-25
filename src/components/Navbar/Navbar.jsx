@@ -16,7 +16,7 @@ export default function Navbar() {
             </button>
 
             <FileInput name={"data-input"} onChange={(data) => setPageState(JSON.parse(data))} />
-            <button className="py-2 px-4 bg-blue-400 mr-4 rounded-lg">
+            <button onClick={() => setShown(true)} className="py-2 px-4 bg-blue-400 mr-4 rounded-lg">
                 <Icon name="arrow-down-tray" />
             </button>
         </nav>

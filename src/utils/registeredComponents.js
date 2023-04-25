@@ -20,6 +20,7 @@ import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
 import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
+import { ProjectsComponent } from "../components/_Projects/ProjectsComponent";
 
 
 export const registeredComponents = new Map([
@@ -58,5 +59,6 @@ export const registeredComponents = new Map([
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
-    ['Services Section', ServicesSectionComponent]
+    ['Services Section', ServicesSectionComponent],
+    ['Projects', ProjectsComponent]
 ]);

@@ -50,6 +50,7 @@ describe('CaseStudyHero Component', ()=> {
 
         let project = optionsComponentJSON.children[0].children[1]
         let about = optionsComponentJSON.children[1].children[1]
+        console.log(optionsComponentJSON);
 
         expect(project.children[1].props.value).eq(defaultOptions.projTask)
         expect(project.children[3].props.value).eq(defaultOptions.clientName)
@@ -57,7 +58,7 @@ describe('CaseStudyHero Component', ()=> {
         expect(project.children[7].props.value).eq(defaultOptions.location)
         expect(about.children[1].props.value).eq(defaultOptions.briefDescr)
         expect(about.children[3].props.value).eq(defaultOptions.extendDescr)
-        expect(optionsComponentJSON.children[5].props.value).eq(defaultOptions.gradient)
+        expect(optionsComponentJSON.children[6].props.value).eq(defaultOptions.gradient)
     })
 
     it('CaseStudyHeroOptions handleChange function', () =>{
@@ -69,7 +70,7 @@ describe('CaseStudyHero Component', ()=> {
             <OptionsComponent options={defaultOptions} updateComponent={(change) => expect(JSON.stringify(change)).eq(JSON.stringify({gradient: Gradients["green-blue"]}))}/>
         )
 
-        let handleChange = component.toTree().rendered.rendered[5].props.onChange;
+        let handleChange = component.toTree().rendered.rendered[6].props.onChange;
 
         handleChange({target: {
             name: 'gradient',

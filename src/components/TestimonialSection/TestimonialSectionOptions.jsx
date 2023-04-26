@@ -4,7 +4,6 @@ import GradientSelect from "../GradientSelect/GradientSelect";
 export default function TestimonialSectionOptions({options, updateComponent}){
     const {gradient, noOfTestimonials, testimonialList} = options;
 
-    //const allTestimonialOptions = Array.from({length: 8}, () => {<TestimonialOptions></TestimonialOptions>})
     function handleChange(event){
         updateComponent({[event.target.name]: event.target.value});
     }
@@ -54,10 +53,6 @@ function SingleTestimonialOptions({testimonial,index, handleImageChange, handleT
             <div className="p-3">
             <label className="block">Stars:</label>
             <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="number" name="stars" value={testimonial.stars} min="1" max="5" onChange={event => handleTestimonialChange(index, event)}/>
-            {/*<label className="block">Star Gradient:</label>
-            <select value={starGradient} name="starGradient" className="p-2 rounded-lg bg-gray-200" onChange={(handleChange)}>
-                {Array.from(Object.entries(Gradients)).map(([key, value]) => <option key={key} value={value}></option>)}
-            </select>*/}
             <label className="block">Testimonial Body Text</label>
             <textarea className="block mb-3 p-2 rounded-lg bg-gray-200" rows="5" type="text" name="testimonialBody" value={testimonial.testimonialBody} onChange={event => handleTestimonialChange(index, event)}></textarea>
             <label className="block">Customer Picture</label>

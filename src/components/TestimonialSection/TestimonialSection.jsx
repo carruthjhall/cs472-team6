@@ -1,6 +1,4 @@
 import Testimonial from "../Testimonial/Testimonial";
-import Component from "../../models/Component";
-import { TestimonialComponent } from "../Testimonial/TestimonialComponent";
 import { Gradients } from "../../utils/utils";
 import React from "react";
 

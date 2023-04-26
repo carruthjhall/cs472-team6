@@ -26,20 +26,20 @@ export default function RecentInsights({ options }) {
                         </button>
                     </a>
                     <a href={buttonLink2}>   
-                        <button className="w-[80px] h-[36px] md:w-[105px] md:h-[46px] rounded-[40px] dark:bg-[#1C1C22] bg-[#e4e4e7] 
-                            mr-4 text-white dark:text-black font-bold" href={buttonLink2}>
+                        <button className="w-[80px] h-[36px] md:w-[105px] md:h-[46px] rounded-[40px] dark:bg-[#1C1C22] bg-[#f5f5f5] 
+                            mr-4 text-black dark:text-white font-bold" href={buttonLink2}>
                             {buttonText2}
                         </button>
                     </a>
                     <a href={buttonLink3}>   
-                        <button className="w-[107px] h-[36px] md:w-[141px] md:h-[46px] rounded-[40px] bg-[#e4e4e7] 
-                            dark:bg-[#1C1C22] mr-4 text-white dark:text-black font-bold" href={buttonLink3}>
+                        <button className="w-[107px] h-[36px] md:w-[141px] md:h-[46px] rounded-[40px] bg-[#f5f5f5] 
+                            dark:bg-[#1C1C22] mr-4 text-black dark:text-white font-bold" href={buttonLink3}>
                             {buttonText3}
                         </button>
                     </a>
                     <a href={buttonLink4}>   
-                        <button className="w-[90px] h-[36px] md:w-[119px] md:h-[46px] rounded-[40px] bg-[#e4e4e7]
-                            dark:bg-[#1C1C22] mr-4 text-white dark:text-black font-bold" href={buttonLink4}>
+                        <button className="w-[90px] h-[36px] md:w-[119px] md:h-[46px] rounded-[40px] bg-[#f5f5f5]
+                            dark:bg-[#1C1C22] mr-4 text-black dark:text-white font-bold" href={buttonLink4}>
                             {buttonText4}
                         </button>
                     </a>

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-export default function ImageInput({ name, value, handleChange }) {
+export default function ImageInput({ name, value, label ,handleChange }) {
   const imageInput = useRef(null);
 
   // handles updating state (saving the image) after the user has selected an image
@@ -34,6 +34,7 @@ export default function ImageInput({ name, value, handleChange }) {
 
   return (
     <div>
+      <label className="options-label">{label}:</label>
       <input name={name} type="text" className="options-input" value={value} onChange={handleChange}/>
       <input ref={imageInput} name={name} onChange={handleImageImport} className="hidden" type="file" accept="image/jpeg, image/png, image/jpg"></input>
       <p className="font-bold">OR</p>

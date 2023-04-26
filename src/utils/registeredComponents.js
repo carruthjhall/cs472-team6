@@ -7,8 +7,6 @@ import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapp
 import {SkillsComponent} from '../components/Skills/SkillsComponent';
 import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
-import Component from "../models/Component";
-import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";

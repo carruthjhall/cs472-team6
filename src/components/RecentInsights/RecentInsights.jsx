@@ -47,7 +47,7 @@ export default function RecentInsights({ options }) {
             </div>
 
             <div className="flex justify-center item-center mb-10">
-                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#FFFFFF]">
+                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#f5f5f5]">
                     <div className="md:w-1/2 mt-4 md:mt-8 ml-5 md:ml-8">
                         <img src={img1} className="w-[300px] h-[280px] md:w-[360px] 
                             md:h-[240px] lg:w-[552px] lg:h-[280px] mb-4" alt="Post Image"></img>
@@ -76,7 +76,7 @@ export default function RecentInsights({ options }) {
             </div>
 
             <div className="flex justify-center item-center mb-10">
-                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#FFFFFF]">
+                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#f5f5f5]">
                     <div className="md:w-1/2 mt-4 md:mt-8 ml-5 md:ml-8">
                         <img src={img2} className="w-[300px] h-[280px] md:w-[360px] 
                             md:h-[240px] lg:w-[552px] lg:h-[280px] mb-4" alt="Post Image"></img>
@@ -105,7 +105,7 @@ export default function RecentInsights({ options }) {
             </div>
 
             <div className="flex justify-center item-center mb-10">
-                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#FFFFFF]">
+                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#f5f5f5]">
                     <div className="md:w-1/2 mt-4 md:mt-8 ml-5 md:ml-8">
                         <img src={img3} className="w-[300px] h-[280px] md:w-[360px] 
                             md:h-[240px] lg:w-[552px] lg:h-[280px] mb-4" alt="Post Image"></img>
@@ -134,7 +134,7 @@ export default function RecentInsights({ options }) {
             </div>
 
             <div className="flex justify-center item-center mb-10">
-                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#FFFFFF]">
+                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#f5f5f5]">
                     <div className="md:w-1/2 mt-4 md:mt-8 ml-5 md:ml-8">
                         <img src={img4} className="w-[300px] h-[280px] md:w-[360px] 
                             md:h-[240px] lg:w-[552px] lg:h-[280px] mb-4" alt="Post Image"></img>
@@ -163,7 +163,7 @@ export default function RecentInsights({ options }) {
             </div>
 
             <div className="flex justify-center item-center mb-10">
-                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#FFFFFF]">
+                <div className="w-[340px] h-[567px] md:w-[864px] md:h-[304px] lg:w-[1200px] lg:h-[344px] md:flex md:flex-row item-center justify-center dark:bg-[#1C1C22] bg-[#f5f5f5]">
                     <div className="md:w-1/2 mt-4 md:mt-8 ml-5 md:ml-8">
                         <img src={img5} className="w-[300px] h-[280px] md:w-[360px] 
                             md:h-[240px] lg:w-[552px] lg:h-[280px] mb-4" alt="Post Image"></img>

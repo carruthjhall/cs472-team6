@@ -5,14 +5,15 @@ import MoreProjectsOptions from "./MoreProjectsOptions";
 import MoreProjectsPreview from "./MoreProjectsPreview.png";
 
 export const MoreProjectsComponent = new Component(
-    'MoreProjects',
+    'More Projects',
     MoreProjects,
     MoreProjectsOptions,
     MoreProjectsPreview,
     {
         title: "More cool", gradientTitle: " projects", 
-        image: "https://i.imgur.com/ThajHs8.png", image2: "https://i.imgur.com/ThajHs8.png", 
+        image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/moreprojects1.png", 
+        image2: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/moreprojects2.png", 
         body: "Lorem Ipsum", description: "Technology", 
-        gradient: Gradients.default, buttonText: "Web Design"
+        gradient: Gradients.default, buttonText: "Web Design", button2Text: "UI/UX Design"
     }
 )

@@ -1,10 +1,10 @@
 import { Gradients } from "../../utils/utils";
 
 export default function MoreProjectsOptions({options, updateComponent}){
-    let{title, gradientTitle, image, image2, body, description, gradient, buttonText} = options;
+    let {title, gradientTitle, image, image2, body, description, gradient, buttonText, buttonLink, button2Text, button2Link} = options;
 
     function handleChange(e) {
-        updateComponent({ [e.target. name]: e.target.value});
+        updateComponent({ [e.target.name]: e.target.value});
     }
 
     return (
@@ -22,12 +22,24 @@ export default function MoreProjectsOptions({options, updateComponent}){
                 <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="image" value={image} onChange={(handleChange)} />
                 <label className="block">Image2 Link:</label>
                 <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="image2" value={image2} onChange={(handleChange)} />
-                <label className="block">Body:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="body" value={body} onChange={(handleChange)} />
-                <label className="block">Description:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="description" value={description} onChange={(handleChange)} />
-                <label className="block">Button Text:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="buttonText" value={buttonText} onChange={(handleChange)} />
+                <details>
+                    <summary>Text Options</summary>
+                    <label className="block">Body:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="body" value={body} onChange={(handleChange)} />
+                    <label className="block">Description:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="description" value={description} onChange={(handleChange)} />
+                </details>
+                <details>
+                    <summary>Button Options</summary>
+                    <label className="block">Button Text:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="buttonText" value={buttonText} onChange={(handleChange)} />
+                    <label className="block">Button Link:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="buttonLink" value={buttonLink} onChange={(handleChange)} />
+                    <label className="block">Button Text:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="button2Text" value={button2Text} onChange={(handleChange)} />
+                    <label className="block">Button Link:</label>
+                    <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="button2Link" value={button2Link} onChange={(handleChange)} />
+                </details>
             </details>
 
         </div>

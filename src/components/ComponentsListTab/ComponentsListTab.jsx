@@ -16,9 +16,9 @@ export default function ComponentsListTab(){
 function ComponentPreview({component}) {
     let addComponent = PageState((state) => state.addComponent);
     return (
-        <div className="shadow-md w-[300px] mt-4">
+        <div className="shadow-md w-[300px] mt-4" onClick={() => addComponent(new PageComponent(component.name, component.defaultOptions))}>
             <img src={component.componentPreview} className="cursor-pointer" alt="Component Preview" />
-            <div className="flex justify-between p-3" onClick={() => addComponent(new PageComponent(component.name, component.defaultOptions))}>
+            <div className="flex justify-between p-3">
                 <p>{component.name}</p>
                 <button className="cursor-pointer">Add</button>
             </div>

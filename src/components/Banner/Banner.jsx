@@ -7,7 +7,7 @@ export default function Banner({options}) {
         content = content.join(",star,").split(',');
         content.push("star");
         let content2 = Array.from(content)
-        for (let i = 0; i < 9; i++){
+        for (let i = 0; i < 49; i++){
             content = content.concat(content2);
         }
     }
@@ -15,7 +15,7 @@ export default function Banner({options}) {
     
 
     return (
-        <div className="w-full overflow-x-clip relative">
+        <div className="w-full overflow-x-clip relative my-[130px]">
             <div className={`w-full h-[120px] bg-gradient-to-r ${gradient}`}></div>
             <div className={`flex items-center absolute top-0 w-[120%] h-[100px] bg-black text-white dark:bg-white dark:text-black -rotate-[4deg] -translate-x-4 z-10`}>
                 {content.map((item, index) => {

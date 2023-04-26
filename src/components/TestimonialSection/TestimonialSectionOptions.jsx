@@ -1,9 +1,5 @@
-import { Gradients } from "../../utils/utils";
-import TestimonialOptions from "../Testimonial/TestimonialOptions";
 import React from "react";
 import GradientSelect from "../GradientSelect/GradientSelect";
-
-
 
 export default function TestimonialSectionOptions({options, updateComponent}){
     const {gradient, noOfTestimonials, testimonialList} = options;

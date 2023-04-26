@@ -20,8 +20,6 @@ export default function PageOptionsTab(){
             <input className="block mb-3 p-2 rounded-lg" type="text" name="author" value={pageOptions.author} onChange={handleChange} />
             <label className="block">Description:</label>
             <input className="block mb-3 p-2 rounded-lg" type="text" name="description" value={pageOptions.description} onChange={handleChange} />
-            {/* <label className="block">Language:</label>
-            <input className="block p-2 rounded-lg" type="text" name="language" value={pageOptions.language} onChange={handleChange} /> */}
             <LanguageSelect name="language" value={pageOptions.language} handleChange={handleChange} />
         </div>
     )

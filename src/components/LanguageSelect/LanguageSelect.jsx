@@ -1,5 +1,5 @@
 import React from 'react'
-import {LangCodes} from '../../utils/LangCodes';
+import {LangCodes} from '../../utils/langCodes';
 
 export default function LanguageSelect({name, value, handleChange}) {
     return (

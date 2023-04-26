@@ -45,36 +45,6 @@ export default function ServicesSectionOptions({options, updateComponent}) {
 
 function ServiceOption({index, service, handleChange, handleDelete}){
     const { name, gradient, picture, url } = service;
-    const imageInput = useRef(null);
-
-    // handles updating state (saving the image) after the user has selected an image
-    function handleImageImport() {
-        if (imageInput !== null && imageInput.current !== null){
-            let input = imageInput.current;
-            if (input.files !== null && input.files.length > 0){
-                const image = input.files[0];
-                const reader = new FileReader();
-
-                reader.onabort = () => alert("ERROR: Image could not be imported");
-                reader.onerror = () => alert("ERROR: Image could not be imported");
-                reader.onload = () => {
-                    const imageURL = reader.result || '';
-                    handleChange(index, { target: { name: "picture", value: imageURL } })
-                }
-
-                // read the image file as Base64
-                reader.readAsDataURL(image);
-            }
-        }
-    }
-
-    // used to click the hidden input element (this allows us to have a custom file input button)
-    function handleSelect(){
-        if (imageInput !== null && imageInput.current !== null){
-            let input = imageInput.current;
-            input.click();
-        }
-    }
 
     return (
         <details className="mt-3">

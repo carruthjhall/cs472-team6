@@ -34,9 +34,9 @@ export default function ImageInput({ name, value, handleChange }) {
 
   return (
     <div>
-      <input name="picture" type="text" className="options-input" value={value} onChange={e => handleChange(e)}/>
-      <p className="font-bold">OR</p>
+      <input name={name} type="text" className="options-input" value={value} onChange={handleChange}/>
       <input ref={imageInput} name={name} onChange={handleImageImport} className="hidden" type="file" accept="image/jpeg, image/png, image/jpg"></input>
+      <p className="font-bold">OR</p>
       <button className="options-btn" onClick={handleClick}>Select Image</button>
     </div>
   )

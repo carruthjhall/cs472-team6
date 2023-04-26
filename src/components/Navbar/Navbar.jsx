@@ -1,7 +1,6 @@
 import Icon from "../Icon/Icon";
-import { PageState, devViewState } from "../../state"
 import FileInput from "../FileInput/FileInput";
-import { devViewState, ExportModalState } from "../../state"
+import { devViewState, ExportModalState, PageState } from "../../state";
 
 export default function Navbar() {
     const setPageState = PageState((state) => state.setPageState)

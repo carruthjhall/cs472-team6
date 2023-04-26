@@ -4,9 +4,7 @@ import {AboutHeadImagesComponent} from '../components/AboutHeadImages/AboutHeadI
 import {AboutHeadSectionComponent} from '../components/AboutHeadSection/AboutHeadSectionComponent';
 import {EducationAndWorkComponent} from '../components/EducationAndWork/EducationAndWorkComponent';
 import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapperComponent';
-import Skills from "../components/Skills/Skills";
-import SkillsOptions from "../components/Skills/SkillsOptions";
-import SkillsPreview from "../components/Skills/SkillsDark.png";
+import {SkillsComponent} from '../components/Skills/SkillsComponent';
 import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
 import Component from "../models/Component";
@@ -20,6 +18,8 @@ import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
 import { HomeHeroSectionComponent } from "../components/HomeHeroSection/HomeHeroSectionComponent";
+import { MoreArticlesComponent } from "../components/MoreArticles/MoreArticlesComponent";
+import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
 
 
 export const registeredComponents = new Map([
@@ -28,37 +28,19 @@ export const registeredComponents = new Map([
     ['Banner', BannerComponent],
     ['AboutHeadSection', AboutHeadSectionComponent],
     ['AboutHeadImages', AboutHeadImagesComponent],
-    ['Stats Section', StatsWrapperComponent],
     ['CtaSection', CtaSectionComponent],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
     ['Education and Work', EducationAndWorkComponent],
-    [
-      'Skills',
-      new Component(
-        'Skills',
-        Skills,
-        SkillsOptions,
-        SkillsPreview,
-        {
-          title: 'What I Do.',
-          skillsList: [
-            {name: "Figma", files:  "", image: "/src/components/Skills/SampleLogos/figma.png"},
-            {name: "Photoshop", files:  "", image: "/src/components/Skills/SampleLogos/photoshop.png"},
-            {name: "HTML", files:  "", image: "/src/components/Skills/SampleLogos/html.png"},
-            {name: "Webflow", files:  "", image: "/src/components/Skills/SampleLogos/webflow.png"},
-            {name: "SEQ", files:  "", image: "/src/components/Skills/SampleLogos/seo.png"}
-          ]
-        }
-      )
-    ],
+    ['Skills', SkillsComponent],
     ['SocialMedia', SocialMediaComponent],
     ['Four Zero Four', FourZeroFourComponent],
     ['FAQ', faqComponent],
     ['ContactSection', contactSectionComponent],
-    ['FAQ', faqComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
-    ['Home Hero Section', HomeHeroSectionComponent]
+    ['Home Hero Section', HomeHeroSectionComponent],
+    ['MoreArticles', MoreArticlesComponent],
+    ['Services Section', ServicesSectionComponent]
 ]);

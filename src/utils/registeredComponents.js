@@ -24,7 +24,6 @@ import { SelectedProjectsComponent } from "../components/SelectedProjects/Select
 
 
 export const registeredComponents = new Map([
-    ['Selected Projects', SelectedProjectsComponent],
     ['Testimonial', TestimonialComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
@@ -59,5 +58,6 @@ export const registeredComponents = new Map([
     ['ContactSection', contactSectionComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
-    ['Companies', CompaniesComponent]
+    ['Companies', CompaniesComponent],
+    ['Selected Projects', SelectedProjectsComponent]
 ]);

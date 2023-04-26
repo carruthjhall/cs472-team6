@@ -11,10 +11,10 @@ export default function BlogPageHeroSectionOptions({options, updateComponent}) {
     return (
         <div className="p-3">
             <label className="block">Title:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="name" value={title} onChange={(handleChange)} />
+            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="title" value={title} onChange={(handleChange)} />
 
             <label className="block">Name:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="description" value={name} onChange={(handleChange)} />
+            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="name" value={name} onChange={(handleChange)} />
 
             <GradientSelect name={"gradient"} value={gradient} handleChange={handleChange} />
 

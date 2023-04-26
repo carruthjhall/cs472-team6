@@ -15,7 +15,7 @@ export const ServiceWrapperComponent = new Component(
         ButtonText: "Contact Me", 
         ButtonLink: "https://www.google.com/", 
         gradient: Gradients.default, 
-        ImageLink: "https://i.imgur.com/0vBgKva.jpeg", 
+        ImageLink: "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/ServiceWrapper_ImageLink.jpg?raw=true", 
         Invert: "Image Left"
     }
 )

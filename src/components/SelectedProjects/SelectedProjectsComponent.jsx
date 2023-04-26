@@ -20,7 +20,7 @@ export const SelectedProjectsComponent = new Component(
         btn1Link: "https://www.google.com",
         btn2: "UI/UX Design",
         btn2Link: "https://www.images.google.com",
-        caseStudy: "View \n Case Study", 
+        caseStudy: "View Case Study", 
         caseStudyLink:"https://www.google.com",
         gradient: Gradients.default 
     }

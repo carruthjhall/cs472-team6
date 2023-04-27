@@ -11,7 +11,7 @@ export default function TestimonialSection({options}){
             <div className="flex flex-wrap justify-center flex_col">
                 {testimonialList.slice(0,noOfTestimonials).map((testimonial, index) => {
                     return(
-                        <SingleTestimonial key = {index} index = {index} testimonial = {testimonial} className="flex-[1_1_50%]"/>
+                        <SingleTestimonial key = {index} index = {index} testimonial = {testimonial} gradient={gradient} className="flex-[1_1_50%]"/>
                 )
                 })}
             </div>
@@ -20,16 +20,16 @@ export default function TestimonialSection({options}){
 
 }
 
-function SingleTestimonial({testimonial,index}){
+function SingleTestimonial({testimonial,index,gradient}){
     let testimonialOptions = {
         stars: testimonial.stars,
-        starGradient: Gradients.default,
+        starGradient: gradient,
         testimonialBody:  testimonial.testimonialBody,
         custPicture: testimonial.custPicture,
         custName: testimonial.custName,
         custPosition: testimonial.custPosition
     }
-
+    
     return(
         <Testimonial options={testimonialOptions} className="p-0"/>
     )

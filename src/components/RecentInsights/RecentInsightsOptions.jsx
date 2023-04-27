@@ -25,20 +25,12 @@ export default function MoreArticlesOptions({options, updateComponent}) {
 
             <label className="block font-bold">First Button text:</label>
             <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonText1" value={buttonText1} onChange={(handleChange)}/>
-            <label className="block font-bold">First Button Link:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonLink1" value={buttonLink1} onChange={(handleChange)}/>
             <label className="block font-bold">Second Button text:</label>
             <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonText2" value={buttonText2} onChange={(handleChange)}/>
-            <label className="block font-bold">Second Button Link:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonLink2" value={buttonLink2} onChange={(handleChange)}/>
             <label className="block font-bold">Third Button text:</label>
             <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonText3" value={buttonText3} onChange={(handleChange)}/>
-            <label className="block font-bold">Third Button Link:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonLink3" value={buttonLink3} onChange={(handleChange)}/>
             <label className="block font-bold">Forth Button text:</label>
             <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonText4" value={buttonText4} onChange={(handleChange)}/>
-            <label className="block font-bold">Forth Button Link:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="buttonLink4" value={buttonLink4} onChange={(handleChange)}/>
 
             <details className="bg-white w-[300px] rounded-lg">
                 <summary className="pl-1 mb-2 cursor-pointer font-bold">Post 1</summary>

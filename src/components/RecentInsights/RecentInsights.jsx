@@ -99,22 +99,22 @@ export default function RecentInsights({ options }) {
 
                 <div className="">
                     <a onClick={() => handleButtonClick(1)}>   
-                        <button className={`w-[90px] h-[36px] md:w-[119px] md:h-[46px] mb-4 ${buttonClasses(1)}`} href={buttonLink1}>
+                        <button className={`w-[90px] h-[36px] md:w-[119px] md:h-[46px] mb-4 ${buttonClasses(1)}`}>
                             {buttonText1}
                         </button>
                     </a>
                     <a onClick={() => handleButtonClick(2)}>   
-                        <button className={`w-[80px] h-[36px] md:w-[105px] md:h-[46px] rounded-[40px] ${buttonClasses(2)}`} href={buttonLink2}>
+                        <button className={`w-[80px] h-[36px] md:w-[105px] md:h-[46px] rounded-[40px] ${buttonClasses(2)}`}>
                             {buttonText2}
                         </button>
                     </a>
                     <a onClick={() => handleButtonClick(3)}>   
-                        <button className={`w-[107px] h-[36px] md:w-[141px] md:h-[46px]  ${buttonClasses(3)}`} href={buttonLink3}>
+                        <button className={`w-[107px] h-[36px] md:w-[141px] md:h-[46px]  ${buttonClasses(3)}`}>
                             {buttonText3}
                         </button>
                     </a>
                     <a onClick={() => handleButtonClick(4)}>   
-                        <button className={`w-[90px] h-[36px] md:w-[119px] md:h-[46px] ${buttonClasses(4)}`} href={buttonLink4}>
+                        <button className={`w-[90px] h-[36px] md:w-[119px] md:h-[46px] ${buttonClasses(4)}`}>
                             {buttonText4}
                         </button>
                     </a>

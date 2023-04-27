@@ -32,13 +32,14 @@ export default function CompaniesOptions({options, updateComponent}){
         <label className="block">Number of Companies</label>
         <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="number" name="noOfLogos" value={noOfLogos} min="1" max="12" onChange={(handleChange)}/>
         <GradientSelect name={"gradient"} value={gradient} handleChange={handleChange}/>
-        <div className="mt-3">
-        {logoList.slice(0,noOfLogos).map((company, index) => {
-                    return(
-                        <CompanyOptions key={index} index={index} company={company} handleLogoChange={handleLogoChange} handleImageChange={handleImageChange}/>
-                    )
+        <details className="mt-3">
+            <summary className="mb-3">Logos</summary>
+                {logoList.slice(0,noOfLogos).map((company, index) => {
+                        return(
+                            <CompanyOptions key={index} index={index} company={company} handleLogoChange={handleLogoChange} handleImageChange={handleImageChange}/>
+                        )
                 })}
-        </div>
+        </details>
         </div>
     );
 }
@@ -46,11 +47,13 @@ export default function CompaniesOptions({options, updateComponent}){
 function CompanyOptions({company, index, handleLogoChange, handleImageChange}){
     const {url, darkUrl} = company;
 return(
-    <details className="bg-white mx-1 rounded-lg">
-        <summary className="mb-3 cursor-pointer">Logo {index + 1}</summary>
+    <details className="bg-white mx-1 pl-4 rounded-lg">
+        <summary className="mb-1 cursor-pointer">Logo {index + 1}</summary>
+        <div className="pl-7 mb-3">
             <label className="block">Upload Logo {index + 1}</label>
             <input className="block mb-3" type="file" accept="image/png, image/jpeg, image/svg+xml" name="url" onChange={event => handleImageChange(index, event)}></input>
             <p className="mt-2 ml-1 text-xs">PNG, JPG, or SVG</p>
+        </div>
     </details>
 );
 }

@@ -25,7 +25,6 @@ import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHe
 
 
 export const registeredComponents = new Map([
-    ['Testimonial', TestimonialComponent],
     ['Testimonial Section', TestimonialSectionComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],

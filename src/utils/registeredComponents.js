@@ -22,7 +22,6 @@ import { HomeHeroSectionComponent } from "../components/HomeHeroSection/HomeHero
 import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
 import { MoreArticlesComponent } from "../components/MoreArticles/MoreArticlesComponent";
 import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
-import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
 
 
 export const registeredComponents = new Map([
@@ -46,6 +45,5 @@ export const registeredComponents = new Map([
     ['Home Hero Section', HomeHeroSectionComponent],
     ['Home Hero Section 2', HomeHeroSection2Component],
     ['MoreArticles', MoreArticlesComponent],
-    ['Services Section', ServicesSectionComponent],
-    ['Home Hero Section 2', HomeHeroSection2Component]
+    ['Services Section', ServicesSectionComponent]
 ]);

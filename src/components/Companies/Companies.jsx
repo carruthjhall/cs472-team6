@@ -27,21 +27,21 @@ export default function Companies({options}){
             <h2 className="text-main font-bold text-[32px] md:text-[64px] mt-11 mb-11 dark:text-[#F0F2F5]"><span className={`text-transparent bg-clip-text bg-gradient-to-r ${gradient}`}>Companies</span> I've Worked With</h2>
             </div>
             <div className="">
-                <div className="flex align-center justify-center">
+                <div className="flex align-center justify-center items-center">
                     {logoList.slice(0,noOfLogos > (screenDimensions.isSm ? 3 : 4) ? (screenDimensions.isSm ? 3 : 4)  : noOfLogos).map((company, index) => {
                             return(
                                 <Company key = {index} index = {index} company={company}/>
                             )
                         })}
                 </div>
-                <div className="flex align-center justify-center">
+                <div className="flex align-center justify-center items-center">
                     {logoList.slice((screenDimensions.isSm ? 3 : 4) , noOfLogos > (screenDimensions.isSm ? 6 : 8) ? (screenDimensions.isSm ? 6 : 8) : noOfLogos).map((company, index) => {
                             return(
                                 <Company key = {index + (screenDimensions.isSm ? 3 : 4)} index = { index  + (screenDimensions.isSm ? 3 : 4)} company={company}/>
                             )
                         })}
                 </div>
-                <div className="flex align-center justify-center">
+                <div className="flex align-center justify-center items-center">
                     {logoList.slice((screenDimensions.isSm ? 6 : 8) , screenDimensions.isSm ? 9 : noOfLogos).map((company, index) => {
                             return(
                                 <Company key = {index + (screenDimensions.isSm ? 6 : 8)} index = {index + (screenDimensions.isSm ? 6 : 8)} company={company}/>
@@ -49,7 +49,7 @@ export default function Companies({options}){
                         })}
                 </div>
                 {screenDimensions.isSm ? 
-                <div className="flex align-center justify-center">
+                <div className="flex align-center justify-center items-center">
                     {logoList.slice(9 , noOfLogos).map((company, index) => {
                             return(
                                 <Company key = {index+9} index = {index+9} company={company}/>

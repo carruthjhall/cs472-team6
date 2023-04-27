@@ -11,10 +11,6 @@ export const RecentInsightsComponent = new Component(
     RecentInsightsPreview, 
     {
         gradient: Gradients.default,
-        buttonLink1: "http://www.google.com",
-        buttonLink2: "http://www.google.com",
-        buttonLink3: "http://www.google.com", 
-        buttonLink4: "http://www.google.com",
         buttonText1: "All Posts", 
         buttonText2: "Design",
         buttonText3: "Technology",

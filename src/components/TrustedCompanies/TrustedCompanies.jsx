@@ -3,7 +3,7 @@ export default function TrustedCompanies({ options }){
 
     return (
         <div className="md:flex flex-col lg:flex-row lg:max-w-[1200px] md:max-w-[864px] max-w-[300px] mx-auto my-[40px]">
-            <div className="text-white text-[24px] font-main my-auto lg:mr-[200px]">
+            <div className="dark:text-white text-[24px] font-main my-auto lg:mr-[200px]">
                 {Title}
             </div>
             <div className="md:flex flex-row">

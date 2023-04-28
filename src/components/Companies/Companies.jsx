@@ -66,7 +66,8 @@ function Company({company, index}){
     const {url, darkUrl} = company;
     return(
         <picture>
-            <source srcSet={url === `/src/components/Companies/Logos/Logo${index + 1}.svg` ? `/src/components/Companies/Logos/DarkLogo${index + 1}.svg`: ""} media="(prefers-color-scheme:dark)"/>
+            <source srcSet={url === `https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/0f69592db28b6ed6cdf835ca2e891d1f068479ae/images/CompanyLogos/Logo${index + 1}.svg` ? `
+            https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/0f69592db28b6ed6cdf835ca2e891d1f068479ae/images/CompanyLogos/DarkLogo${index + 1}.svg`: ""} media="(prefers-color-scheme:dark)"/>
             <img src={url} className="float-left max-w-[115px] sm:max-w-[144px] m-5"/>
         </picture>
     );

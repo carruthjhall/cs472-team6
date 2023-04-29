@@ -65,7 +65,7 @@ describe('RecentInsights Component', () => {
     })
 
     it('RecentInsightsOptions show correct input values',()=>{
-        let RecentInsightsComponent = registeredComponents.get('RecentInsights');
+        let RecentInsightsComponent = registeredComponents.get('Recent Insights');
         let OptionsComponent = RecentInsightsComponent.optionsComponent;
         let defaultOptions = RecentInsightsComponent.defaultOptions;
 
@@ -82,7 +82,7 @@ describe('RecentInsights Component', () => {
     })
 
     it('MoreArticlesOptions handleChange function',()=>{
-        let RecentInsightsComponent = registeredComponents.get('RecentInsights');
+        let RecentInsightsComponent = registeredComponents.get('Recent Insights');
         let OptionsComponent = RecentInsightsComponent.optionsComponent;
         let defaultOptions = RecentInsightsComponent.defaultOptions;
 

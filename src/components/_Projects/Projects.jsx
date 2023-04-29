@@ -29,7 +29,9 @@ function ProjectItem({ProjectItems}) {
     const { Title, Description, Picture, URL } = ProjectItems;
     return (
         <div className="w-[340px] h-[370px] lg:h-[587px] lg:w-[560px] dark:bg-gray-700 bg-gray-400 rounded-xl mx-auto my-[40px]">
-            <img className="mx-auto h-[242px] lg:h-[400px]" src={Picture}></img>
+            <a href={URL} target="_blank">
+                <img className="mx-auto h-[242px] lg:h-[400px]" src={Picture}></img>
+            </a>
             <div className="h-[128px] lg:h-[187px] dark:bg-gray-900 bg-gray-100">
                 <div className="dark:text-white font-main p-[19px] lg:p-[42px]">
                     <div className="text-[26px] lg:text-[32px]">

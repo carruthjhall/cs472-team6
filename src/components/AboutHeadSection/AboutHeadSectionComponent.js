@@ -7,7 +7,7 @@ import AboutHeadSectionPreview from "./AboutHeadSectionPreview.png";
 
 export const AboutHeadSectionComponent = new Component(
 
-    'AboutHeadSection', 
+    'About Head Section', 
     AboutHeadSection, 
     AboutHeadSectionOptions, 
     AboutHeadSectionPreview, 

@@ -5,7 +5,7 @@ import SocialMediaOptions from "./SocialMediaOptions";
 import SocialMediaPreview from "./SocialMediaPreview.png";
 
 export const SocialMediaComponent = new Component(
-    'SocialMedia', 
+    'Social Media', 
     SocialMedia, 
     SocialMediaOptions, 
     SocialMediaPreview, 

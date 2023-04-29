@@ -17,11 +17,11 @@ export default function CtaSection({options}) {
         <div className = {`bg-gradient-to-r ${gradient} text-transparent bg-clip-text flex items-center`}>
         {link.trim() ? <a href={link}className= 'flex items-center font-bold font-main flex-wrap mt-2 mb-2 lg:text-6xl lg:leading-non md:text-5xl md:leading-tight sm:font-medium sm:text-2xl sm:leading-relaxed'>{word2} 
           <svg className="w-6 h-6 md:w-14 md:h-14 lg:w-18 lg:h-18" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 68L66.5845 5.41551M13.9664 4L66.5859 5.41403L67.9999 58.0336" stroke="url(#paint0_linear_228_503)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 68L66.5845 5.41551M13.9664 4L66.5859 5.41403L67.9999 58.0336" stroke="url(#paint0_linear_228_503)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_228_503" x1="4" y1="35.9009" x2="67.9999" y2="35.9009" gradientUnits="userSpaceOnUse">
-<stop offset="0.140625" stop-color={`${getColorFromGradient(choppedGradient, 0)}`}/>
-<stop offset="1" stop-color={`${getColorFromGradient(choppedGradient, choppedGradient[1] === "grad1" ? (choppedGradient.length / 2 - 1) :(choppedGradient.length / 3 - 1))}`}/>
+<stop offset="0.140625" stopColor={`${getColorFromGradient(choppedGradient, 0)}`}/>
+<stop offset="1" stopColor={`${getColorFromGradient(choppedGradient, choppedGradient[1] === "grad1" ? (choppedGradient.length / 2 - 1) :(choppedGradient.length / 3 - 1))}`}/>
 </linearGradient>
 </defs>
 </svg></a> : null}
@@ -34,7 +34,6 @@ export default function CtaSection({options}) {
 }
 
 function getColorFromGradient(choppedGrad, stop){
-  console.log(choppedGrad);
   let colorName = choppedGrad[3 * stop + 1];
   let colorNumber = choppedGrad[3 * stop + 2];
 

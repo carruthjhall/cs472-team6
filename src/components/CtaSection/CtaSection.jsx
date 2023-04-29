@@ -9,15 +9,15 @@ export default function CtaSection({options}) {
     <div className="font-bold font-main
     lg:text-5xl
     md:text-4xl 
-    sm:font-semibold sm:text-lg">
+    text-[22px]">
     <h2>{word1}</h2> 
     <div className = {`bg-white dark:bg-black`}>
     <div className = {`bg-gradient-to-r ${gradient} text-transparent bg-clip-text flex items-center`}>
-    <a href={link.trim() ? link : '#0'}className= 'flex items-center font-bold font-main flex-wrap mt-2 mb-2 lg:text-5xl md:text-4xl sm:font-medium sm:text-2xl sm:leading-relaxed'>{word2}
+    <a href={link.trim() ? link : '#0'}className= 'flex items-center font-bold font-main flex-wrap mt-2 mb-2 lg:text-5xl md:text-4xl text-[26px]'>{word2}
     {isgreenblue ? (
-        <img src={vectorSVG2} className="w-6 h-6 md:w-14 md:h-14 lg:w-18 lg:h-18"/>
+        <img src={vectorSVG2} className="w-8 h-8 md:w-14 md:h-14 lg:w-18 lg:h-18"/>
       ) : (
-        <img src={vectorSVG} className="w-6 h-6 md:w-14 md:h-14 lg:w-18 lg:h-18"/>
+        <img src={vectorSVG} className="w-8 h-8 md:w-14 md:h-14 lg:w-18 lg:h-18"/>
     )}
     </a>
     </div>

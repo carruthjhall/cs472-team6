@@ -8,8 +8,6 @@ import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapp
 import {SkillsComponent} from '../components/Skills/SkillsComponent';
 import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
-import Component from "../models/Component";
-import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
@@ -22,6 +20,8 @@ import { HomeHeroSectionComponent } from "../components/HomeHeroSection/HomeHero
 import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
 import { MoreArticlesComponent } from "../components/MoreArticles/MoreArticlesComponent";
 import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
+import { RecentInsightsComponent } from "../components/RecentInsights/RecentInsightsComponent";
+import { MoreProjectsComponent } from "../components/MoreProjects/MoreProjectsComponent";
 
 
 export const registeredComponents = new Map([
@@ -42,8 +42,10 @@ export const registeredComponents = new Map([
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
+    ['More Projects', MoreProjectsComponent],
     ['Home Hero Section', HomeHeroSectionComponent],
     ['Home Hero Section 2', HomeHeroSection2Component],
     ['MoreArticles', MoreArticlesComponent],
-    ['Services Section', ServicesSectionComponent]
+    ['Services Section', ServicesSectionComponent],
+    ['RecentInsights', RecentInsightsComponent]
 ]);

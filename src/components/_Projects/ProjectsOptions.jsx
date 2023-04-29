@@ -19,7 +19,7 @@ export default function ProjectsOptions({options, updateComponent}) {
 
     function handleAddProject(){
         let newProjects = [...Projects];
-        newProjects.push(new ProjectOptions('Finance Landing Page', 'Landing Page UI Kit', "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80", ''))
+        newProjects.push(new ProjectOptions('Finance Landing Page', 'Landing Page UI Kit', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/ProjectOne.png?raw=true", ''))
 
         updateComponent({ Projects: newProjects })
     }

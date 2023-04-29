@@ -84,7 +84,7 @@ export const Gradients = {
     'Purple Beam': 'bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900' ,
     'Sand Beam': 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-orange-900 via-amber-100 to-orange-900' ,
     'Island Waves': 'from-yellow-400 via-gray-50 to-teal-300' ,
-    'Big Sur': 'Pastel bg-gradient-to-tr from-violet-500 to-orange-300' ,
+    'Big Sur': 'from-violet-500 to-orange-300' ,
     'Oahu': 'bg-gradient-to-t from-orange-400 to-sky-400' ,
     'Peach Pie': 'bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-red-900 via-violet-200 to-orange-500' ,
     'Salem': 'bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600' ,

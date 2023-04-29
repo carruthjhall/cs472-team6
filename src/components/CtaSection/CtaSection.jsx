@@ -73,7 +73,7 @@ function getColorFromGradient(choppedGrad, stop){
           return colors.cyan[colorNumber];
       case "emerald":
           return colors.emerald[colorNumber];
-      case "fuschia":
+      case "fuchsia":
           return colors.fuchsia[colorNumber];
       case "gray":
           return colors.gray[colorNumber];

@@ -10,7 +10,7 @@
     "test:ui": "vitest --ui",
     "build": "npm run fs && vite build",
     "preview": "vite preview",
-    "fs": "node ./filesystem.js" 
+    "fs": "node ./filesystem.js"
   },
   "dependencies": {
     "@webcontainer/api": "^1.1.3",

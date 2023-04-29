@@ -32,7 +32,7 @@ describe('CtaSection Component', () => {
 
     it('CtaSectionOptions show correct input values',()=>{
         // get the CtaSection registered component
-        let CtaSectionComponent = registeredComponents.get('CtaSection');
+        let CtaSectionComponent = registeredComponents.get('Call to Action Section');
         let OptionsComponent = CtaSectionComponent.optionsComponent;
         let defaultOptions = CtaSectionComponent.defaultOptions;
 
@@ -62,7 +62,7 @@ describe('CtaSection Component', () => {
 
     it('CtaSectionOptions handleChange function',()=>{
         // get the CtaSection registered component
-        let CtaSectionComponent = registeredComponents.get('CtaSection');
+        let CtaSectionComponent = registeredComponents.get('Call to Action Section');
         let OptionsComponent = CtaSectionComponent.optionsComponent;
         let defaultOptions = CtaSectionComponent.defaultOptions;
 

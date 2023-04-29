@@ -5,7 +5,7 @@ import Component from "../../models/Component";
 import { Gradients } from "../../utils/utils";
 
 export const contactSectionComponent = new Component(
-    'ContactSection', 
+    'Contact Section', 
     ContactSection, 
     ContactSectionOptions, 
     ContactSectionPreview, 

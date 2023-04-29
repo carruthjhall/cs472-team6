@@ -4,6 +4,7 @@ import miniEmailIcon from "./miniEmailIcon.svg";
 import miniDollarIcon from "./miniDollarIcon.svg";
 import blackMiniDollarSign from "./blackMiniDollarSign.svg"
 import blackMiniEmail from "./blackMiniEmail.svg"
+import colors from "tailwindcss/colors";
 
 import { useState } from 'react'
 
@@ -96,7 +97,7 @@ export default function ContactSection({options}){
               </div>
 
               {/*Submit button*/}
-              <button type="submit" className="text-black dark:text-white font-secondary text-sm font-bold mt-5 bg-gradient-to-r from-grad1 via-grad2 via-grad3 to-grad4 rounded-full py-4 px-8 ">SUBMIT NOW</button>
+              <button type="submit" className={`text-black dark:text-white font-secondary text-sm font-bold mt-5 bg-gradient-to-r ${gradient} rounded-full py-4 px-8`}>SUBMIT NOW</button>
               
             </form>
           </div>

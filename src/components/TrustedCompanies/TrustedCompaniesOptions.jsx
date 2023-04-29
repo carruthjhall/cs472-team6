@@ -78,7 +78,7 @@ function CompanyOption({index, Company, handleChange, handleDelete}){
             <summary className="font-bold">Company {index+1}: {Name}</summary>
             <div className="p-2">
                 <label className="options-label">Title:</label>
-                <input type="text" className="options-input" name="Title" value={Name} onChange={e => handleChange(index, e)} />
+                <input type="text" className="options-input" name="Name" value={Name} onChange={e => handleChange(index, e)} />
                 <label className="options-label">Image:</label>
                 <input name="Picture" type="text" className="options-input" value={Picture} onChange={e => handleChange(index, e)}/>
                 <p className="font-bold">OR</p>

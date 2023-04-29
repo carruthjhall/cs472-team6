@@ -2,6 +2,7 @@ import { useRef } from "react";
 import GradientSelect from "../GradientSelect/GradientSelect";
 import { ServiceOptions } from "./ServicesSectionComponent";
 import { Gradients } from "../../utils/utils";
+import ImageInput from "../ImageInput/ImageInput";
 
 export default function ServicesSectionOptions({options, updateComponent}) {
     let {header, services} = options;
@@ -44,36 +45,6 @@ export default function ServicesSectionOptions({options, updateComponent}) {
 
 function ServiceOption({index, service, handleChange, handleDelete}){
     const { name, gradient, picture, url } = service;
-    const imageInput = useRef(null);
-
-    // handles updating state (saving the image) after the user has selected an image
-    function handleImageImport() {
-        if (imageInput !== null && imageInput.current !== null){
-            let input = imageInput.current;
-            if (input.files !== null && input.files.length > 0){
-                const image = input.files[0];
-                const reader = new FileReader();
-
-                reader.onabort = () => alert("ERROR: Image could not be imported");
-                reader.onerror = () => alert("ERROR: Image could not be imported");
-                reader.onload = () => {
-                    const imageURL = reader.result || '';
-                    handleChange(index, { target: { name: "picture", value: imageURL } })
-                }
-
-                // read the image file as Base64
-                reader.readAsDataURL(image);
-            }
-        }
-    }
-
-    // used to click the hidden input element (this allows us to have a custom file input button)
-    function handleSelect(){
-        if (imageInput !== null && imageInput.current !== null){
-            let input = imageInput.current;
-            input.click();
-        }
-    }
 
     return (
         <details className="mt-3">
@@ -83,11 +54,7 @@ function ServiceOption({index, service, handleChange, handleDelete}){
                 <input type="text" className="options-input" name="name" value={name} onChange={e => handleChange(index, e)} />
                 <label className="options-label">URL:</label>
                 <input type="text" className="options-input" name="url" value={url} onChange={e => handleChange(index, e)} />
-                <label className="options-label">Image:</label>
-                <input name="picture" type="text" className="options-input" value={picture} onChange={e => handleChange(index, e)}/>
-                <p className="font-bold">OR</p>
-                <input ref={imageInput} name="picture" onChange={handleImageImport} className="hidden" type="file" accept="image/jpeg, image/png, image/jpg"></input>
-                <button className="options-btn" onClick={handleSelect}>Select Image</button>
+                <ImageInput label="Image" value={picture} name="picture" handleChange={(e) => handleChange(index, e)} />
                 <GradientSelect name={"gradient"} value={gradient} handleChange={e => handleChange(index, e)} />
                 <button onClick={() => handleDelete(index)} className="options-btn bg-red-500 hover:bg-red-700 font-bold text-white">Delete Item {index + 1}</button>
             </div>

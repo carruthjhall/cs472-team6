@@ -31,7 +31,7 @@ describe('AboutHeadSection Component', () => {
 
     it('AboutHeadSectionOptions show correct input values',()=>{
         // get the AboutHeadSection registered component
-        let AboutHeadSectionComponent = registeredComponents.get('AboutHeadSection');
+        let AboutHeadSectionComponent = registeredComponents.get('About Head Section');
         let OptionsComponent = AboutHeadSectionComponent.optionsComponent;
         let defaultOptions = AboutHeadSectionComponent.defaultOptions;
 
@@ -58,7 +58,7 @@ describe('AboutHeadSection Component', () => {
 
     it('AboutHeadSectionOptions handleChange function',()=>{
         // get the AboutHeadSection registered component
-        let AboutHeadSectionComponent = registeredComponents.get('AboutHeadSection');
+        let AboutHeadSectionComponent = registeredComponents.get('About Head Section');
         let OptionsComponent = AboutHeadSectionComponent.optionsComponent;
         let defaultOptions = AboutHeadSectionComponent.defaultOptions;
 

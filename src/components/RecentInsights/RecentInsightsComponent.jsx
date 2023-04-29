@@ -5,7 +5,7 @@ import RecentInsightsPreview from "./RecentInsightsPreview.png";
 import RecentInsightsOptions from "./RecentInsightsOptions";
 
 export const RecentInsightsComponent = new Component(
-    'RecentInsights', 
+    'Recent Insights', 
     RecentInsights, 
     RecentInsightsOptions, 
     RecentInsightsPreview, 

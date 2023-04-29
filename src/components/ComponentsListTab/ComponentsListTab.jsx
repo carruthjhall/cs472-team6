@@ -17,10 +17,10 @@ function ComponentPreview({component}) {
     let addComponent = PageState((state) => state.addComponent);
     return (
         <div className="shadow-md w-[300px] mt-4">
-            <img src={component.componentPreview} alt="Component Preview" />
+            <img src={component.componentPreview} className="cursor-pointer" alt="Component Preview" onClick={() => addComponent(new PageComponent(component.name, component.defaultOptions))}/>
             <div className="flex justify-between p-3">
                 <p>{component.name}</p>
-                <button onClick={() => addComponent(new PageComponent(component.name, component.defaultOptions))}>Add</button>
+                <button className="cursor-pointer" onClick={() => addComponent(new PageComponent(component.name, component.defaultOptions))}>Add</button>
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ describe('AboutHeadImages Component', () => {
     
     it('AboutHeadSectionOptions show correct input values',()=>{
         // get the AboutHeadSection registered component
-        let AboutHeadImagesComponent = registeredComponents.get('AboutHeadImages');
+        let AboutHeadImagesComponent = registeredComponents.get('About Head Images');
         let OptionsComponent = AboutHeadImagesComponent.optionsComponent;
         let defaultOptions = AboutHeadImagesComponent.defaultOptions;
 

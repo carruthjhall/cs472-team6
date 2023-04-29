@@ -1,4 +1,3 @@
-import vectorSVG from "./vector.svg";
 import colors from "tailwindcss/colors";
 
 export default function CtaSection({options}) {
@@ -34,7 +33,6 @@ export default function CtaSection({options}) {
   );
 }
 
-//possibly add logic for default in svg?
 function getColorFromGradient(choppedGrad, stop){
   console.log(choppedGrad);
   let colorName = choppedGrad[3 * stop + 1];

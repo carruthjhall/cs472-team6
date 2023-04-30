@@ -5,7 +5,7 @@ import MoreArticlesPreview from "./MoreArticlesPreview.png";
 import MoreArticlesOptions from "./MoreArticlesOptions";
 
 export const MoreArticlesComponent = new Component(
-    'MoreArticles', 
+    'More Articles Section', 
     MoreArticles, 
     MoreArticlesOptions, 
     MoreArticlesPreview, 

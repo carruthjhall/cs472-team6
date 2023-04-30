@@ -30,7 +30,7 @@ describe('BlogPage Component', () => {
 
     it('BlogPageOptions show correct input values',()=>{
         // get the BlogPage registered component
-        let BlogPageComponent = registeredComponents.get('BlogPage');
+        let BlogPageComponent = registeredComponents.get('Blog Page');
         let OptionsComponent = BlogPageComponent.optionsComponent;
         let defaultOptions = BlogPageComponent.defaultOptions;
 
@@ -57,7 +57,7 @@ describe('BlogPage Component', () => {
 
     it('BlogOptions handleChange function',()=>{
         // get the BlogPage registered component
-        let BlogPageComponent = registeredComponents.get('BlogPage');
+        let BlogPageComponent = registeredComponents.get('Blog Page');
         let OptionsComponent = BlogPageComponent.optionsComponent;
         let defaultOptions = BlogPageComponent.defaultOptions;
 

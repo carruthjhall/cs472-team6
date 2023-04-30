@@ -176,7 +176,7 @@ describe('ServicesSection Component', () => {
         let serviceOption = servicesSectionOptions.rendered.rendered[3].rendered.rendered.at(-1).rendered;
         
         // drill into component to get inputs
-        const [nameLabel, nameInput, urlLabel, urlInput, imageLabel, picture1Input, orPTag, picture2Input, selectImageBtn, gradientSelect, deleteBtn] = serviceOption;
+        const [nameLabel, nameInput, urlLabel, urlInput, imageInput, gradientSelect, deleteBtn] = serviceOption;
         
         // set test values
         const testName = 'Test Service 1';
@@ -207,7 +207,7 @@ describe('ServicesSection Component', () => {
 
 
         // test onChange for picture
-        picture1Input.props.onChange({
+        imageInput.props.handleChange({
             target: {
                 name: 'picture',
                 value: testPicture
@@ -227,10 +227,5 @@ describe('ServicesSection Component', () => {
         // test that change occurred
         let updatedGradient = PageState.getState().componentsList[0].options.services[0].gradient;
         expect(updatedGradient).eq(Gradients['green-blue'])
-
-        // test onClick for imageBtn
-        selectImageBtn.props.onClick()
-        // test onChange for file input 
-        picture2Input.props.onChange()
     })
 })

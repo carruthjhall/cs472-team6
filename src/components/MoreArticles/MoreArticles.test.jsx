@@ -37,7 +37,7 @@ describe('MoreArticles Component', () => {
     })
 
     it('MoreArticlesOptions show correct input values',()=>{
-        let MoreArticlesComponent = registeredComponents.get('MoreArticles');
+        let MoreArticlesComponent = registeredComponents.get('More Articles Section');
         let OptionsComponent = MoreArticlesComponent.optionsComponent;
         let defaultOptions = MoreArticlesComponent.defaultOptions;
 
@@ -57,7 +57,7 @@ describe('MoreArticles Component', () => {
 
     it('MoreArticlesOptions handleChange function',()=>{
         // get the Banner registered component
-        let MoreArticlesComponent = registeredComponents.get('MoreArticles');
+        let MoreArticlesComponent = registeredComponents.get('More Articles Section');
         let OptionsComponent = MoreArticlesComponent.optionsComponent;
         let defaultOptions = MoreArticlesComponent.defaultOptions;
 

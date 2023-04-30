@@ -4,7 +4,7 @@ import BlogPagePreview from "./BlogPagePreview.png";
 import Component from "../../models/Component";
 
 export const BlogPageComponent = new Component(
-    'BlogPage', BlogPage, BlogPageOptions, BlogPagePreview, 
+    'Blog Page', BlogPage, BlogPageOptions, BlogPagePreview, 
       {
         header: "Overview",
         paragraph: "example\nexample1\nexample2", 

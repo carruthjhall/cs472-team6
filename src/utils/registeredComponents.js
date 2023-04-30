@@ -1,4 +1,5 @@
 import { TestimonialComponent } from "../components/Testimonial/TestimonialComponent";
+import { TestimonialSectionComponent } from "../components/TestimonialSection/TestimonialSectionComponent";
 import {BannerComponent} from '../components/Banner/BannerComponent';
 import {AboutHeadImagesComponent} from '../components/AboutHeadImages/AboutHeadImagesComponent';
 import {AboutHeadSectionComponent} from '../components/AboutHeadSection/AboutHeadSectionComponent';
@@ -7,8 +8,6 @@ import {ServiceWrapperComponent} from '../components/ServiceWrapper/ServiceWrapp
 import {SkillsComponent} from '../components/Skills/SkillsComponent';
 import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaComponent'; 
 import { faqComponent } from "../components/faqSection/faqComponent";
-import Component from "../models/Component";
-import { Gradients } from "./utils";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
@@ -21,28 +20,32 @@ import { HomeHeroSectionComponent } from "../components/HomeHeroSection/HomeHero
 import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
 import { MoreArticlesComponent } from "../components/MoreArticles/MoreArticlesComponent";
 import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
+import { RecentInsightsComponent } from "../components/RecentInsights/RecentInsightsComponent";
+import { MoreProjectsComponent } from "../components/MoreProjects/MoreProjectsComponent";
 
 
 export const registeredComponents = new Map([
-    ['Testimonial', TestimonialComponent],
+    ['Testimonial Section', TestimonialSectionComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
-    ['AboutHeadSection', AboutHeadSectionComponent],
-    ['AboutHeadImages', AboutHeadImagesComponent],
-    ['CtaSection', CtaSectionComponent],
-    ['BlogPage', BlogPageComponent],
+    ['About Head Section', AboutHeadSectionComponent],
+    ['About Head Images', AboutHeadImagesComponent],
+    ['Call to Action Section', CtaSectionComponent],
+    ['Blog Page', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
     ['Education and Work', EducationAndWorkComponent],
     ['Skills', SkillsComponent],
-    ['SocialMedia', SocialMediaComponent],
+    ['Social Media', SocialMediaComponent],
     ['Four Zero Four', FourZeroFourComponent],
     ['FAQ', faqComponent],
-    ['ContactSection', contactSectionComponent],
+    ['Contact Section', contactSectionComponent],
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
+    ['More Projects', MoreProjectsComponent],
     ['Home Hero Section', HomeHeroSectionComponent],
     ['Home Hero Section 2', HomeHeroSection2Component],
-    ['MoreArticles', MoreArticlesComponent],
-    ['Services Section', ServicesSectionComponent]
+    ['More Articles Section', MoreArticlesComponent],
+    ['Services Section', ServicesSectionComponent],
+    ['Recent Insights', RecentInsightsComponent]
 ]);

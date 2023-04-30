@@ -22,6 +22,7 @@ import { MoreArticlesComponent } from "../components/MoreArticles/MoreArticlesCo
 import { ServicesSectionComponent } from "../components/ServicesSection/ServicesSectionComponent";
 import { RecentInsightsComponent } from "../components/RecentInsights/RecentInsightsComponent";
 import { MoreProjectsComponent } from "../components/MoreProjects/MoreProjectsComponent";
+import { TrustedCompaniesComponent } from "../components/TrustedCompanies/TrustedCompaniesComponent";
 
 
 export const registeredComponents = new Map([
@@ -47,5 +48,6 @@ export const registeredComponents = new Map([
     ['Home Hero Section 2', HomeHeroSection2Component],
     ['More Articles Section', MoreArticlesComponent],
     ['Services Section', ServicesSectionComponent],
-    ['Recent Insights', RecentInsightsComponent]
+    ['Recent Insights', RecentInsightsComponent],
+    ['Trusted Companies', TrustedCompaniesComponent]
 ]);

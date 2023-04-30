@@ -5,11 +5,17 @@ export default class PageOptions {
     description = '';
     language = '';
 
-    constructor({title, icon, author, description, language}) {
-        this.title = title ?? 'Portfolio'
-        this.icon = icon ?? ''
-        this.author = author ?? ''
-        this.description = description ?? 'My Portfolio'
-        this.language = language ?? 'en'
+    constructor({
+        title,
+        icon,
+        author,
+        description,
+        language
+    }) {
+        this.title = title || 'Portfolio'
+        this.icon = icon || ''
+        this.author = author || ''
+        this.description = description || 'My Portfolio'
+        this.language = language || 'en'
     }
 }

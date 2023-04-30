@@ -9,9 +9,9 @@ export default function InfoModal() {
         <div
       className={`${
         visible ? "block" : "hidden"
-        } fixed z-10 left-0 top-0 w-full h-full bg-black bg-black/40`}
+        } fixed z-10 left-0 top-0 w-full h-full bg-black bg-black/40 flex items-center`}
         >
-            <div className="w-4/5 max-h-[600px] max-w-[600px] max-w-sm bg-white mx-auto mt-[250px] -translate-y-1/4 p-9 rounded-lg overflow-scroll">
+            <div className="w-4/5 h-3/5 max-w-[600px] bg-white mx-auto p-9 rounded-lg overflow-scroll relative">
                 <button
                 className="absolute top-4 right-4"
                 onClick={() => setVisible(false)}

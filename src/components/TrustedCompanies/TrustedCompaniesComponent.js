@@ -21,7 +21,7 @@ export const TrustedCompaniesComponent = new Component(
         Companies: [
             new CompanyOptions('Company 1', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/Logo1.png?raw=true"),
             new CompanyOptions('Company 2', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/Logo2.png?raw=true"),
-            new CompanyOptions('Company 3', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/Logo3.png?raw=true"),
+            new CompanyOptions('Company 3', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/CompanyLogos/DarkLogo4.svg?raw=true"),
             new CompanyOptions('Company 4', "https://github.com/cs472-team6/cs472-team6-resources/blob/main/images/Logo4.png?raw=true")
         ]
     }

@@ -6,7 +6,7 @@ export default function TrustedCompanies({ options }){
             <div className="dark:text-white text-[24px] font-main my-auto lg:mr-[200px]">
                 {Title}
             </div>
-            <div className="md:flex flex-row">
+            <div className="md:flex flex-row flex max-w-[1200px] flex-wrap justify-center">
                 {Companies.map((Company, index) => <CompanyItem key={index} Company={Company} />)}
             </div>
         </div>
@@ -17,6 +17,6 @@ function CompanyItem({Company}) {
     const { Name, Picture } = Company;
 
     return (
-        <img src={Picture} alt={Name} className="max-w-[150px] object-contain max-h-[150px] my-[20px] md:my-[60px] mr-[40px]"/>
+        <img src={Picture} alt={Name} className="max-w-[130px] object-contain max-h-[130px] my-[20px] md:my-[60px] mr-[40px]"/>
     )
 }

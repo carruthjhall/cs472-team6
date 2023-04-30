@@ -34,7 +34,7 @@ describe('SocialMedia Component', () => {
     })
     it('SocialMedia Input Value Renders', () => {
         
-        let SocialMediaComponent = registeredComponents.get('SocialMedia');
+        let SocialMediaComponent = registeredComponents.get('Social Media');
         let OptionsComponent = SocialMediaComponent.optionsComponent;
         let defaultOptions = SocialMediaComponent.defaultOptions;
 

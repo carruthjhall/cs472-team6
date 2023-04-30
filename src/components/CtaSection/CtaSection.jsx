@@ -1,4 +1,3 @@
-
 import colors from "tailwindcss/colors";
 export default function CtaSection({options}) {
   const {link, word1, word2, gradient} = options;

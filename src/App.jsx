@@ -3,6 +3,7 @@ import PreviewPanel from "./components/PreviewPanel/PreviewPanel";
 import SidePanel from "./components/SidePanel/SidePanel";
 import FourZeroFourDark from "./components/404Section/FourZeroFour";
 import FourZeroFourLight from "./components/404Section/FourZeroFour";
+import ExportModal from "./components/ExportModal/ExportModal";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         {/* PreviewPanel */}
         <PreviewPanel />
       </div>
+      <ExportModal />
     </div>
   )
 }

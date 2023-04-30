@@ -40,7 +40,7 @@ describe('Contact Section Component', () => {
 
     it('Contact Section Options shows correct inputs', ()=>{
 
-        let csComp = registeredComponents.get('ContactSection')
+        let csComp = registeredComponents.get('Contact Section')
         let CSOpt = csComp.optionsComponent;
         let defOpt = csComp.defaultOptions;
 
@@ -65,7 +65,7 @@ describe('Contact Section Component', () => {
     })
 
     it('ContactSectionOptions handleChange function', ()=>{
-        let csComp = registeredComponents.get('ContactSection')
+        let csComp = registeredComponents.get('Contact Section')
         let CSOpt = csComp.optionsComponent;
         let defOpt = csComp.defaultOptions;
         

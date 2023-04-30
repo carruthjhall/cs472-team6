@@ -5,7 +5,7 @@ import Component from "../../models/Component";
 import { Gradients } from "../../utils/utils";
 
 export const CtaSection2Component = new Component(
-    'CtaSection2', 
+    'Call to Action Section 2', 
     CtaSection2, 
     CtaSection2Options, 
     CtaSection2Preview, 

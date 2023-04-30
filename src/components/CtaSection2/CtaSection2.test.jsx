@@ -34,7 +34,7 @@ describe('CtaSection2 Component', () => {
 
     it('CtaSection2Options show correct input values',()=>{
         // get the CtaSection2 registered component
-        let CtaSection2Component = registeredComponents.get('CtaSection2');
+        let CtaSection2Component = registeredComponents.get('Call to Action Section 2');
         let OptionsComponent = CtaSection2Component.optionsComponent;
         let defaultOptions = CtaSection2Component.defaultOptions;
 
@@ -63,7 +63,7 @@ describe('CtaSection2 Component', () => {
 
     it('CtaSectionOptions handleChange function',()=>{
         // get the CtaSection2 registered component
-        let CtaSection2Component = registeredComponents.get('CtaSection2');
+        let CtaSection2Component = registeredComponents.get('Call to Action Section 2');
         let OptionsComponent = CtaSection2Component.optionsComponent;
         let defaultOptions = CtaSection2Component.defaultOptions;
 
@@ -85,7 +85,7 @@ describe('CtaSection2 Component', () => {
 
     it('Test handleChange function', () => {
         
-        let initailComponentsList = [new PageComponent(registeredComponents.get('CtaSection2').name, {
+        let initailComponentsList = [new PageComponent(registeredComponents.get('Call to Action Section 2').name, {
             link: "https://www.google.com/", 
             text: "Interested in working with me?", 
             button: "GET IN TOUCH",

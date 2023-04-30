@@ -31,7 +31,7 @@ export const registeredComponents = new Map([
     ['AboutHeadSection', AboutHeadSectionComponent],
     ['AboutHeadImages', AboutHeadImagesComponent],
     ['CtaSection', CtaSectionComponent],
-    ['CtaSection2', CtaSection2Component],
+    ['Call to Action Section 2', CtaSection2Component],
     ['BlogPage', BlogPageComponent],
     ['Stats Section', StatsWrapperComponent],
     ['Education and Work', EducationAndWorkComponent],

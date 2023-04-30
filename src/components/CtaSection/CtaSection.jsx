@@ -1,6 +1,4 @@
 
-import vectorSVG from "./vector.svg";
-import vectorSVG2 from "./vector2.svg";
 import colors from "tailwindcss/colors";
 export default function CtaSection({options}) {
   const {link, word1, word2, gradient} = options;

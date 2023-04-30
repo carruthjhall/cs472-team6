@@ -60,8 +60,14 @@ const componentFiles = new Map([
   ['Footer', [
     'src/components/Footer/Footer.jsx'
   ]],
+  ['MoreArticles', [
+    'src/components/MoreArticles/MoreArticles.jsx'
+  ]],
   ['NavbarComponent', [
     'src/components/NavbarComponent/NavbarComponent.jsx'
+  ]],
+  ['ServicesSection', [
+    'src/components/ServicesSection/ServicesSection.jsx'
   ]],
   ['ServiceWrapper', [
     'src/components/ServiceWrapper/ServiceWrapper.jsx'

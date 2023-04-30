@@ -17,6 +17,6 @@ function CompanyItem({Company}) {
     const { Name, Picture } = Company;
 
     return (
-        <img src={Picture} alt={Name} className="max-w-[130px] object-contain max-h-[130px] my-[20px] md:my-[60px] mr-[40px]"/>
+        <img src={Picture} alt={Name} className="max-w-[130px] object-contain max-h-[130px] my-[20px] md:my-[20px] mr-[40px]"/>
     )
 }

@@ -42,7 +42,7 @@ export default function ProjectsOptions({options, updateComponent}) {
                 {Array.from(Object.entries(Gradients)).map(([key, value]) => <option key={key} value={value}>{key}</option>)}
             </select>
             <label className="block">Description:</label>
-            <input className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="Description" value={Description} onChange={handleChange} />
+            <textarea className={`block mb-3 p-2 rounded-lg bg-gray-200`} type="text" name="Description" value={Description} onChange={handleChange} />
             <button onClick={handleAddProject} className="options-btn bg-blue-500 hover:bg-blue-700 font-bold text-white">Add Item</button>
             {Projects?.map((Project, index) => <ProjectOption key={index} project={Project} index={index} handleChange={handleProjectChange} handleDelete={handleDeleteProject}  />)}
         </div>

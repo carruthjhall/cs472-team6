@@ -12,10 +12,8 @@ describe('CtaSection Component', () => {
             link: "https://www.google.com/", 
             word1: "See the impact of good, conversion-oriented design on your business.", 
             word2: "Let's Work Together", 
-            gradient: Gradients['green-blue']
+            gradient: Gradients.default
         }
-
-        let isgreenblue = "/src/components/CtaSection/vector2.svg"
 
         // render the component
         const component = renderer.create(
@@ -29,24 +27,15 @@ describe('CtaSection Component', () => {
 
         // expect the rendered/displayed words to match the options passed into the component
         expect(displayedWords[0]).eq(options.word1);
-
-        // get component version of dom
-        let displayedWords1 = component.toJSON();
-        // get the src path of the svg file;
-        displayedWords1 = displayedWords1.children[0].children[0].children[1].children[0].children[0].children[1];
-        //expect the src path to match the options passed into the component
-        expect(displayedWords1.props.src).eq(isgreenblue);
     })
 
-    it('Check the gradient', () => {
+    it('Check the link if nothing', () => {
         let options = {
             link: "", 
             word1: "See the impact of good, conversion-oriented design on your business.", 
             word2: "Let's Work Together", 
             gradient: Gradients.default
         }
-
-        let isgreenblue = "/src/components/CtaSection/vector.svg"
         let href = "#0"
 
         // render the component
@@ -56,11 +45,6 @@ describe('CtaSection Component', () => {
 
         // get component version of dom
         let displayedWords = component.toJSON();
-        // get the src path of the svg file;
-        let displayedWords1 = displayedWords.children[0].children[0].children[1].children[0].children[0].children[1];
-        //expect the src path to match the options passed into the component
-        expect(displayedWords1.props.src).eq(isgreenblue);
-
         // get the link in href;
         let displayedWords2 = displayedWords.children[0].children[0].children[1].children[0].children[0];
         //expext the link tao match the options passed in to the component

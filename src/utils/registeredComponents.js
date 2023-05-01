@@ -10,6 +10,7 @@ import {SocialMediaComponent} from '../components/SocialMedia/SocialMediaCompone
 import { faqComponent } from "../components/faqSection/faqComponent";
 import {CtaSectionComponent} from "../components/CtaSection/CtaSectionComponent";
 import { BlogPageComponent } from "../components/BlogPage/BlogPageComponent";
+import { BlogPageHeroSectionComponent } from "../components/BlogPageHeroSection/BlogPageHeroSectionComponent";
 import { StatsWrapperComponent } from "../components/StatsWrapper/StatsWrapperComponent";
 import {FourZeroFourComponent} from '../components/404Section/FourZeroFourComponent';
 import { contactSectionComponent } from "../components/ContactSection/contactSectionComponent";
@@ -31,6 +32,12 @@ export const registeredComponents = new Map([
     ['Testimonial Section', TestimonialSectionComponent],
     ['Service Wrapper', ServiceWrapperComponent],
     ['Banner', BannerComponent],
+    ['BlogPageHeroSection', BlogPageHeroSectionComponent],
+    ['AboutHeadSection', AboutHeadSectionComponent],
+    ['AboutHeadImages', AboutHeadImagesComponent],
+    ['Stats Section', StatsWrapperComponent],
+    ['CtaSection', CtaSectionComponent],
+    ['BlogPage', BlogPageComponent],
     ['About Head Section', AboutHeadSectionComponent],
     ['About Head Images', AboutHeadImagesComponent],
     ['Call to Action Section', CtaSectionComponent],

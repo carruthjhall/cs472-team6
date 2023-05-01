@@ -32,9 +32,9 @@ export default function faqSection({options}){
     ];
 
     return(
-        <div className="sm:flex lg:flex md:flex m-auto md:pl-[30px] md:pr-[80px] pl-2 p-4 pr-[10px] lg:w-[1257px] lg:h-[400px] md:w-[250%] md:h-[800px] w-[390px] h-[775px] flex-col lg:flex-row bg-white dark:bg-black text-white lg:grid lg:grid-cols-2 lg:gap-36 ">
+        <div className="flex m-auto md:pl-[30px] md:pr-[80px] pl-2 p-4 pr-[10px] lg:w-[1050px] xl:w-[95%] lg:h-[750px] xl:h-[500px] md:w-[95%] md:h-[800px] w-[390px] h-[775px] flex-col bg-white dark:bg-black text-white xl:grid xl:grid-cols-2 xl:gap-20">
             {/*FAQ Side*/}
-            <div className="md:flex lg:grid md:grid lg:grid-rows-2 md:flex-col-3 lg:w-[541px] lg:h-[332px]">
+            <div className="md:flex lg:grid md:grid lg:grid-rows-2 md:flex-col-3 lg:w-[541px] lg:h-[332px] xl:mx-auto">
                <div className="flex-shrink lg:w-[541px] lg:h-[160px] sm:w-[340px]">
                     <h2 className="font-main text-[64px] text-black dark:text-white leading-tight">Frequently Asked</h2>
                     <h2 className={`font-main text-[64px] -translate-y-5 text-black dark:text-white lg:bg-gradient-to-r ${gradient} lg:text-transparent lg:bg-clip-text md:bg-gradient-to-r ${gradient} md:text-transparent md:bg-clip-text`}> Questions </h2>
@@ -52,7 +52,7 @@ export default function faqSection({options}){
             </div>
 
             {/*Question Accordion */}
-            <div className="overflow-auto lg:w-[608px] lg:h-[325px] md:w-[875px] md:h-[370px] h-[365px]"> 
+            <div className="overflow-auto xl:h-[400px] lg:w-[620px] lg:h-[325px] md:w-[700px] md:h-[370px] h-[365px]"> 
                 {questionAccordion.map( ({question, answer}, index) => 
                 ( <Accordion question={question} answer={answer} key={index}/>))}
               

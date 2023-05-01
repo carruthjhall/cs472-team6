@@ -17,6 +17,7 @@ import { contactSectionComponent } from "../components/ContactSection/contactSec
 import { FooterComponent } from "../components/Footer/FooterComponent";
 import { NavBarComponent } from "../components/NavbarComponent/NavBarComponent";
 import { CompaniesComponent } from "../components/Companies/CompaniesComponent";
+import { CaseStudyHeroComponent } from "../components/CaseStudyHero/CaseStudyHeroComponent";
 import { CtaSection2Component } from "../components/CtaSection2/CtaSection2Component";
 import { HomeHeroSectionComponent } from "../components/HomeHeroSection/HomeHeroSectionComponent";
 import { HomeHeroSection2Component } from "../components/HomeHeroSection2/HomeHeroSection2Component";
@@ -26,6 +27,7 @@ import { RecentInsightsComponent } from "../components/RecentInsights/RecentInsi
 import { MoreProjectsComponent } from "../components/MoreProjects/MoreProjectsComponent";
 import { ProjectsComponent } from "../components/_Projects/ProjectsComponent";
 import { TrustedCompaniesComponent } from "../components/TrustedCompanies/TrustedCompaniesComponent"
+
 
 
 export const registeredComponents = new Map([
@@ -53,6 +55,7 @@ export const registeredComponents = new Map([
     ['Navbar', NavBarComponent],
     ['Footer', FooterComponent],
     ['Companies', CompaniesComponent],
+    ['Case Study Hero', CaseStudyHeroComponent],
     ['More Projects', MoreProjectsComponent],
     ['Home Hero Section', HomeHeroSectionComponent],
     ['Home Hero Section 2', HomeHeroSection2Component],

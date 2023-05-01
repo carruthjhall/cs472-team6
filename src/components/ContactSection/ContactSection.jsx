@@ -1,3 +1,5 @@
+import emailIcon from "./emailIcon.svg";
+import phoneIcon from "./phoneIcon.svg";
 import miniEmailIcon from "./miniEmailIcon.svg";
 import miniDollarIcon from "./miniDollarIcon.svg";
 import blackMiniDollarSign from "./blackMiniDollarSign.svg"

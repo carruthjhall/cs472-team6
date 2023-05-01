@@ -30,7 +30,6 @@ describe('Contact Section Component', () => {
         let descr = leftWrapper.children[2].children.shift();
         let email = contact.children[3].children[0].children[1].children.shift();
         let phone = contact.children[3].children[1].children[1];
-        console.log(phone.children[0]);
 
         expect(header).eq(options.displayHeader);
         expect(descr).eq(options.displayDescr);

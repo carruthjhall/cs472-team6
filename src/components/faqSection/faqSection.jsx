@@ -32,7 +32,7 @@ export default function faqSection({options}){
     ];
 
     return(
-        <div className="flex m-auto md:pl-[30px] md:pr-[80px] pl-2 p-4 pr-[10px] lg:w-[1050px] xl:w-[95%] lg:h-[750px] xl:h-[500px] md:w-[95%] md:h-[800px] w-[390px] h-[775px] flex-col bg-white dark:bg-black text-white xl:grid xl:grid-cols-2 xl:gap-20">
+        <div className="flex m-auto md:pl-[30px] md:pr-[80px] pl-2 p-4 pr-[10px] xl:w-[1257px] lg:h-[750px] xl:h-[500px] md:w-[95%] md:h-[800px] w-[390px] h-[775px] flex-col bg-white dark:bg-black text-white xl:grid xl:grid-cols-2 xl:gap-20">
             {/*FAQ Side*/}
             <div className="md:flex lg:grid md:grid lg:grid-rows-2 md:flex-col-3 lg:w-[541px] lg:h-[332px] xl:mx-auto">
                <div className="flex-shrink lg:w-[541px] lg:h-[160px] sm:w-[340px]">

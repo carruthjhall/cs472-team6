@@ -36,14 +36,6 @@ export default function ContactSection({options}){
   
     return (
         <div className="flex flex-col m-auto lg:w-[1200px] lg:h-[700px] md:w-[864px] md:h-[1069px] w-[400px] h-[1000px] bg-white dark:bg-black md:px-10 py-10 lg:grid lg:grid-cols-2 lg:gap-28 justify-center">
-          <div className='flex-grow row-span-2 py-5 font-main '>
-            <h2 className={`text-[64px] w-[400px] h-auto text-ellipsis whitespace-pre-wrap text-transparent bg-clip-text bg-gradient-to-r ${gradient} bg-red-400`}>{displayHeader}</h2>
-            
-            <br></br>
-            
-            <p className="flex flex-wrap flex-row justify-between whitespace-pre-wrap break-words overflow-hidden 
-            text-black dark:text-white text-lg font-secondary md:w-[452px] md:h-[97px]">{displayDescr} </p>
-
             <div className='flex-grow row-span-2 py-5 font-main '>
               <h2 className={`text-[64px] w-[400px] h-auto text-ellipsis whitespace-pre-wrap text-transparent bg-clip-text bg-gradient-to-r ${gradient} bg-red-400`}>{displayHeader}</h2>
               <br></br>
@@ -60,10 +52,7 @@ export default function ContactSection({options}){
                 <img src={phoneIcon}></img>
                   <span className="text-black dark:text-white text-[18px] translate-y-[2.5px] font-bold font-secondary px-4">{uPhone}</span>
                 </div>
-
-              </div>
             </div>
-
           </div>
                   
 

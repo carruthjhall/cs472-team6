@@ -2,7 +2,7 @@ import FourZeroFourSection from './components/404Section/FourZeroFour';
 import AboutHeadSection from './components/AboutHeadSection/AboutHeadSection';
 import AboutHeadImages from './components/AboutHeadImages/AboutHeadImages';
 import Banner from './components/Banner/Banner';
-import BlogPage from './components/BlogPage/BlogPage';
+//import BlogPage from './components/BlogPage/BlogPage';
 // import Companies from './components/Companies/Companies';
 import ContactSection from './components/ContactSection/ContactSection';
 import EducationWorkExperience from './components/EducationAndWork/EducationAndWork';
@@ -12,7 +12,7 @@ import ServiceWrapper from './components/ServiceWrapper/ServiceWrapper';
 import Sm from './components/SocialMedia/SocialMedia';
 import StatsWrapper from './components/StatsWrapper/StatsWrapper';
 import Testimonial from './components/Testimonial/Testimonial';
-import CtaSection from './components/CtaSection/CtaSection';
+//import CtaSection from './components/CtaSection/CtaSection';
 import Skills from './components/Skills/Skills';
 // import faqSection from './components/faqSection/faqSection';
 import MoreArticles from './components/MoreArticles/MoreArticles';
@@ -23,10 +23,10 @@ export const registeredComponents = new Map([
   ['AboutHeadImages', AboutHeadImages],
   ['AboutHeadSection', AboutHeadSection],
   ['Banner', Banner],
-  ['BlogPage', BlogPage],
+  //['Blog Page', BlogPage],
   // ['Companies', Companies],
   ['ContactSection', ContactSection],
-  ['CtaSection', CtaSection],
+  //['Call to Action Section', CtaSection],
   ['Education and Work', EducationWorkExperience],
   // ['FAQ', faqSection],
   ['Footer', Footer],
